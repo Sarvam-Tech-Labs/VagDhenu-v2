@@ -177,33 +177,35 @@ def split_padas(text):
 
 
 def detect_meter_key(text):
-    """Best-effort chandas (meter) detection from raw text in ANY Indic script, so a non-technical
-    user need not name the meter. Returns the detected meter name (e.g. 'anushtubh', 'vasantatilaka')
-    which the bank LUT resolves via its wav-stem aliases; 'anushtubh_half' is normalized to
-    'anushtubh'. Returns "" when the verse is partial/unrecognized — the caller then picks the
-    graceful FALLBACK_METER itself and can tell the user it was a guess. Pure text — no GPU. Needs a
-    COMPLETE verse (4 pādas, or 32 syllables for anuṣṭubh) for a confident vṛtta match."""
+    """High-precision Sanskrit chandas detection backed by VyakaranaBandhu prosody engine.
+    Returns the resolved bank key (e.g. 'anuṣṭubh', 'śālinī', 'vasantatilakā') or '' if unrecognized."""
+    try:
+        from chandas_bridge import detect_meter_key as _bridge_detect
+        key = _bridge_detect(text)
+        if key:
+            return key
+    except Exception:
+        pass
+
+    # Legacy fallback
     try:
         from indic_transliteration import sanscript
         from tts_syllabify import syllabify
         from tts_weight import tag_weights
         from tts_meter import detect_meter
-    except Exception:
-        return ""
-    try:
         d = PT.to_deva(text).replace("॥", "|").replace("।", "|").replace("\n", " | ")
         d = "".join(c for c in d if not (c.isdigit() or ("०" <= c <= "९")) and c not in "\"'“”‘’()")
         slp = re.sub(r"\s+", " ", sanscript.transliterate(d, sanscript.DEVANAGARI, sanscript.SLP1)).strip()
         syls = syllabify(slp)
         tag_weights(syls)
         name = detect_meter(syls).get("name", "unknown")
+        if name in ("anushtubh_half", "anushtubh"):
+            return "anuṣṭubh"
+        if name in ("unknown", None, ""):
+            return ""
+        return name
     except Exception:
         return ""
-    if name in ("anushtubh_half", "anushtubh"):
-        return "anushtubh"
-    if name in ("unknown", None, ""):
-        return ""
-    return name
 
 
 class Renderer:

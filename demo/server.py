@@ -61,9 +61,22 @@ def synthesize(text, meter_choice, seed, request: gr.Request):
         raise gr.Error(f"You've reached today's limit of {limits.DAILY_LIMIT} chants from this network. "
                        f"Please come back tomorrow 🙏")
     if meter_choice==AUTO or not meter_choice:
-        used,ok=_resolve(detect_meter_key(text))
-        status=(f"🪔 Detected meter: **{used}**" if ok else
-                f"🪔 Couldn't pin the meter — chanting with **{used}** (a good general fit).")
+        try:
+            from chandas_bridge import analyze_verse_meter
+            m_info = analyze_verse_meter(text)
+        except Exception:
+            m_info = {"identified": False, "bank_key": "", "name": "", "is_surrogate": False}
+
+        if m_info.get("identified"):
+            used, ok = _resolve(m_info["bank_key"])
+            if m_info.get("is_surrogate") and m_info.get("name") and m_info["name"] != used:
+                status = f"🪔 Detected meter: **{m_info['name']}** (using **{used}** cadence)"
+            else:
+                status = f"🪔 Detected meter: **{m_info.get('name') or used}**"
+        else:
+            used, ok = _resolve(detect_meter_key(text))
+            status = (f"🪔 Detected meter: **{used}**" if ok else
+                      f"🪔 Couldn't pin the meter — chanting with **{used}** (a good general fit).")
     else:
         used,status=meter_choice,f"🪔 Meter: **{meter_choice}**"
     try:
