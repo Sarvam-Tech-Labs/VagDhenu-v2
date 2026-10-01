@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive, drill-down guide to the Vāgdhenu Sanskrit chant TTS architecture.">
+<title>Vāgdhenu — Interactive Architecture</title>
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #fbf8f1;
+    --surface: #fffefa;
+    --ink: #28231e;
+    --muted: #74695d;
+    --line: #e9dfd0;
+    --saffron: #9c3517;
+    --gold: #bd8a2d;
+    --green: #426954;
+    --blue: #456b83;
+    --violet: #765982;
+    --shadow: 0 18px 55px -35px rgba(65, 41, 20, .4);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(ellipse at 18% 0%, rgba(232, 198, 138, .18), transparent 32rem),
+      var(--paper);
+    color: var(--ink);
+    font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  button, a { font: inherit; }
+  a { color: var(--saffron); }
+  button:focus-visible, a:focus-visible { outline: 3px solid #d4a13e; outline-offset: 3px; }
+  .page { max-width: 1220px; padding: 28px 24px 56px; margin: 0 auto; }
+  .topline { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:36px; }
+  .brand { display:flex; align-items:center; gap:11px; color:var(--muted); font-size:.9rem; }
+  .brand-mark {
+    display:grid; place-items:center; width:38px; height:38px; border-radius:12px;
+    background:#f4e6cd; color:var(--saffron); font-size:1.2rem;
+  }
+  .top-links { display:flex; gap:18px; font-size:.88rem; }
+  .top-links a { text-decoration:none; }
+  .top-links a:hover { text-decoration:underline; }
+  .hero { max-width:850px; margin:0 auto 32px; text-align:center; }
+  .eyebrow {
+    color:var(--saffron); text-transform:uppercase; letter-spacing:.15em;
+    font-weight:750; font-size:.72rem;
+  }
+  h1 { margin:9px 0 10px; font:600 clamp(2.25rem, 5vw, 3.7rem)/1.08 Georgia, "Times New Roman", serif; letter-spacing:-.04em; }
+  .hero p { max-width:690px; margin:0 auto; color:var(--muted); font-size:1.04rem; }
+  .controls { display:flex; align-items:center; gap:12px; margin:25px 0 16px; }
+  .crumbs { display:flex; align-items:center; gap:8px; flex:1; min-width:0; flex-wrap:wrap; color:var(--muted); font-size:.88rem; }
+  .crumb {
+    border:0; padding:3px 0; background:none; color:var(--saffron); cursor:pointer;
+    text-decoration:underline; text-underline-offset:3px;
+  }
+  .crumb.current { color:var(--ink); text-decoration:none; font-weight:650; cursor:default; }
+  .crumb-sep { color:#b9aa97; }
+  .back, .overview {
+    border:1px solid var(--line); border-radius:999px; padding:8px 14px;
+    background:var(--surface); color:var(--ink); cursor:pointer; font-size:.85rem;
+  }
+  .back:hover, .overview:hover { border-color:#c9a66a; background:#fffaf0; }
+  .back:disabled { opacity:.45; cursor:default; }
+  .canvas {
+    min-height:420px; padding:28px; border:1px solid var(--line); border-radius:24px;
+    background:rgba(255,254,250,.88); box-shadow:var(--shadow); overflow:hidden;
+  }
+  .canvas-head { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:24px; }
+  .canvas-head h2 { margin:0 0 5px; font:600 clamp(1.35rem, 3vw, 1.8rem)/1.25 Georgia, "Times New Roman", serif; }
+  .canvas-head p { max-width:700px; margin:0; color:var(--muted); }
+  .level-tag { flex:none; border:1px solid var(--line); border-radius:999px; padding:5px 10px; color:var(--muted); font-size:.76rem; }
+  .flow {
+    display:grid; grid-template-columns:repeat(var(--columns, 4), minmax(0, 1fr));
+    align-items:stretch; gap:28px; position:relative;
+  }
+  .flow-node {
+    position:relative; text-align:left; min-height:155px; padding:18px;
+    border:1px solid var(--line); border-radius:17px; background:var(--surface);
+    color:var(--ink); box-shadow:0 9px 25px -24px rgba(31,25,18,.7);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  button.flow-node { cursor:pointer; }
+  button.flow-node:hover { transform:translateY(-3px); border-color:#d2ae70; box-shadow:0 16px 30px -23px rgba(84,46,14,.48); }
+  .flow-node:not(:last-child)::after {
+    content:""; position:absolute; width:28px; height:1px; background:#cdbb9f;
+    right:-29px; top:50%;
+  }
+  .flow-node:not(:last-child)::before {
+    content:""; position:absolute; z-index:1; right:-29px; top:calc(50% - 3px);
+    width:6px; height:6px; border-top:1px solid #b1956a; border-right:1px solid #b1956a;
+    transform:rotate(45deg);
+  }
+  .flow.no-arrows .flow-node::after, .flow.no-arrows .flow-node::before { display:none; }
+  .node-index { color:#aa9b87; font-size:.72rem; letter-spacing:.1em; font-weight:750; }
+  .node-icon { display:grid; place-items:center; width:35px; height:35px; margin:12px 0 10px; border-radius:11px; font-size:1rem; }
+  .tone-saffron .node-icon { color:var(--saffron); background:#f8e8dc; }
+  .tone-gold .node-icon { color:#8b641b; background:#f5edd8; }
+  .tone-green .node-icon { color:var(--green); background:#e5efe7; }
+  .tone-blue .node-icon { color:var(--blue); background:#e7eff3; }
+  .tone-violet .node-icon { color:var(--violet); background:#efe8f1; }
+  .flow-node h3 { margin:0 0 5px; font-size:1rem; line-height:1.25; }
+  .flow-node p { margin:0; color:var(--muted); font-size:.82rem; line-height:1.45; }
+  .drill { display:flex; align-items:center; gap:5px; margin-top:14px; color:var(--saffron); font-size:.77rem; font-weight:700; }
+  .details {
+    display:grid; grid-template-columns:minmax(0, 1.55fr) minmax(240px, .8fr);
+    gap:22px; margin-top:24px;
+  }
+  .detail-card { padding:20px; border:1px solid var(--line); border-radius:17px; background:#fffdf8; }
+  .detail-card h3 { margin:0 0 9px; font:600 1.08rem Georgia, "Times New Roman", serif; }
+  .detail-card p { margin:0; color:#5f554a; }
+  .detail-card ul { margin:12px 0 0; padding-left:19px; color:#5f554a; }
+  .detail-card li + li { margin-top:7px; }
+  .file-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .file-link {
+    display:inline-flex; align-items:center; padding:5px 9px; border:1px solid var(--line);
+    border-radius:8px; background:white; font-size:.78rem; text-decoration:none;
+  }
+  .file-link:hover { background:#fff5e6; border-color:#d5b780; }
+  .callout {
+    margin-top:20px; padding:13px 16px; border-left:3px solid var(--gold);
+    border-radius:0 11px 11px 0; background:#fbf4e6; color:#5d4b2a; font-size:.9rem;
+  }
+  .callout strong { color:#4c3b1f; }
+  .callout.blue { border-color:var(--blue); background:#edf4f6; color:#405c69; }
+  .callout.red { border-color:var(--saffron); background:#fbefea; color:#70402c; }
+  .legend { display:flex; justify-content:center; flex-wrap:wrap; gap:17px; margin:18px 0 0; color:var(--muted); font-size:.78rem; }
+  .legend span { display:flex; align-items:center; gap:7px; }
+  .legend i { display:block; width:8px; height:8px; border-radius:50%; background:var(--gold); }
+  .legend .legend-reference { background:var(--green); }
+  .legend .legend-model { background:var(--blue); }
+  .legend .legend-output { background:var(--violet); }
+  .foot { display:flex; justify-content:space-between; gap:20px; margin:20px 2px 0; color:var(--muted); font-size:.78rem; }
+  .foot a { color:var(--muted); }
+  @media (max-width:900px) {
+    .flow { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .flow-node:not(:last-child)::after, .flow-node:not(:last-child)::before { display:none; }
+    .details { grid-template-columns:1fr; }
+  }
+  @media (max-width:560px) {
+    .page { padding:18px 14px 36px; }
+    .topline { align-items:flex-start; margin-bottom:29px; }
+    .top-links { gap:10px; flex-direction:column; text-align:right; }
+    .controls { align-items:flex-start; }
+    .back { white-space:nowrap; }
+    .canvas { min-height:0; padding:18px 14px; border-radius:18px; }
+    .canvas-head { flex-direction:column; gap:10px; }
+    .flow { grid-template-columns:1fr; gap:12px; }
+    .flow-node { min-height:0; padding:15px; }
+    .node-icon { float:left; margin:0 12px 9px 0; }
+    .node-index { display:block; margin-bottom:5px; }
+    .foot { flex-direction:column; gap:6px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="topline">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">व</span><span>Vāgdhenu · system map</span></div>
+    <nav class="top-links" aria-label="Project links">
+      <a href="../README.md">Project README</a>
+      <a href="TECH_REPORT.md">Technical report</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow">Interactive architecture explorer</div>
+    <h1>From Sanskrit verse<br>to traditional chant</h1>
+    <p>Start with the end-to-end map. Select any component to zoom in, follow its subcomponents, and use the breadcrumbs to move back out.</p>
+  </header>
+
+  <div class="controls">
+    <nav id="breadcrumbs" class="crumbs" aria-label="Architecture path"></nav>
+    <button id="back" class="back" type="button" aria-label="Go back one level">← Back</button>
+    <button id="overview" class="overview" type="button">Overview</button>
+  </div>
+
+  <section id="canvas" class="canvas" aria-live="polite" aria-atomic="false"></section>
+  <div class="legend" aria-label="Component colors">
+    <span><i></i>Text &amp; analysis</span><span><i class="legend-reference"></i>Reference conditioning</span>
+    <span><i class="legend-model"></i>Neural synthesis</span><span><i class="legend-output"></i>Audio &amp; serving</span>
+  </div>
+  <footer class="foot">
+    <span>Architecture reflects the public repository and its technical report.</span>
+    <span><a href="TECH_REPORT.md">Read the full technical report ↗</a></span>
+  </footer>
+</main>
+<script>
+const tree = {
+  id: "system",
+  title: "End-to-end system",
+  subtitle: "A request is normalized, paired with a chant reference, synthesized, then cleaned and returned as audio.",
+  kind: "System overview",
+  children: [
+    {
+      id: "input", title: "Verse input", icon: "Aa", tone: "saffron",
+      summary: "One Sanskrit śloka arrives in a supported Indic script.",
+      description: "The interactive demo accepts one verse per request. Newlines and daṇḍas are meaningful boundaries for the renderer.",
+      bullets: ["Devanagari, Kannada, Telugu, Malayalam, Bengali, Gujarati, Gurmukhi, Oriya, and Grantha are supported by script detection.", "The demo checks for empty or excessively long/multi-verse input before scheduling GPU work.", "Roman transliteration is not auto-detected by the text frontend; transliterate it before passing it in."],
+      files: [["Demo UI", "../demo/app.py"], ["Input limits", "../src/limits.py"]],
+      children: [
+        { id:"input-script", title:"Script identification", icon:"文", tone:"saffron", summary:"Identify the Unicode block containing the first Indic-script character.", description:"The frontend chooses a sanscript scheme from Unicode ranges, then normalizes the input into Devanagari for the rest of its language processing.", bullets:["Script is detected automatically for supported Brahmic scripts.","Tamil script is inherently lossy for Sanskrit distinctions; Grantha is supported for Tamil-region Sanskrit."], files:[["prep_text.py", "../src/prep_text.py"]] },
+        { id:"input-boundaries", title:"Verse boundaries", icon:"¶", tone:"gold", summary:"Preserve lines and split on daṇḍa punctuation.", description:"The render core splits free text first on newlines, then on danda-like delimiters, dropping empty pieces. This controls the units that will be rendered and stitched.", bullets:["The intended demo input is a single verse.","Batch input can provide explicit padas as a list."], files:[["render_core.py", "../src/render_core.py"]] }
+      ]
+    },
+    {
+      id: "frontend", title: "Text frontend", icon: "अ", tone: "saffron",
+      summary: "Convert the verse into the script and pronunciations expected by the model.",
+      description: "A Sanskrit-specific normalization layer prevents script-related pronunciation errors and applies selected phonetic repairs before synthesis.",
+      bullets: ["Normalize source script to Devanagari, strip non-spoken punctuation, then route model text through Kannada.", "Select plain or sandhi-aware processing according to the render request.", "Apply targeted anusvāra, visarga, and rare-conjunct fixes."],
+      files: [["Text prep", "../src/prep_text.py"], ["Renderer", "../src/render_core.py"]],
+      children: [
+        { id:"frontend-script", title:"Devanagari → Kannada", icon:"ಕ", tone:"saffron", summary:"Route Sanskrit through Kannada rather than asking the model to read raw Devanagari.", description:"IndicF5's behavior on Devanagari can apply Hindi-style schwa deletion. The frontend transliterates Devanagari through SLP1 into Kannada, which better matches the model's intended Indic pronunciation path.", bullets:["Any supported source script is first converted to Devanagari.","SLP1 is an intermediate transliteration representation, not the final model input."], files:[["prep_text.py", "../src/prep_text.py"]] },
+        { id:"frontend-sandhi", title:"Sandhi & pronunciation", icon:"ः", tone:"gold", summary:"Choose model-compatible Sanskrit sandhi and phonetic spellings.", description:"Two model text modes exist: plain Kannada-routed text, and a sandhi-aware path. Renderer helpers then apply additional targeted rules.", bullets:["Sandhi mode handles selected utva/rutva/lopa rules; it is not a general Sanskrit grammar engine.","Anusvāra is mapped to a homorganic nasal before consonants when appropriate.","Final visarga, visarga before kṣa, h+n conjuncts, and vocalic ḷ have special handling."], files:[["Text prep", "../src/prep_text.py"], ["Render core", "../src/render_core.py"]] },
+        { id:"frontend-units", title:"Piece preparation", icon:"|", tone:"saffron", summary:"Prepare each pada/hemistich as a separate synthesis unit.", description:"The renderer applies text rules per piece, counts syllabic nuclei for duration estimation, and inserts configured gaps when pieces are stitched.", bullets:["Piece boundaries affect timing and pauses.","Repeat-depth checks may switch to a matching repeat-prime reference."], files:[["Render core", "../src/render_core.py"]] }
+      ]
+    },
+    {
+      id: "meter", title: "Chandas & reference", icon: "◌", tone: "green",
+      summary: "Identify the meter and retrieve an appropriate chant example.",
+      description: "Meter analysis maps the verse to a bank entry. That entry supplies reference audio, matching reference text, and a pace value.",
+      bullets: ["The chandas engine scans syllables and weighs them as laghu/guru for meter recognition.", "Unrecorded meters can map to a surrogate; unknown meters use a general fallback.", "The reference is a real style signal: it carries speaker quality, chant contour, and relative pace."],
+      files: [["Chandas package", "../src/chandas/"], ["Meter bridge", "../src/chandas_bridge.py"], ["Reference bank", "../src/reference_bank/bank.json"]],
+      children: [
+        { id:"meter-analysis", title:"Syllable scan & identification", icon:"L·G", tone:"green", summary:"Scan Sanskrit syllables, then identify a classical meter.", description:"The local chandas package analyses syllable structure and weight. The bridge attempts exact classical varṇa-meter matching and then uses broader meter summaries for cases including śloka and jāti forms.", bullets:["Handles multiple pādas and hemistichs, with fallback strategies for mixed or incomplete input.","The bridge returns a canonical reference-bank key when a usable match exists."], files:[["Chandas bridge", "../src/chandas_bridge.py"], ["Meter tests", "../tests/test_chandas_bridge.py"]] },
+        { id:"meter-map", title:"Meter-to-bank mapping", icon:"↗", tone:"green", summary:"Resolve an identified meter to a recorded meter or surrogate.", description:"The bridge maps meter names to available recordings, including surrogate choices based on meter family and syllables-per-pāda. If it cannot resolve a bank entry, the renderer falls back to vasantatilakā.", bullets:["Identification and exact recording availability are separate: a recognized meter may use a surrogate recording.","Manual meter selection can bypass automatic identification in the demo."], files:[["Meter bridge", "../src/chandas_bridge.py"], ["Reference bank", "../src/reference_bank/bank.json"]] },
+        { id:"reference", title:"Reference audio & transcript", icon:"♫", tone:"green", summary:"Load and preprocess the selected style example.", description:"Each bank record associates a WAV file with ref_text, the text that must correspond to the audio's spoken span. The renderer preprocesses and caches references for reuse.", bullets:["The half-reference rule: the reference transcript must match exactly what is spoken in the audio.","Bank entries also provide sec_per_syll for duration targeting.","Repeat-prime clips can replace the meter reference for repeated-token patterns."], files:[["Reference bank JSON", "../src/reference_bank/bank.json"], ["Renderer", "../src/render_core.py"]] }
+      ]
+    },
+    {
+      id: "acoustic", title: "Acoustic model", icon: "DiT", tone: "blue",
+      summary: "Generate mel features from target text using F5 flow matching and reference context.",
+      description: "IndicF5/F5-TTS is the learned speech-generation core. The production checkpoint is fine-tuned/voice-steered for chant, while reference conditioning supplies much of the chant style.",
+      bullets: ["A non-autoregressive flow-matching DiT performs mel infilling conditioned on reference audio/text and target text.", "There is no native duration or pitch head in this architecture.", "Duration is guided by a total-length target; syllables are not individually forced to exact durations."],
+      files: [["Renderer/model load", "../src/render_core.py"], ["Fine-tuning script", "../training/finetune_indicf5.py"], ["Technical report", "TECH_REPORT.md"]],
+      children: [
+        { id:"acoustic-backbone", title:"IndicF5 / F5-TTS DiT", icon:"DiT", tone:"blue", summary:"The neural acoustic backbone predicts the mel representation.", description:"The public setup loads IndicF5's F5-TTS DiT configuration and a Vāgdhenu voice checkpoint. The model uses reference-conditioned infilling rather than an explicit duration/pitch predictor.", bullets:["Documented configuration: dimension 1024, depth 22, 16 heads, text dimension 512.","Model output is passed to the vocoder as 100-band, 24 kHz Vocos-style mel features."], files:[["Render core", "../src/render_core.py"], ["Training script", "../training/finetune_indicf5.py"]] },
+        { id:"acoustic-conditioning", title:"Reference conditioning", icon:"＋", tone:"green", summary:"Provide reference waveform and matching transcript with the target text.", description:"F5 inference consumes a preprocessed reference audio/text pair. The report's central finding is that the reference—not an external text-side pitch plan—is the effective prosody lever.", bullets:["Voice, pace, and swara contour transfer from the reference to varying degrees.","The voice-steered checkpoint increases responsiveness to reference style.","A reference transcript mismatch or overly long clip can hurt quality."], files:[["Render core", "../src/render_core.py"], ["Technical report", "TECH_REPORT.md"]] },
+        { id:"duration", title:"Duration & stochastic inference", icon:"⏱", tone:"blue", summary:"Set an overall mel duration and sample the flow-matching trajectory.", description:"The renderer estimates fix_duration from reference length plus syllable count × sec_per_syll. It retries seeds if the waveform energy indicates a likely failed/collapsed take.", bullets:["The duration target is an overall length, not a per-syllable duration regulator.","Production defaults documented in the report include Euler sampling, 64 function evaluations, and configurable CFG strength.","Different seeds can vary in pauses, articulation, and melody."], files:[["Render core", "../src/render_core.py"], ["Technical report", "TECH_REPORT.md"]] }
+      ]
+    },
+    {
+      id: "vocoder", title: "Vocoder", icon: "≈", tone: "violet",
+      summary: "Turn the model's mel representation into the final audio waveform.",
+      description: "BigVGAN-v2, fine-tuned on the F5/Vocos mel representation, performs neural waveform synthesis after acoustic inference.",
+      bullets: ["The renderer captures F5's mel output, then decodes it with the fine-tuned BigVGAN checkpoint.", "The public renderer loads NVIDIA's BigVGAN architecture and applies the Vāgdhenu weights.", "The report documents BigVGAN as the production vocoder to avoid long-vowel artifacts."],
+      files: [["Render core", "../src/render_core.py"], ["Vocoder training", "../training/bigvgan_vocoder_train.py"], ["Weight download", "../scripts/download_weights.py"]],
+      children: [
+        { id:"mel", title:"F5 mel features", icon:"▥", tone:"blue", summary:"Intermediate acoustic representation passed between model and vocoder.", description:"F5 inference returns a mel-like representation; the renderer captures the Vocos-format features from the inference vocoder wrapper. They are not the final audio.", bullets:["Feature format and dimensions must agree with the trained BigVGAN setup.","The renderer normalizes axis order before vocoding when needed."], files:[["Render core", "../src/render_core.py"]] },
+        { id:"bigvgan", title:"BigVGAN-v2 decoder", icon:"♫", tone:"violet", summary:"Decode mel features into a 24 kHz waveform.", description:"The NVIDIA BigVGAN-v2 model maps acoustic features to waveform samples. Vāgdhenu's fine-tuned weights adapt it to F5's mel output.", bullets:["BigVGAN code is installed from NVIDIA's repository, not as a pip package.","The model is loaded once per Renderer, then reused for subsequent clips."], files:[["Render core", "../src/render_core.py"], ["Setup script", "../scripts/setup.sh"]] }
+      ]
+    },
+    {
+      id: "post", title: "Audio post-processing", icon: "◖", tone: "violet",
+      summary: "Trim artifacts, preserve edge consonants, and assemble pieces with pauses.",
+      description: "Post-processing is deliberately small and speech-aware: remove model padding, protect quiet phonetic edges, then stitch the requested pieces.",
+      bullets: ["An RMS gate trims leading/trailing padding and applies short fades.", "Fricative-aware and halant-aware modes avoid clipping quiet initial fricatives or final stop bursts.", "Configured silence is inserted between rendered units."],
+      files: [["Render core", "../src/render_core.py"], ["Batch renderer", "../src/render.py"]],
+      children: [
+        { id:"gate", title:"Speech-boundary gate", icon:"⌁", tone:"violet", summary:"Locate speech edges using short-window RMS energy.", description:"The gate removes model/vocoder padding and edge artifacts, while optional handling preserves low-energy fricatives at the start and weak bursts at a final halant.", bullets:["Fades are used to reduce clicks at trimmed boundaries.","The gate returns the original audio if there are too few analysis windows."], files:[["Render core", "../src/render_core.py"]] },
+        { id:"stitch", title:"Pause & stitch", icon:"···", tone:"violet", summary:"Join independently rendered pieces with intentional gaps.", description:"The renderer gates each piece, inserts a configured silence buffer, and concatenates the segments into a single output waveform.", bullets:["A longer configured pause is added when a piece ends in a virāma/halant.","The batch renderer writes dry audio; production assembly can add ambience or tanpura later."], files:[["Render core", "../src/render_core.py"], ["Batch renderer", "../src/render.py"]] }
+      ]
+    },
+    {
+      id: "serving", title: "Serving & batch flow", icon: "⇢", tone: "saffron",
+      summary: "Expose synthesis through the Gradio demo or process shard JSON for batch rendering.",
+      description: "Interactive and batch paths share the reusable synthesis core. The demo caches the model in-process; batch rendering loads models once and iterates over clips.",
+      bullets: ["Gradio validates and meter-resolves input before calling the GPU render function.", "The first request downloads/loads weights; later requests reuse the renderer.", "The repo contains local renderers and scripts, while some large-scale production orchestration is described only in the technical report."],
+      files: [["Demo app", "../demo/app.py"], ["Batch renderer", "../src/render.py"], ["Render core", "../src/render_core.py"], ["Example shard", "../examples/sample_shard.json"]],
+      children: [
+        { id:"demo-flow", title:"Interactive Gradio demo", icon:"◎", tone:"saffron", summary:"A person submits one verse and receives generated audio.", description:"The demo handles validation, optional automatic meter detection, per-IP quota accounting, GPU allocation, asset download, and rendering.", bullets:["Only the render call is wrapped for on-demand GPU allocation.","The renderer instance is cached after its first initialization.","Errors are surfaced to the user through Gradio messages."], files:[["Demo app", "../demo/app.py"], ["Limits", "../src/limits.py"]] },
+        { id:"batch-flow", title:"Shard-based renderer", icon:"▤", tone:"saffron", summary:"Process many clips with one model load.", description:"The command-line renderer reads shard JSON, renders each clip, writes audio and result records, and reuses the loaded DiT and vocoder across the shard.", bullets:["Typical fields include id, meter, padas, seed, and output path.","Production clip building, large fan-out, and media assembly are not all included in this public checkout."], files:[["Batch renderer", "../src/render.py"], ["Sample shard", "../examples/sample_shard.json"]] }
+      ]
+    }
+  ]
+};
+
+const byId = new Map();
+function indexNodes(node) {
+  byId.set(node.id, node);
+  (node.children || []).forEach(indexNodes);
+}
+indexNodes(tree);
+const path = [tree.id];
+const canvas = document.getElementById("canvas");
+const crumbs = document.getElementById("breadcrumbs");
+const back = document.getElementById("back");
+
+function safeText(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  })[character]);
+}
+function renderCrumbs() {
+  crumbs.innerHTML = path.map((id, index) => {
+    const node = byId.get(id);
+    const label = safeText(node.title);
+    if (index === path.length - 1) return `<span class="crumb current" aria-current="page">${label}</span>`;
+    return `<button class="crumb" type="button" data-index="${index}">${label}</button><span class="crumb-sep" aria-hidden="true">/</span>`;
+  }).join("");
+  crumbs.querySelectorAll("[data-index]").forEach(button => {
+    button.addEventListener("click", () => {
+      path.splice(Number(button.dataset.index) + 1);
+      render();
+    });
+  });
+  back.disabled = path.length === 1;
+}
+function renderFiles(files) {
+  if (!files || !files.length) return "";
+  return `<div class="file-links">${files.map(([label, href]) =>
+    `<a class="file-link" href="${safeText(href)}">${safeText(label)} ↗</a>`
+  ).join("")}</div>`;
+}
+function renderNodeCard(node, index) {
+  const card = `<span class="node-index">${String(index + 1).padStart(2, "0")}</span>
+    <span class="node-icon" aria-hidden="true">${safeText(node.icon || "•")}</span>
+    <h3>${safeText(node.title)}</h3><p>${safeText(node.summary)}</p>
+    ${node.children?.length ? '<span class="drill">Explore component <span aria-hidden="true">↗</span></span>' : ""}`;
+  if (node.children?.length) {
+    return `<button type="button" class="flow-node tone-${safeText(node.tone || "saffron")}" data-node="${safeText(node.id)}" aria-label="Zoom into ${safeText(node.title)}">${card}</button>`;
+  }
+  return `<article class="flow-node tone-${safeText(node.tone || "saffron")}">${card}</article>`;
+}
+function render() {
+  const node = byId.get(path[path.length - 1]);
+  renderCrumbs();
+  const children = node.children || [];
+  const list = children.length ? `<div class="flow${children.length > 4 ? " no-arrows" : ""}" style="--columns:${Math.min(children.length, 4)}">${children.map(renderNodeCard).join("")}</div>` : "";
+  const detail = node.id === "system" ? `
+    <div class="details">
+      <article class="detail-card"><h3>How to read the map</h3>
+        <p>Follow the cards from left to right. The green reference branch explains how meter selection supplies chant style and pacing; the blue model branch is the learned synthesis engine; the violet branch converts and cleans the audio.</p>
+      </article>
+      <article class="detail-card"><h3>Core architectural point</h3>
+        <p>Meter selection does not directly prescribe a pitch melody. In this system, chant contour and pace are mainly carried by the reference recording.</p>
+      </article>
+    </div>
+    <div class="callout"><strong>Tip:</strong> click a card to zoom into that component. Continue clicking its child cards to follow the flow in more detail.</div>` : `
+    <div class="details">
+      <article class="detail-card"><h3>${safeText(node.title)} — component notes</h3>
+        <p>${safeText(node.description || node.summary)}</p>
+        ${node.bullets?.length ? `<ul>${node.bullets.map(item => `<li>${safeText(item)}</li>`).join("")}</ul>` : ""}
+        ${renderFiles(node.files)}
+      </article>
+      <article class="detail-card"><h3>In the end-to-end flow</h3>
+        <p>${safeText(node.id === "meter" || node.id === "reference" || node.id === "meter-map" ? "This is the style-selection branch: it determines which example conditions synthesis." :
+          node.id === "acoustic" || node.id === "acoustic-backbone" || node.id === "duration" ? "This is the central learned-generation stage. Text and reference context enter here; mel features leave it." :
+          node.id === "vocoder" || node.id === "bigvgan" || node.id === "mel" ? "This stage converts the acoustic representation into waveform audio." :
+          node.id === "post" || node.id === "gate" || node.id === "stitch" ? "This stage prepares the generated waveform for playback or downstream assembly." :
+          node.id === "serving" || node.id === "demo-flow" || node.id === "batch-flow" ? "This is the application boundary around the shared synthesis core." :
+          "This stage transforms or analyzes the verse before the neural synthesis step.")}</p>
+      </article>
+    </div>
+    ${node.id === "acoustic" || node.id === "acoustic-backbone" ? '<div class="callout blue"><strong>Important:</strong> F5 has no native duration or pitch head here. The renderer sets a total duration target; reference audio is the effective chant-style/prosody lever.</div>' : ""}
+    ${node.id === "meter" || node.id === "reference" ? '<div class="callout"><strong>Reference matching matters:</strong> ref_text must correspond exactly to the spoken span of its WAV. A clean half-verse reference is often more useful than a longer mismatched clip.</div>' : ""}
+    ${node.id === "system" ? "" : '<div class="callout red"><strong>Scope note:</strong> the technical report covers production workflows beyond this checkout. Links here point to components present in the public repository when available.</div>'}`;
+  canvas.innerHTML = `
+    <div class="canvas-head">
+      <div><h2>${safeText(node.title)}</h2><p>${safeText(node.subtitle || node.summary || "Explore the parts of this component.")}</p></div>
+      <span class="level-tag">${safeText(node.kind || (children.length ? "Component detail" : "Subcomponent"))}</span>
+    </div>
+    ${list}
+    ${detail}`;
+  canvas.querySelectorAll("[data-node]").forEach(button => {
+    button.addEventListener("click", () => {
+      path.push(button.dataset.node);
+      render();
+      document.querySelector(".canvas").scrollIntoView({ behavior:"smooth", block:"start" });
+    });
+  });
+}
+back.addEventListener("click", () => {
+  if (path.length > 1) path.pop();
+  render();
+});
+document.getElementById("overview").addEventListener("click", () => {
+  path.splice(1);
+  render();
+});
+render();
+</script>
+</body>
+</html>

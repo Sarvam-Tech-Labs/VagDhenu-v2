@@ -223,6 +223,18 @@ class Renderer:
         import torchaudio as ta
         self._ta = ta
 
+        def _load_audio_file(path):
+            try:
+                import soundfile as _sf
+                _d, _sr = _sf.read(path)
+                _t = torch.from_numpy(_d).float()
+                if _t.ndim == 1: _t = _t.unsqueeze(0)
+                elif _t.ndim == 2 and _t.shape[0] != 1 and _t.shape[1] == 1: _t = _t.transpose(0, 1)
+                return _t, _sr
+            except Exception:
+                return ta.load(path)
+        self._audio_load = _load_audio_file
+
         CFG = dict(dim=1024, depth=22, heads=16, ff_mult=2, text_dim=512, conv_layers=4)
         # vocab.txt (IndicF5's MIT tokenizer vocab) ships beside the bank; fall back to the IndicF5
         # cache for legacy local setups. Never index an empty glob.
@@ -285,7 +297,7 @@ class Renderer:
         ref_wav = os.path.join(self._bdir, e["wav"]); ref_text = e["ref_text"]
         sps = float(e.get("sec_per_syll", 0.26))
         ref_audio, ref_t = self._preprocess(ref_wav, ref_text, clip_short=True)
-        ra, sr = self._ta.load(ref_audio); ref_len = ra.shape[-1] / sr
+        ra, sr = self._audio_load(ref_audio); ref_len = ra.shape[-1] / sr
         val = (ref_audio, ref_t, sps, ref_len)
         self._refcache[key] = val
         return val
@@ -331,7 +343,7 @@ class Renderer:
         if _pick:
             _pv = self._primes[_pick]
             _ra, _rt = self._preprocess(os.path.join(self._bdir, _pv["wav"]), _pv["ref_text"], clip_short=True)
-            _prb, _psr = self._ta.load(_ra); ref_len = _prb.shape[-1] / _psr
+            _prb, _psr = self._audio_load(_ra); ref_len = _prb.shape[-1] / _psr
 
         NSYLL = [n_aksharas(x) for x in PIECES]
         GAPS = [np.zeros(int(self.gap*SR) + (int(self.gap_halant*SR) if _ends_halant(_p) else 0),

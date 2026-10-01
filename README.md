@@ -28,6 +28,8 @@ examples/    sample inputs + rendered outputs
 scripts/     env setup + weight download
 ```
 
+Explore the system interactively: [architecture drill-down](docs/architecture.html).
+
 ## Install & quickstart
 Requires **Python 3.10** and a **CUDA 12.1 GPU**.
 ```bash
