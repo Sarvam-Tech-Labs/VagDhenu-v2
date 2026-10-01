@@ -3,17 +3,19 @@ Loads the model ONCE at startup and serves it — no ZeroGPU, no per-visitor quo
 Guards: one shloka per request + 10 renders/IP/day (src/limits.py). Run in the `indicf5` env."""
 import os, sys, json, torch
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "src")
+ROOT = os.path.dirname(HERE)
+SRC = os.path.join(ROOT, "src")
 sys.path.insert(0, SRC)
 import gradio as gr
 import limits
 from render_core import Renderer, detect_meter_key
 from indic_transliteration import sanscript as _S
 
+MODELS_DIR = os.path.join(ROOT, "models")
 BANK  = os.path.join(SRC, "reference_bank", "bank.json")
-VOCAB = os.path.join(SRC, "reference_bank", "vocab.txt")
-VOICE = os.environ.get("VAGDHENU_VOICE", os.path.join(HERE, "weights", "voice_steer.pt"))
-VOC   = os.environ.get("VAGDHENU_VOC",   "/home/ece/Prathosh/CHAMPION_2026-06-11/voc_bigvgan_EMA_2026-06-11.pth")
+VOCAB = os.path.join(MODELS_DIR, "vocab.txt") if os.path.exists(os.path.join(MODELS_DIR, "vocab.txt")) else os.path.join(SRC, "reference_bank", "vocab.txt")
+VOICE = os.environ.get("VAGDHENU_VOICE", os.path.join(MODELS_DIR, "voice_steer_ema_2026-06-17.pt"))
+VOC   = os.environ.get("VAGDHENU_VOC",   os.path.join(MODELS_DIR, "voc_bigvgan_EMA_2026-06-11.pth"))
 AUTO  = "__auto__"
 DEVICE = os.environ.get("VAGDHENU_DEVICE", "cuda" if torch.cuda.is_available() else "cpu")
 NFE   = int(os.environ.get("VAGDHENU_NFE", "16" if DEVICE == "cpu" else "32"))
@@ -127,4 +129,4 @@ with gr.Blocks(title="Vāgdhenu — Sanskrit chant", theme=gr.themes.Soft()) as 
     gr.Examples(examples=EXAMPLES, example_labels=EXAMPLE_LABELS, inputs=[txt,meter,seed], label="")
 
 if __name__=="__main__":
-    demo.queue(max_size=64, default_concurrency_limit=2).launch(server_name="0.0.0.0", server_port=7860, show_api=False)
+    demo.queue(max_size=64, default_concurrency_limit=2).launch(server_name="0.0.0.0", server_port=7860)
