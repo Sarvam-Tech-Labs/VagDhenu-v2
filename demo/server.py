@@ -84,19 +84,16 @@ def synthesize(text, meter_choice, seed, mode, request: gr.Request):
     else:
         used,status=meter_choice,f"🪔 Meter: **{meter_choice}**"
 
-    # Execution modes: fast preview vs high quality
-    if mode == "⚡ Fast Preview (Vocos ~6s)":
-        voc = "vocos"
-        nfe_step = 4
-    elif mode == "🚀 Balanced (BigVGAN NFE=8 ~15s)":
-        voc = "bigvgan"
+    # Execution modes: BigVGAN vocoding across all options
+    if mode == "⚡ Fast (BigVGAN NFE=8 ~15s)":
         nfe_step = 8
-    else: # High Fidelity
-        voc = "bigvgan"
-        nfe_step = 16 if DEVICE == "cpu" else 32
+    elif mode == "🚀 High Quality (BigVGAN NFE=16 ~28s)":
+        nfe_step = 16
+    else:  # Studio Fidelity
+        nfe_step = 32
 
     try:
-        sr,audio=RENDERER.render_one(text, used, seed=int(seed), vocoder=voc, nfe=nfe_step)
+        sr,audio=RENDERER.render_one(text, used, seed=int(seed), vocoder="bigvgan", nfe=nfe_step)
     except Exception as e:
         raise gr.Error(f"Sorry, rendering failed: {e}")
     return (sr,audio), status
@@ -117,8 +114,8 @@ with gr.Blocks(title="Vāgdhenu — Sanskrit chant", theme=gr.themes.Soft()) as 
             with gr.Accordion("⚙️ Advanced (optional)", open=False):
                 meter=gr.Dropdown(METER_CHOICES, value=AUTO, label="Meter (chandas)",
                                   info="Leave on Auto-detect unless you know the meter.")
-                mode=gr.Radio(["⚡ Fast Preview (Vocos ~6s)", "🚀 Balanced (BigVGAN NFE=8 ~15s)", "💎 High Fidelity (BigVGAN NFE=16)"],
-                              value="🚀 Balanced (BigVGAN NFE=8 ~15s)", label="Speed / Quality Mode")
+                mode=gr.Radio(["⚡ Fast (BigVGAN NFE=8 ~15s)", "🚀 High Quality (BigVGAN NFE=16 ~28s)", "💎 Studio Fidelity (BigVGAN NFE=32)"],
+                              value="⚡ Fast (BigVGAN NFE=8 ~15s)", label="Speed / Quality Mode")
                 seed=gr.Slider(0,1000,value=60,step=1,label="Seed")
             btn=gr.Button("🎧 Chant it", variant="primary", size="lg")
         with gr.Column(scale=2):
