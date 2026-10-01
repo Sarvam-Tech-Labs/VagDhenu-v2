@@ -179,6 +179,32 @@ class TestChandasEndToEnd(unittest.TestCase):
         res = chandas_bridge.analyze_verse_meter(v)
         self.assertEqual(res["bank_key"], "anuṣṭubh")
 
+    # ── 4. SMART PĀDA SEGMENTATION TESTS ────────────────────────────────────
+
+    def test_23_smart_split_unpunctuated_anustubh(self):
+        from render_core import split_padas
+        v = "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय"
+        padas = split_padas(v)
+        self.assertEqual(len(padas), 2)
+        self.assertEqual(padas[0], "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः")
+        self.assertEqual(padas[1], "मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय")
+
+    def test_24_smart_split_unpunctuated_upajati(self):
+        from render_core import split_padas
+        v = "अवैदिकं माध्यमिकं निरस्तं निरीक्ष्य तत्पक्षसुपक्षपाती तमेव पक्षं प्रतिपादुकोऽसौ न्यरूरुपन्मार्गमिहानुरूपम्"
+        padas = split_padas(v)
+        self.assertEqual(len(padas), 2)
+        self.assertEqual(padas[0], "अवैदिकं माध्यमिकं निरस्तं निरीक्ष्य तत्पक्षसुपक्षपाती")
+        self.assertEqual(padas[1], "तमेव पक्षं प्रतिपादुकोऽसौ न्यरूरुपन्मार्गमिहानुरूपम्")
+
+    def test_25_smart_split_punctuated_preserved(self):
+        from render_core import split_padas
+        v = "सन्ततं चिन्तयेत् कण्ठं भास्वत्कौस्तुभभासकम् । वैकुण्ठस्याखिला वेदा उद्गीर्यन्तेऽनिशं यतः ॥"
+        padas = split_padas(v)
+        self.assertEqual(len(padas), 2)
+        self.assertEqual(padas[0], "सन्ततं चिन्तयेत् कण्ठं भास्वत्कौस्तुभभासकम्")
+        self.assertEqual(padas[1], "वैकुण्ठस्याखिला वेदा उद्गीर्यन्तेऽनिशं यतः")
+
 
 if __name__ == "__main__":
     unittest.main()

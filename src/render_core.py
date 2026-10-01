@@ -167,12 +167,26 @@ def _ends_halant(txt):
 
 _DANDAS = "।॥|"
 def split_padas(text):
-    """Split a free-text shloka into hemistich/pada pieces: newlines first, then dandas. Empty drop."""
+    """Split a free-text shloka into hemistich/pada pieces.
+    If punctuation (dandas or newlines) is missing, utilizes the chandas prosody
+    engine to automatically segment at authentic metric boundaries."""
     pieces = []
     for line in text.replace("॥", "।").replace("|", "।").splitlines():
         for seg in line.split("।"):
             seg = seg.strip()
             if seg: pieces.append(seg)
+    if len(pieces) >= 2:
+        return pieces
+
+    # If unpunctuated continuous verse, use smart prosody-guided segmentation
+    try:
+        from chandas_bridge import smart_split_padas
+        smart_pieces = smart_split_padas(text)
+        if len(smart_pieces) >= 2:
+            return smart_pieces
+    except Exception:
+        pass
+
     return pieces or ([text.strip()] if text.strip() else [])
 
 

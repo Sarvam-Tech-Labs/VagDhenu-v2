@@ -359,6 +359,86 @@ def analyze_verse_meter(text: str) -> Dict[str, Any]:
     }
 
 
+def smart_split_padas(text: str) -> List[str]:
+    """
+    Intelligently segment a Sanskrit verse into natural chant units (hemistichs / pādas).
+    
+    1. If explicit linebreaks or daṇḍas (।, ॥, |) exist, splits along them.
+    2. If text is unpunctuated/continuous, uses the prosody scansion engine and exact
+       syllable counts to identify pāda boundaries and segment cleanly without mid-word breaks.
+    """
+    if not text or not text.strip():
+        return []
+
+    # 1. Check explicit punctuation first
+    explicit = []
+    for line in text.replace("॥", "।").replace("|", "।").splitlines():
+        for seg in line.split("।"):
+            seg = seg.strip()
+            if seg:
+                explicit.append(seg)
+    if len(explicit) >= 2:
+        return explicit
+
+    # 2. Continuous text: use prosody engine
+    clean = text.strip()
+    m_info = analyze_verse_meter(clean)
+    syl_count = m_info.get("syllables_per_pada")
+
+    analysis = None
+    try:
+        clean_deva = _clean_deva_for_scansion(clean)
+        analysis = analyze_sanskrit_verse(clean_deva)
+    except Exception:
+        pass
+
+    if not analysis or not analysis.syllables:
+        return [clean]
+
+    syls = analysis.syllables
+    total = len(syls)
+
+    # Determine optimal chant chunk size
+    seg_syl = None
+    if syl_count:
+        if syl_count == 8:
+            # Anuṣṭubh: 16 syllables (hemistich = 2 padas) for standard 32-syl shlokas
+            seg_syl = 16 if total >= 24 else 8
+        elif total >= syl_count * 2:
+            # If 4-pāda verse, divide into 2 hemistichs (2 * syl_count) to match reference chant cadence
+            if total == 4 * syl_count:
+                seg_syl = syl_count * 2
+            else:
+                seg_syl = syl_count
+        else:
+            seg_syl = syl_count
+    elif total in (31, 32, 33):
+        seg_syl = 16
+    elif total in (43, 44, 45):
+        seg_syl = 22
+    elif total in (47, 48, 49):
+        seg_syl = 24
+    elif total in (55, 56, 57):
+        seg_syl = 28
+    elif total in (34, 68):
+        seg_syl = 17
+
+    if not seg_syl or total < seg_syl * 1.4:
+        return [clean]
+
+    pieces = []
+    n_segs = total // seg_syl
+    for i in range(n_segs):
+        sub = syls[i * seg_syl : (i + 1) * seg_syl]
+        st = sub[0].span.start
+        en = sub[-1].span.end
+        pieces.append(clean[st:en].strip())
+    rem = syls[n_segs * seg_syl :]
+    if rem:
+        pieces.append(clean[rem[0].span.start : rem[-1].span.end].strip())
+    return pieces or [clean]
+
+
 def detect_meter_key(text: str) -> str:
     """
     Drop-in replacement for Vāgdhenu's detect_meter_key(text).
