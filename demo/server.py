@@ -1,7 +1,7 @@
 """Vāgdhenu standalone warm server for a dedicated GPU (ece A6000).
 Loads the model ONCE at startup and serves it — no ZeroGPU, no per-visitor quota wall.
 Guards: one shloka per request + 10 renders/IP/day (src/limits.py). Run in the `indicf5` env."""
-import os, sys, json
+import os, sys, json, torch
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "src")
 sys.path.insert(0, SRC)
@@ -15,10 +15,12 @@ VOCAB = os.path.join(SRC, "reference_bank", "vocab.txt")
 VOICE = os.environ.get("VAGDHENU_VOICE", os.path.join(HERE, "weights", "voice_steer.pt"))
 VOC   = os.environ.get("VAGDHENU_VOC",   "/home/ece/Prathosh/CHAMPION_2026-06-11/voc_bigvgan_EMA_2026-06-11.pth")
 AUTO  = "__auto__"
-NFE   = int(os.environ.get("VAGDHENU_NFE", "32"))
+DEVICE = os.environ.get("VAGDHENU_DEVICE", "cuda" if torch.cuda.is_available() else "cpu")
+NFE   = int(os.environ.get("VAGDHENU_NFE", "16" if DEVICE == "cpu" else "32"))
 
-print(f"[boot] loading model once  voice={VOICE}  nfe={NFE} …", flush=True)
-RENDERER = Renderer(VOICE, VOC, BANK, device="cuda", vocab_file=VOCAB, nfe=NFE)
+print(f"[boot] loading model once  voice={VOICE}  device={DEVICE}  nfe={NFE} …", flush=True)
+RENDERER = Renderer(VOICE, VOC, BANK, device=DEVICE, vocab_file=VOCAB, nfe=NFE,
+                    use_bf16=True, num_workers=2)
 print("[boot] model warm, ready.", flush=True)
 
 _bank = json.load(open(BANK, encoding="utf-8"))
@@ -52,7 +54,7 @@ EX_DEFAULT = EXAMPLES[0][0]
 def _resolve(name):
     k=_ALIAS.get((name or "").lower()); return (k,True) if k else (_FALLBACK,False)
 
-def synthesize(text, meter_choice, seed, request: gr.Request):
+def synthesize(text, meter_choice, seed, mode, request: gr.Request):
     text=(text or "").strip()
     if not text: raise gr.Error("Please paste a verse first 🙏")
     msg = limits.validate_one_shloka(text)
@@ -79,8 +81,20 @@ def synthesize(text, meter_choice, seed, request: gr.Request):
                       f"🪔 Couldn't pin the meter — chanting with **{used}** (a good general fit).")
     else:
         used,status=meter_choice,f"🪔 Meter: **{meter_choice}**"
+
+    # Execution modes: fast preview vs high quality
+    if mode == "⚡ Fast Preview (Vocos ~6s)":
+        voc = "vocos"
+        nfe_step = 4
+    elif mode == "🚀 Balanced (BigVGAN NFE=8 ~15s)":
+        voc = "bigvgan"
+        nfe_step = 8
+    else: # High Fidelity
+        voc = "bigvgan"
+        nfe_step = 16 if DEVICE == "cpu" else 32
+
     try:
-        sr,audio=RENDERER.render_one(text, used, seed=int(seed))
+        sr,audio=RENDERER.render_one(text, used, seed=int(seed), vocoder=voc, nfe=nfe_step)
     except Exception as e:
         raise gr.Error(f"Sorry, rendering failed: {e}")
     return (sr,audio), status
@@ -101,12 +115,14 @@ with gr.Blocks(title="Vāgdhenu — Sanskrit chant", theme=gr.themes.Soft()) as 
             with gr.Accordion("⚙️ Advanced (optional)", open=False):
                 meter=gr.Dropdown(METER_CHOICES, value=AUTO, label="Meter (chandas)",
                                   info="Leave on Auto-detect unless you know the meter.")
+                mode=gr.Radio(["⚡ Fast Preview (Vocos ~6s)", "🚀 Balanced (BigVGAN NFE=8 ~15s)", "💎 High Fidelity (BigVGAN NFE=16)"],
+                              value="🚀 Balanced (BigVGAN NFE=8 ~15s)", label="Speed / Quality Mode")
                 seed=gr.Slider(0,1000,value=60,step=1,label="Seed")
             btn=gr.Button("🎧 Chant it", variant="primary", size="lg")
         with gr.Column(scale=2):
             out=gr.Audio(label="Chant", type="numpy")
             status=gr.Markdown("")
-    btn.click(synthesize, inputs=[txt,meter,seed], outputs=[out,status])
+    btn.click(synthesize, inputs=[txt,meter,seed,mode], outputs=[out,status])
     gr.Markdown("### 📜 Sample shlokas — click one, then press **Chant it**")
     gr.Examples(examples=EXAMPLES, example_labels=EXAMPLE_LABELS, inputs=[txt,meter,seed], label="")
 

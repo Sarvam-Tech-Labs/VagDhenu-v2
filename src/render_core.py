@@ -212,13 +212,17 @@ class Renderer:
     """Loads DiT + vocos + BigVGAN + the reference bank ONCE; render_one() synthesizes a single input."""
 
     def __init__(self, voice_path, voc_path, bank_path, device="cuda", vocab_file=None,
-                 speed=0.90, nfe=64, cfg=3.0, gap=0.55, gap_halant=0.20):
+                 speed=0.90, nfe=64, cfg=3.0, gap=0.55, gap_halant=0.20,
+                 use_bf16=True, vocoder_type="bigvgan", num_workers=2):
         import bigvgan
         from f5_tts.infer.utils_infer import load_model, load_vocoder, preprocess_ref_audio_text
         from f5_tts.model import DiT
         self.device = device
         self.speed = speed; self.nfe = nfe; self.cfg = cfg
         self.gap = gap; self.gap_halant = gap_halant
+        self.use_bf16 = use_bf16 and (device == "cpu")  # bfloat16 shines on CPU (AVX-512 / AMX)
+        self.vocoder_type = vocoder_type  # 'bigvgan' or 'vocos' (ultra-fast preview)
+        self.num_workers = max(1, int(num_workers))
         self._preprocess = preprocess_ref_audio_text
         import torchaudio as ta
         self._ta = ta
@@ -251,9 +255,17 @@ class Renderer:
         self.cfm.load_state_dict(ema, strict=False); self.cfm.eval()
 
         real_voc = load_vocoder("vocos")
+        import threading
         class Cap:
-            def __init__(s, r): s.r = r; s.last = None
-            def decode(s, m): s.last = m.detach().cpu().numpy(); return s.r.decode(m)
+            def __init__(s, r):
+                s.r = r
+                s.local = threading.local()
+                s.last = None
+            def decode(s, m):
+                arr = m.detach().cpu().numpy()
+                s.local.last = arr
+                s.last = arr
+                return s.r.decode(m)
         self.cap = Cap(real_voc)
 
         g = bigvgan.BigVGAN.from_pretrained("nvidia/bigvgan_v2_24khz_100band_256x", use_cuda_kernel=False)
@@ -310,14 +322,17 @@ class Renderer:
                   GAPS[i] if i < len(GAPS) else GAPS[-1]]
         return np.concatenate(b[:-1])
 
-    def render_one(self, text, meter, seed=60, no_sandhi=True, speed=None, sps=None):
+    def render_one(self, text, meter, seed=60, no_sandhi=True, speed=None, sps=None,
+                   vocoder=None, nfe=None):
         """Synthesize one shloka. text = free Devanagari (split into padas on newline/danda).
-        Returns (sr, audio float32). Pipeline is identical to render.py's render_clip()."""
+        Returns (sr, audio float32)."""
         padas = text if isinstance(text, list) else split_padas(text)
         if not padas: raise ValueError("empty text")
         ref_audio, ref_t, ref_sps, ref_len = self._get_ref(meter)
         if sps is not None: ref_sps = float(sps)
         spd = float(speed) if speed is not None else self.speed
+        nfe_step = int(nfe) if nfe is not None else self.nfe
+        voc = vocoder or self.vocoder_type
 
         def _basetext(p):
             return PT.model_text_sandhi(p, echo_final=False) if not no_sandhi else PT.model_text(p)
@@ -349,21 +364,56 @@ class Renderer:
         GAPS = [np.zeros(int(self.gap*SR) + (int(self.gap_halant*SR) if _ends_halant(_p) else 0),
                          dtype=np.float32) for _p in PIECES]
         from f5_tts.infer.utils_infer import infer_process
-        bseg = []
-        for i, p in enumerate(PIECES):
+        from concurrent.futures import ThreadPoolExecutor
+
+        def _render_single_pada(idx_piece):
+            idx, p = idx_piece
+            # If executing concurrently on CPU, allocate balanced threads per worker
+            if self.num_workers > 1 and self.device == "cpu":
+                torch.set_num_threads(max(4, 24 // self.num_workers))
             au = None
+            last_mel = None
             for att in range(4):
-                torch.manual_seed(seed + att)
-                _fixd = (ref_len + NSYLL[i]*ref_sps) if (ref_sps > 0 and NSYLL) else None
-                w, sr, _ = infer_process(_ra, _rt, p, self.cfm, self.cap, mel_spec_type="vocos",
-                                         speed=spd, nfe_step=self.nfe, cfg_strength=self.cfg,
-                                         device=self.device, fix_duration=_fixd)
+                torch.manual_seed(seed + att + idx*7)
+                _fixd = (ref_len + NSYLL[idx]*ref_sps) if (ref_sps > 0 and NSYLL) else None
+                with torch.inference_mode():
+                    if self.use_bf16:
+                        with torch.autocast("cpu", dtype=torch.bfloat16):
+                            w, sr, _ = infer_process(_ra, _rt, p, self.cfm, self.cap, mel_spec_type="vocos",
+                                                     speed=spd, nfe_step=nfe_step, cfg_strength=self.cfg,
+                                                     device=self.device, fix_duration=_fixd)
+                    else:
+                        w, sr, _ = infer_process(_ra, _rt, p, self.cfm, self.cap, mel_spec_type="vocos",
+                                                 speed=spd, nfe_step=nfe_step, cfg_strength=self.cfg,
+                                                 device=self.device, fix_duration=_fixd)
                 w = np.array(w, dtype=np.float32)
-                if np.abs(w).max() > 1.5: w = w/32768.0
-                if float(np.sqrt((w**2).mean())) > 0.04: au = w; break
+                # If int16 PCM was returned (max > 100), scale to float32 [-1, 1]
+                if np.abs(w).max() > 100.0:
+                    w = w / 32768.0
+                elif np.abs(w).max() > 1.0:
+                    w = w / np.abs(w).max() * 0.95
+                last_mel = getattr(self.cap.local, "last", self.cap.last)
+                if float(np.sqrt((w**2).mean())) > 0.04:
+                    au = w
+                    break
             if au is None: au = w
-            y = self._bvgan(self.cap.last); mx = np.abs(y).max(); y = y/mx*0.97 if mx > 1 else y
-            bseg.append(y)
+
+            if voc == "vocos":
+                y = au
+            else:
+                mel_to_use = getattr(self.cap.local, "last", self.cap.last) if last_mel is None else last_mel
+                y = self._bvgan(mel_to_use)
+                mx = np.abs(y).max()
+                y = y/mx*0.97 if mx > 1 else y
+            return idx, y
+
+        if self.num_workers > 1 and len(PIECES) > 1:
+            with ThreadPoolExecutor(max_workers=min(self.num_workers, len(PIECES))) as ex:
+                results = list(ex.map(_render_single_pada, enumerate(PIECES)))
+            results.sort(key=lambda x: x[0])
+            bseg = [r[1] for r in results]
+        else:
+            bseg = [_render_single_pada((i, p))[1] for i, p in enumerate(PIECES)]
 
         _slp = PT.align_slp1(padas[0])
         fric = bool(_slp) and _slp[0] in ("S", "z", "s", "h")
