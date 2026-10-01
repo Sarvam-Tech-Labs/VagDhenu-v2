@@ -58,6 +58,8 @@ NAME_TO_BANK = {
     "śloka": "anuṣṭubh",
     "pramāṇikā": "pramāṇikā",
     "pramanika": "pramāṇikā",
+    "pañcacāmara": "pramāṇikā",
+    "pancacamara": "pramāṇikā",
     "indravajrā": "indravajrā",
     "indravajra": "indravajrā",
     "upendravajrā": "upendravajrā",
@@ -93,6 +95,7 @@ METER_SURROGATES = {
     "vidyunmālā": "anuṣṭubh",
     "māṇavakākrīḍā": "anuṣṭubh",
     "samānī": "pramāṇikā",
+    "pañcacāmara": "pramāṇikā",
     # 11 syllables / pada (Triṣṭubh class)
     "dodhaka": "upajāti",
     "svāgatā": "rathoddhatā",
@@ -253,14 +256,38 @@ def analyze_verse_meter(text: str) -> Dict[str, Any]:
         except Exception:
             pass
 
+    # 4. If still unverified on mixed verses, test the first hemistich
+    if not meter_name and analysis and len(analysis.padas) >= 2:
+        try:
+            p0_pat = ''.join('G' if s.weight == 'guru' else 'L' for s in analysis.padas[0].syllables)
+            varna_p0 = _match_exact_sama_varna(p0_pat)
+            if varna_p0:
+                meter_name, syl_count = varna_p0
+                kind = "sama-vrtta"
+            else:
+                first_hemi = analysis.padas[0].source
+                hemi_summary = meter_summary(first_hemi)
+                if hemi_summary.get("name"):
+                    meter_name = hemi_summary.get("name")
+                    kind = hemi_summary.get("kind", kind)
+                    subtypes = hemi_summary.get("subtypes") or subtypes
+                    summary = hemi_summary
+        except Exception:
+            pass
+
     identified = bool(meter_name)
     bank_key = None
     is_surrogate = False
 
     if identified and meter_name:
         norm_name = meter_name.lower().strip()
+        # Handle Upajāti family routing
         if norm_name.startswith("upajāti") or norm_name.startswith("upajati"):
-            bank_key = "upajāti"
+            # Check 12-syllable Upajāti vs 11-syllable Upajāti
+            if any(term in norm_name for term in ("vaṃśastha", "vamsastha", "indravaṃśā", "indravamsha")) or syl_count == 12:
+                bank_key = "vaṃśastha"
+            else:
+                bank_key = "upajāti"
         elif norm_name in NAME_TO_BANK:
             bank_key = NAME_TO_BANK[norm_name]
         elif norm_name in METER_SURROGATES:
@@ -310,7 +337,6 @@ def analyze_verse_meter(text: str) -> Dict[str, Any]:
             if deva_pada:
                 extracted_padas.append(deva_pada.strip())
     elif analysis and syl_count and len(analysis.syllables) >= syl_count:
-        # Slice by syllable count if summary had no padas
         syls = analysis.syllables
         n_padas = len(syls) // syl_count
         for i in range(n_padas):
