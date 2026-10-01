@@ -216,7 +216,7 @@ const tree = {
       children: [
         { id:"frontend-script", title:"Devanagari → Kannada", icon:"ಕ", tone:"saffron", summary:"Route Sanskrit through Kannada rather than asking the model to read raw Devanagari.", description:"IndicF5's behavior on Devanagari can apply Hindi-style schwa deletion. The frontend transliterates Devanagari through SLP1 into Kannada, which better matches the model's intended Indic pronunciation path.", bullets:["Any supported source script is first converted to Devanagari.","SLP1 is an intermediate transliteration representation, not the final model input."], files:[["prep_text.py", "../src/prep_text.py"]] },
         { id:"frontend-sandhi", title:"Sandhi & pronunciation", icon:"ः", tone:"gold", summary:"Choose model-compatible Sanskrit sandhi and phonetic spellings.", description:"Two model text modes exist: plain Kannada-routed text, and a sandhi-aware path. Renderer helpers then apply additional targeted rules.", bullets:["Sandhi mode handles selected utva/rutva/lopa rules; it is not a general Sanskrit grammar engine.","Anusvāra is mapped to a homorganic nasal before consonants when appropriate.","Final visarga, visarga before kṣa, h+n conjuncts, and vocalic ḷ have special handling."], files:[["Text prep", "../src/prep_text.py"], ["Render core", "../src/render_core.py"]] },
-        { id:"frontend-units", title:"Piece preparation", icon:"|", tone:"saffron", summary:"Prepare each pada/hemistich as a separate synthesis unit.", description:"The renderer applies text rules per piece, counts syllabic nuclei for duration estimation, and inserts configured gaps when pieces are stitched.", bullets:["Piece boundaries affect timing and pauses.","Repeat-depth checks may switch to a matching repeat-prime reference."], files:[["Render core", "../src/render_core.py"]] }
+        { id:"frontend-units", title:"Piece preparation & smart pāda split", icon:"|", tone:"saffron", summary:"Segment verses into metric pādas using chandas analysis.", description:"The renderer uses prosody-guided smart segmentation: if explicit danda/newline punctuation is missing, it leverages exact syllable counts from chandas analysis (e.g. 8, 11, 12, 14, 15, 19, 21) to divide unpunctuated verses into natural metrical quarters, preventing DiT breath-exhaustion.", bullets:["Smart pāda segmentation is the primary default, preventing run-on degradation.","Piece boundaries affect timing, pauses, and stitching buffers.","Repeat-depth checks may switch to a matching repeat-prime reference."], files:[["Render core", "../src/render_core.py"], ["Chandas bridge", "../src/chandas_bridge.py"]] }
       ]
     },
     {
@@ -263,6 +263,56 @@ const tree = {
       children: [
         { id:"gate", title:"Speech-boundary gate", icon:"⌁", tone:"violet", summary:"Locate speech edges using short-window RMS energy.", description:"The gate removes model/vocoder padding and edge artifacts, while optional handling preserves low-energy fricatives at the start and weak bursts at a final halant.", bullets:["Fades are used to reduce clicks at trimmed boundaries.","The gate returns the original audio if there are too few analysis windows."], files:[["Render core", "../src/render_core.py"]] },
         { id:"stitch", title:"Pause & stitch", icon:"···", tone:"violet", summary:"Join independently rendered pieces with intentional gaps.", description:"The renderer gates each piece, inserts a configured silence buffer, and concatenates the segments into a single output waveform.", bullets:["A longer configured pause is added when a piece ends in a virāma/halant.","The batch renderer writes dry audio; production assembly can add ambience or tanpura later."], files:[["Render core", "../src/render_core.py"], ["Batch renderer", "../src/render.py"]] }
+      ]
+    },
+    {
+      id: "profiling", title: "Profiling & bottlenecks", icon: "⚡", tone: "gold",
+      summary: "Empirical CPU latency benchmarks, time-accounting breakdown, and optimization roadmap.",
+      description: "In-depth benchmarking on AMD EPYC 9J14 (24 OCPU / 48 vCPU) across 6 sample shlokas reveals exact time sinks and uncovers the highest-leverage CPU optimization targets.",
+      bullets: [
+        "Text Frontend & Meter scan consume < 0.2% total time (~25-40 ms total).",
+        "Acoustic DiT Flow Matching consumes 72% – 93% of wall time (scales strictly linearly with NFE steps).",
+        "BigVGAN Vocoder consumes 7% – 27% of wall time (flat ~3.0s for ~9.5s Anuṣṭubh audio on CPU).",
+        "Immediate optimization targets: CFG batching (batch_size=2 tensor pass) and high-order ODE solvers."
+      ],
+      files: [["Profiling script", "../scripts/profile_examples.py"], ["Raw profile dataset", "../profiling_results.json"]],
+      children: [
+        {
+          id:"profile-stages", title:"Stage-by-stage time budget", icon:"📊", tone:"gold",
+          summary:"Frontend, DiT, and BigVGAN exact latencies across Anuṣṭubh and Mālinī.",
+          description:"Meter detection takes 7-15ms, smart pāda segmentation takes 10-13ms, and text preparation takes ~0.3ms. Neural execution dominates 99.8% of the pipeline.",
+          bullets:[
+            "Anuṣṭubh (9.5s audio, NFE=8 Fast): DiT = 11.0s (74%), BigVGAN = 3.0s (25%), Total = 14.1s (RTF 1.46).",
+            "Anuṣṭubh (9.5s audio, NFE=16 HQ): DiT = 20.0s (86%), BigVGAN = 3.0s (13%), Total = 23.0s (RTF 2.40).",
+            "Anuṣṭubh (9.5s audio, NFE=32 Studio): DiT = 41.5s (93%), BigVGAN = 3.2s (7%), Total = 44.5s (RTF 4.65).",
+            "Mālinī anomaly: 15.6s reference audio expands DiT generation window to 15.9s, yielding 71.2s DiT wall time at NFE=32."
+          ],
+          files:[["Profiling script", "../scripts/profile_examples.py"], ["Benchmark JSON", "../profiling_results.json"]]
+        },
+        {
+          id:"profile-bottlenecks", title:"Deep bottleneck analysis", icon:"🔍", tone:"gold",
+          summary:"Why DiT and BigVGAN consume 99.8% of compute on 24 OCPU.",
+          description:"Root causes identified in the inference engine: sequential CFG forward passes, Euler ODE solver step inefficiency, and CPU convolution overhead in BigVGAN.",
+          bullets:[
+            "Bottleneck 1 (CFG Doubling): For each ODE step, F5 runs two separate forward passes (pred_cond and pred_uncond) sequentially. Stacking them into batch_size=2 will vectorize compute and save 25-35% DiT time.",
+            "Bottleneck 2 (Euler Solver NFE): Euler requires 8-16 steps for stability. Midpoint / Heun 2nd-order or RK4 ODE solvers can reach equal audio fidelity with 4-6 steps.",
+            "Bottleneck 3 (BigVGAN CPU Conv): BigVGAN relies on un-fused eager conv1d layers with Snake activations taking ~3.0s. Channels-last memory layout and TorchScript JIT can trim this.",
+            "Bottleneck 4 (Reference audio duration): Long reference clips (e.g. 15.6s in Mālinī) inflate fix_duration proportionally. Trimming references to crisp 6-8s half-verses dramatically cuts synthesis load."
+          ],
+          files:[["Render core", "../src/render_core.py"], ["F5 model", "../src/third_party/f5_tts/model/dit.py"]]
+        },
+        {
+          id:"profile-roadmap", title:"Optimization roadmap", icon:"🔨", tone:"saffron",
+          summary:"Step-by-step action plan to reach real-time or sub-real-time CPU inference.",
+          description:"Phased engineering roadmap to hit the hammer on inference speed without sacrificing traditional chant fidelity or BigVGAN audio quality.",
+          bullets:[
+            "Phase 1: CFG Batching — Stack conditional and unconditional inputs into a single batched DiT forward pass (batch_size=2).",
+            "Phase 2: High-order ODE Solvers — Implement midpoint or Heun ODE integration for F5 to drop Fast mode from NFE=8 to NFE=4-5.",
+            "Phase 3: BigVGAN TorchScript / Channels-Last — Optimize CPU convolutions and Snake activation caches.",
+            "Phase 4: Reference clip audit — Standardize reference audio bank to tight 5-8s hemistich anchors."
+          ],
+          files:[["Render core", "../src/render_core.py"]]
+        }
       ]
     },
     {
@@ -331,6 +381,59 @@ function render() {
   renderCrumbs();
   const children = node.children || [];
   const list = children.length ? `<div class="flow${children.length > 4 ? " no-arrows" : ""}" style="--columns:${Math.min(children.length, 4)}">${children.map(renderNodeCard).join("")}</div>` : "";
+  const benchmarkTable = `
+    <div style="margin-top:22px; overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse; font-size:0.84rem; text-align:left; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden;">
+        <thead style="background:#f5eedf; color:var(--ink);">
+          <tr>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">Example Shloka</th>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">Meter</th>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">Mode / NFE</th>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">Frontend (ms)</th>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">DiT (s)</th>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">BigVGAN (s)</th>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">Total (s)</th>
+            <th style="padding:10px 12px; border-bottom:1px solid var(--line);">RTF</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #f0e6d5;">
+            <td style="padding:8px 12px; font-weight:600;">Vasudevasutaṃ</td><td>anuṣṭubh</td><td>Fast (NFE=8)</td><td>28.4 ms</td><td>10.82 s</td><td>4.67 s</td><td style="font-weight:700; color:var(--saffron);">15.55 s</td><td>1.65×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5; background:#faf7f0;">
+            <td style="padding:8px 12px; font-weight:600;">Vasudevasutaṃ</td><td>anuṣṭubh</td><td>HQ (NFE=16)</td><td>17.6 ms</td><td>20.11 s</td><td>3.83 s</td><td style="font-weight:700; color:var(--saffron);">23.97 s</td><td>2.49×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5;">
+            <td style="padding:8px 12px; font-weight:600;">Vasudevasutaṃ</td><td>anuṣṭubh</td><td>Studio (NFE=32)</td><td>18.3 ms</td><td>40.93 s</td><td>3.24 s</td><td style="font-weight:700; color:var(--saffron);">44.19 s</td><td>4.64×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5; background:#faf7f0;">
+            <td style="padding:8px 12px; font-weight:600;">Śuklāmbaradharaṃ</td><td>anuṣṭubh</td><td>Fast (NFE=8)</td><td>19.4 ms</td><td>11.08 s</td><td>3.01 s</td><td style="font-weight:700; color:var(--saffron);">14.12 s</td><td>1.46×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5;">
+            <td style="padding:8px 12px; font-weight:600;">Śuklāmbaradharaṃ</td><td>anuṣṭubh</td><td>HQ (NFE=16)</td><td>18.6 ms</td><td>19.93 s</td><td>2.92 s</td><td style="font-weight:700; color:var(--saffron);">22.88 s</td><td>2.40×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5; background:#faf7f0;">
+            <td style="padding:8px 12px; font-weight:600;">Śuklāmbaradharaṃ</td><td>anuṣṭubh</td><td>Studio (NFE=32)</td><td>23.5 ms</td><td>41.59 s</td><td>3.66 s</td><td style="font-weight:700; color:var(--saffron);">45.28 s</td><td>4.76×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5; background:#fff2ea;">
+            <td style="padding:8px 12px; font-weight:600;">Narasiṃha</td><td>mālinī</td><td>Fast (NFE=8)</td><td>33.7 ms</td><td>18.28 s</td><td>14.16 s</td><td style="font-weight:700; color:var(--saffron);">31.85 s</td><td>2.05×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5; background:#fff2ea;">
+            <td style="padding:8px 12px; font-weight:600;">Narasiṃha</td><td>mālinī</td><td>HQ (NFE=16)</td><td>14.3 ms</td><td>36.71 s</td><td>11.18 s</td><td style="font-weight:700; color:var(--saffron);">47.58 s</td><td>3.07×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5; background:#fff2ea;">
+            <td style="padding:8px 12px; font-weight:600;">Narasiṃha</td><td>mālinī</td><td>Studio (NFE=32)</td><td>14.1 ms</td><td>71.24 s</td><td>11.55 s</td><td style="font-weight:700; color:var(--saffron);">82.81 s</td><td>5.21×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5;">
+            <td style="padding:8px 12px; font-weight:600;">Gururbrahmā</td><td>anuṣṭubh</td><td>Fast (NFE=8)</td><td>20.8 ms</td><td>11.32 s</td><td>5.78 s</td><td style="font-weight:700; color:var(--saffron);">16.41 s</td><td>1.64×</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f0e6d5; background:#faf7f0;">
+            <td style="padding:8px 12px; font-weight:600;">Namastubhyaṃ</td><td>anuṣṭubh</td><td>Fast (NFE=8)</td><td>19.4 ms</td><td>10.83 s</td><td>3.11 s</td><td style="font-weight:700; color:var(--saffron);">13.97 s</td><td>1.59×</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>`;
+
   const detail = node.id === "system" ? `
     <div class="details">
       <article class="detail-card"><h3>How to read the map</h3>
@@ -353,9 +456,11 @@ function render() {
           node.id === "vocoder" || node.id === "bigvgan" || node.id === "mel" ? "This stage converts the acoustic representation into waveform audio." :
           node.id === "post" || node.id === "gate" || node.id === "stitch" ? "This stage prepares the generated waveform for playback or downstream assembly." :
           node.id === "serving" || node.id === "demo-flow" || node.id === "batch-flow" ? "This is the application boundary around the shared synthesis core." :
+          node.id.startsWith("profile") ? "This stage diagnoses CPU execution times across all 48 vCPUs on AMD EPYC 9J14." :
           "This stage transforms or analyzes the verse before the neural synthesis step.")}</p>
       </article>
     </div>
+    ${node.id.startsWith("profile") ? benchmarkTable : ""}
     ${node.id === "acoustic" || node.id === "acoustic-backbone" ? '<div class="callout blue"><strong>Important:</strong> F5 has no native duration or pitch head here. The renderer sets a total duration target; reference audio is the effective chant-style/prosody lever.</div>' : ""}
     ${node.id === "meter" || node.id === "reference" ? '<div class="callout"><strong>Reference matching matters:</strong> ref_text must correspond exactly to the spoken span of its WAV. A clean half-verse reference is often more useful than a longer mismatched clip.</div>' : ""}
     ${node.id === "system" ? "" : '<div class="callout red"><strong>Scope note:</strong> the technical report covers production workflows beyond this checkout. Links here point to components present in the public repository when available.</div>'}`;
