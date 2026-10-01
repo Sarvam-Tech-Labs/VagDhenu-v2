@@ -363,80 +363,113 @@ def smart_split_padas(text: str) -> List[str]:
     """
     Intelligently segment a Sanskrit verse into natural chant units (hemistichs / pādas).
     
-    1. If explicit linebreaks or daṇḍas (।, ॥, |) exist, splits along them.
-    2. If text is unpunctuated/continuous, uses the prosody scansion engine and exact
-       syllable counts to identify pāda boundaries and segment cleanly without mid-word breaks.
+    Architectural Philosophy: Prosody-First with Hybrid Punctuation Alignment
+    1. Runs phonemic scansion and meter identification FIRST to understand the verse's
+       classical metric structure (e.g. 8-syl Anuṣṭubh, 11-syl Upajāti, 14-syl Vasantatilakā,
+       19-syl Śārdūlavikrīḍita).
+    2. Maps to optimal chant units matching Vāgdhenu's reference bank cadences:
+       - 8-syllable meters (Anuṣṭubh): 16-syllable hemistichs (2 per 32-syl shloka)
+       - 11/12/14-syllable meters: 22/24/28-syllable hemistichs (or single pādas if half-verse)
+       - 15/17/19/21-syllable meters: 15/17/19/21-syllable pādas
+    3. Hybrid Punctuation Alignment:
+       - If user punctuation (daṇḍas/newlines) already cleanly divides the verse into the
+         expected number of chant units, respects the user's explicit boundaries.
+       - If user pasted 4 lines for an Anuṣṭubh or Upajāti shloka, automatically groups
+         them into 2 hemistichs (Pādas 1+2, Pādas 3+4) to prevent awkward 4-pause staccato chanting.
+       - If user text is continuous, unpunctuated, or has broken formatting, cleanly segments
+         at exact metric akṣara code-point spans.
+    4. Falls back gracefully to standard daṇḍa/line splitting if meter is completely unknown (prose).
     """
     if not text or not text.strip():
         return []
 
-    # 1. Check explicit punctuation first
-    explicit = []
-    for line in text.replace("॥", "।").replace("|", "।").splitlines():
-        for seg in line.split("।"):
-            seg = seg.strip()
-            if seg:
-                explicit.append(seg)
-    if len(explicit) >= 2:
-        return explicit
-
-    # 2. Continuous text: use prosody engine
     clean = text.strip()
+    clean_deva = _clean_deva_for_scansion(clean)
+
+    # 1. Scansion and meter identification
     m_info = analyze_verse_meter(clean)
     syl_count = m_info.get("syllables_per_pada")
 
     analysis = None
     try:
-        clean_deva = _clean_deva_for_scansion(clean)
         analysis = analyze_sanskrit_verse(clean_deva)
     except Exception:
         pass
 
-    if not analysis or not analysis.syllables:
-        return [clean]
-
-    syls = analysis.syllables
+    syls = analysis.syllables if (analysis and analysis.syllables) else []
     total = len(syls)
 
-    # Determine optimal chant chunk size
-    seg_syl = None
-    if syl_count:
+    # Collect any explicit pieces present in input
+    explicit_pieces = []
+    for line in text.replace("॥", "।").replace("|", "।").splitlines():
+        for seg in line.split("।"):
+            seg = seg.strip()
+            if seg:
+                explicit_pieces.append(seg)
+
+    # 2. If scansion succeeded and we have a recognizable metric shape
+    if total >= 8:
+        seg_syl = None
         if syl_count == 8:
             # Anuṣṭubh: 16 syllables (hemistich = 2 padas) for standard 32-syl shlokas
             seg_syl = 16 if total >= 24 else 8
-        elif total >= syl_count * 2:
-            # If 4-pāda verse, divide into 2 hemistichs (2 * syl_count) to match reference chant cadence
-            if total == 4 * syl_count:
+        elif syl_count in (11, 12, 14):
+            # 4-pāda Triṣṭubh / Jagatī / Śakvarī: group into 2 hemistichs (2 * syl_count)
+            if total >= syl_count * 3:
                 seg_syl = syl_count * 2
             else:
                 seg_syl = syl_count
-        else:
+        elif syl_count == 15:
+            # Mālinī: 15 syllables per pada (or 30 if full 60-syllable verse)
+            if total in (29, 30, 31):
+                seg_syl = 15
+            elif total in (59, 60, 61):
+                seg_syl = 30
+            else:
+                seg_syl = 15
+        elif syl_count in (17, 19, 21):
+            # Long classical meters: single pāda per chant unit
             seg_syl = syl_count
-    elif total in (31, 32, 33):
-        seg_syl = 16
-    elif total in (43, 44, 45):
-        seg_syl = 22
-    elif total in (47, 48, 49):
-        seg_syl = 24
-    elif total in (55, 56, 57):
-        seg_syl = 28
-    elif total in (34, 68):
-        seg_syl = 17
+        elif total in (31, 32, 33):
+            seg_syl = 16
+        elif total in (43, 44, 45):
+            seg_syl = 22
+        elif total in (47, 48, 49):
+            seg_syl = 24
+        elif total in (55, 56, 57):
+            seg_syl = 28
 
-    if not seg_syl or total < seg_syl * 1.4:
-        return [clean]
+        if seg_syl and total >= seg_syl * 1.4:
+            expected_n_pieces = round(total / seg_syl)
 
-    pieces = []
-    n_segs = total // seg_syl
-    for i in range(n_segs):
-        sub = syls[i * seg_syl : (i + 1) * seg_syl]
-        st = sub[0].span.start
-        en = sub[-1].span.end
-        pieces.append(clean[st:en].strip())
-    rem = syls[n_segs * seg_syl :]
-    if rem:
-        pieces.append(clean[rem[0].span.start : rem[-1].span.end].strip())
-    return pieces or [clean]
+            # If user already formatted into the exact expected number of chant units
+            if len(explicit_pieces) == expected_n_pieces:
+                return explicit_pieces
+
+            # If user pasted 4 lines for a 2-hemistich meter (e.g. Anuṣṭubh or Upajāti), pair them!
+            if len(explicit_pieces) == 4 and expected_n_pieces == 2:
+                return [
+                    explicit_pieces[0] + " " + explicit_pieces[1],
+                    explicit_pieces[2] + " " + explicit_pieces[3]
+                ]
+
+            # Otherwise (continuous unpunctuated text or mismatched linebreaks), segment by akṣara spans
+            pieces = []
+            n_segs = total // seg_syl
+            for i in range(n_segs):
+                sub = syls[i * seg_syl : (i + 1) * seg_syl]
+                st = sub[0].span.start
+                en = sub[-1].span.end
+                pieces.append(clean_deva[st:en].strip())
+            rem = syls[n_segs * seg_syl :]
+            if rem:
+                pieces.append(clean_deva[rem[0].span.start : rem[-1].span.end].strip())
+
+            if len(pieces) >= 2:
+                return pieces
+
+    # 3. Fallback for unscannable / prose text
+    return explicit_pieces or ([text.strip()] if text.strip() else [])
 
 
 def detect_meter_key(text: str) -> str:

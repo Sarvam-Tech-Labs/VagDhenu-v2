@@ -205,6 +205,17 @@ class TestChandasEndToEnd(unittest.TestCase):
         self.assertEqual(padas[0], "सन्ततं चिन्तयेत् कण्ठं भास्वत्कौस्तुभभासकम्")
         self.assertEqual(padas[1], "वैकुण्ठस्याखिला वेदा उद्गीर्यन्तेऽनिशं यतः")
 
+    def test_26_smart_split_4_lines_grouped_into_hemistichs(self):
+        from render_core import split_padas
+        v = """धर्मक्षेत्रे कुरुक्षेत्रे
+समवेता युयुत्सवः
+मामकाः पाण्डवाश्चैव
+किमकुर्वत सञ्जय"""
+        padas = split_padas(v)
+        self.assertEqual(len(padas), 2)
+        self.assertEqual(padas[0], "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः")
+        self.assertEqual(padas[1], "मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय")
+
 
 if __name__ == "__main__":
     unittest.main()
