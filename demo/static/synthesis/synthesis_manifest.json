@@ -1,0 +1,98 @@
+[
+  {
+    "id": "sb_01_02_04",
+    "title": "Śrīmad-Bhāgavatam 1.2.4 (Maṅgalācaraṇa)",
+    "meter": "prabhupada_anustubh",
+    "padas": [
+      {
+        "deva": "नारायणं नमस्कृत्य",
+        "iast": "nārāyaṇaṁ namaskṛtya",
+        "audio_fn": "sb_01_02_04_pada_1.wav",
+        "duration_s": 3.49,
+        "sushrota_ctc": "नारायणं नमस्कृत्य"
+      },
+      {
+        "deva": "नरं चैव नरोत्तमम्",
+        "iast": "naraṁ caiva narottamam",
+        "audio_fn": "sb_01_02_04_pada_2.wav",
+        "duration_s": 3.88,
+        "sushrota_ctc": "नरं चैव नरोत्तमत्तमम्"
+      },
+      {
+        "deva": "देवीं सरस्वतीं व्यासं",
+        "iast": "devīṁ sarasvatīṁ vyāsaṁ",
+        "audio_fn": "sb_01_02_04_pada_3.wav",
+        "duration_s": 3.86,
+        "sushrota_ctc": "देवीं सरसतीं व्यासं"
+      },
+      {
+        "deva": "ततो जयमुदीरयेत्",
+        "iast": "tato jayam udīrayet",
+        "audio_fn": "sb_01_02_04_pada_4.wav",
+        "duration_s": 3.23,
+        "sushrota_ctc": "ततो जयवजीरगेेत्"
+      }
+    ],
+    "translation": "Before reciting this Śrīmad-Bhāgavatam, which is the very means of conquest, one should offer respectful obeisances unto the Personality of Godhead, Nārāyaṇa, unto Nara-nārāyaṇa Ṛṣi, the supermost human being, unto mother Sarasvatī, the goddess of learning, and unto Śrīla Vyāsadeva, the author.",
+    "complete_audio_fn": "sb_01_02_04_complete.wav",
+    "total_duration_s": 15.81,
+    "complete_sushrota_ctc": "नारायणं नमस्कृत्य नरं चैव नरोत्तोत्तमं देवीं सरसतीं व्यासं ततो जयमधीरयेेधे"
+  },
+  {
+    "id": "sb_01_02_17",
+    "title": "Śrīmad-Bhāgavatam 1.2.17 (Śṛṇvatāṁ Sva-kathāḥ Kṛṣṇaḥ)",
+    "meter": "prabhupada_anustubh",
+    "padas": [
+      {
+        "deva": "शृण्वतां स्वकथाः कृष्णः",
+        "iast": "śṛṇvatāṁ sva-kathāḥ kṛṣṇaḥ",
+        "audio_fn": "sb_01_02_17_pada_1.wav",
+        "duration_s": 3.89,
+        "sushrota_ctc": "शृण्वतां पकठ कृष्णः"
+      },
+      {
+        "deva": "पुण्यश्रवणकीर्तनः",
+        "iast": "puṇya-śravaṇa-kīrtanaḥ",
+        "audio_fn": "sb_01_02_17_pada_2.wav",
+        "duration_s": 3.83,
+        "sushrota_ctc": "उन्नश्रवणसीीतनः"
+      },
+      {
+        "deva": "हृद्यन्तःस्थो ह्यभद्राणि",
+        "iast": "hṛdy antaḥ-stho hy abhadrāṇi",
+        "audio_fn": "sb_01_02_17_pada_3.wav",
+        "duration_s": 3.61,
+        "sushrota_ctc": "वृद्धसा सो हवद्राणी"
+      },
+      {
+        "deva": "विधुनोति सुहृत्सताम्",
+        "iast": "vidhunoti suhṛt satām",
+        "audio_fn": "sb_01_02_17_pada_4.wav",
+        "duration_s": 3.33,
+        "sushrota_ctc": "गृणोति सुहित्सदा"
+      }
+    ],
+    "translation": "Śrī Kṛṣṇa, the Personality of Godhead, who is the Paramātmā in everyone's heart and the benefactor of the truthful devotee, cleanses desire for material enjoyment from the heart of the devotee who has developed the urge to hear His messages, which are in themselves virtuous when properly heard and chanted.",
+    "complete_audio_fn": "sb_01_02_17_complete.wav",
+    "total_duration_s": 16.01,
+    "complete_sushrota_ctc": "शृण्वसांपकथाा कृष्णः पुन्नश्रवणशीलीतनः वृद्धस्र सोवद्राणि दुणोति सुहित्सकम्"
+  },
+  {
+    "id": "sb_01_01_01_invoc",
+    "title": "Śrīmad-Bhāgavatam 1.1.1 (Pranāma)",
+    "meter": "prabhupada_anustubh",
+    "padas": [
+      {
+        "deva": "ॐ नमो भगवते वासुदेवाय",
+        "iast": "oṁ namo bhagavate vāsudevāya",
+        "audio_fn": "sb_01_01_01_invoc_pada_1.wav",
+        "duration_s": 5.37,
+        "sushrota_ctc": "नम भगवदेवासुदेवाय"
+      }
+    ],
+    "translation": "O my Lord, Śrī Kṛṣṇa, son of Vasudeva, O all-pervading Personality of Godhead, I offer my respectful obeisances unto You.",
+    "complete_audio_fn": "sb_01_01_01_invoc_complete.wav",
+    "total_duration_s": 5.37,
+    "complete_sushrota_ctc": "नम भगवदेवासुदेवाय"
+  }
+]

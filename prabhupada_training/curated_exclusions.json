@@ -1,0 +1,97 @@
+{
+  "bg_01_02_speaker.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791108112.1002119
+  },
+  "bg_01_13_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791109674.5945485
+  },
+  "bg_01_22_line_3_4.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791109876.012841
+  },
+  "bg_01_45_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791111826.9580295
+  },
+  "bg_01_46_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791111852.1361094
+  },
+  "bg_01_48_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791111904.1431198
+  },
+  "bg_02_00_title.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791112108.8374991
+  },
+  "bg_02_25_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791121650.2133384
+  },
+  "bg_02_29_line_3_4.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791122037.145851
+  },
+  "bg_02_55_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791123030.3722498
+  },
+  "bg_02_69_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791124097.75439
+  },
+  "bg_03_00_title.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791124309.9948595
+  },
+  "bg_03_03_line_3_4.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791125041.667023
+  },
+  "bg_01_48_line_3_4.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791126300.584159
+  },
+  "bg_01_24_speaker.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791126351.2557778
+  },
+  "bg_01_28_speaker.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791126365.003231
+  },
+  "bg_01_47_speaker.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791126368.3073752
+  },
+  "bg_03_44_line_1_2.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791129876.2668362
+  },
+  "bg_03_44_line_3_4.wav": {
+    "excluded": true,
+    "reason": "Manual review (English / repetition / non-scriptural speech)",
+    "timestamp": 1791129883.606167
+  }
+}

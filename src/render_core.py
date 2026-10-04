@@ -13,7 +13,9 @@ Usage:
 import os, sys, glob, json, re, numpy as np, torch
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(REPO, "BigVGAN"))
 import prep_text as PT  # noqa: E402
 
 SR = 24000
@@ -260,9 +262,15 @@ class Renderer:
             raise FileNotFoundError("vocab.txt not found (pass vocab_file= or ship it beside bank.json)")
         self.cfm = load_model(DiT, CFG, mel_spec_type="vocos", vocab_file=vocab, device=device)
         ck = torch.load(voice_path, map_location="cpu", weights_only=True)
-        ema = {k.replace("ema_model.", ""): v for k, v in ck["ema_model_state_dict"].items()
-               if k not in ("initted", "step")}
-        self.cfm.load_state_dict(ema, strict=False); self.cfm.eval()
+        if "ema_model_state_dict" in ck:
+            sd = {k.replace("ema_model.", ""): v for k, v in ck["ema_model_state_dict"].items()
+                  if k not in ("initted", "step")}
+        elif "model_state_dict" in ck:
+            sd = {k.replace("ema_model.", ""): v for k, v in ck["model_state_dict"].items()
+                  if k not in ("initted", "step")}
+        else:
+            sd = ck
+        self.cfm.load_state_dict(sd, strict=False); self.cfm.eval()
 
         real_voc = load_vocoder("vocos")
         import threading
@@ -319,6 +327,7 @@ class Renderer:
         ref_wav = os.path.join(self._bdir, e["wav"]); ref_text = e["ref_text"]
         sps = float(e.get("sec_per_syll", 0.26))
         ref_audio, ref_t = self._preprocess(ref_wav, ref_text, clip_short=True)
+        ref_t = PT.model_text(ref_t)
         ra, sr = self._audio_load(ref_audio); ref_len = ra.shape[-1] / sr
         val = (ref_audio, ref_t, sps, ref_len)
         self._refcache[key] = val
@@ -383,9 +392,10 @@ class Renderer:
                 torch.set_num_threads(max(4, 24 // self.num_workers))
             au = None
             last_mel = None
-            for att in range(4):
+            for att in range(2):
                 torch.manual_seed(seed + att + idx*7)
-                _fixd = (ref_len + NSYLL[idx]*ref_sps) if (ref_sps > 0 and NSYLL) else None
+                # When fix_duration is None, F5-TTS calculates duration robustly based on text length and speed
+                _fixd = None
                 with torch.inference_mode():
                     if self.use_bf16:
                         with torch.autocast("cpu", dtype=torch.bfloat16):
@@ -403,7 +413,7 @@ class Renderer:
                 elif np.abs(w).max() > 1.0:
                     w = w / np.abs(w).max() * 0.95
                 last_mel = getattr(self.cap.local, "last", self.cap.last)
-                if float(np.sqrt((w**2).mean())) > 0.04:
+                if float(np.sqrt((w**2).mean())) > 0.008:
                     au = w
                     break
             if au is None: au = w

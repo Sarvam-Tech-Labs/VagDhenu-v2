@@ -1,0 +1,2432 @@
+[
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0000.wav",
+    "duration": 7.48,
+    "text": "ಧರ್ಮಾಕ್ಷೇತ್ರೇ ಕುರುಕ್ಷೇತ್ರೇ ಸಮವೇತಾ ಯುಯುತ್ಸವಃ",
+    "text_orig": "धर्माक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः",
+    "chapter": 1,
+    "verse": 1,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0001.wav",
+    "duration": 5.36,
+    "text": "ಮಾಮಕಾಃ ಪಾಣ್ಡವಾಶ್ಚೈವ ಕಿಮಕುರ್ವತ ಸಞ್ಜಯ",
+    "text_orig": "मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय",
+    "chapter": 1,
+    "verse": 1,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0002.wav",
+    "duration": 6.26,
+    "text": "ಸಞ್ಜಯ ಉವಾಚ ದೃಷ್ಟ್ವಾ ತು ಪಾಣ್ಡವಾನೀಕಂ",
+    "text_orig": "सञ्जय उवाच दृष्ट्वा तु पाण्डवानीकं",
+    "chapter": 1,
+    "verse": 2,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0003.wav",
+    "duration": 3.58,
+    "text": "ವ್ಯೂಢಂ ದುರ್ಯೋಧನಸ್ತದಾ",
+    "text_orig": "व्यूढं दुर्योधनस्तदा",
+    "chapter": 1,
+    "verse": 2,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0004.wav",
+    "duration": 5.5,
+    "text": "ಆಚಾರ್ಯಮುಪಸಙ್ಗಮ್ಯ ರಾಜಾ ವಚನಮಬ್ರವೀತ್",
+    "text_orig": "आचार्यमुपसङ्गम्य राजा वचनमब्रवीत्",
+    "chapter": 1,
+    "verse": 2,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0005.wav",
+    "duration": 10.58,
+    "text": "ಪಶ್ಯೈತಾಂ ಪಾಣ್ಡುಪುತ್ರಾಣಾಮಾಚಾರ್ಯ ಮಹತೀಂ ಚಮೂಮ್",
+    "text_orig": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम्",
+    "chapter": 1,
+    "verse": 3,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0006.wav",
+    "duration": 2.6,
+    "text": "ವ್ಯೂಢಾಂ ದ್ರುಪದಪುತ್ರೇಣ ತವ ಶಿಷ್ಯೇಣ ಧೀಮತಾ",
+    "text_orig": "व्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता",
+    "chapter": 1,
+    "verse": 3,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0007.wav",
+    "duration": 4.54,
+    "text": "ಅತ್ರ ಶೂರಾ ಮಹೇಷ್ವಾಸಾ ಭೀಮಾರ್ಜುನಸಮಾ ಯುಧಿ",
+    "text_orig": "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि",
+    "chapter": 1,
+    "verse": 4,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0008.wav",
+    "duration": 7.62,
+    "text": "ಯುಯುಧಾನೋ ವಿರಾಟಶ್ಚ ದ್ರುಪದಶ್ಚ ಮಹಾರಥಃ",
+    "text_orig": "युयुधानो विराटश्च द्रुपदश्च महारथः",
+    "chapter": 1,
+    "verse": 4,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0009.wav",
+    "duration": 3.5,
+    "text": "ಧೃಷ್ಟಕೇತುಶ್ಚೇಕಿತಾನಃ ಕಾಶಿರಾಜಶ್ಚ ವೀರ್ಯವಾನ್",
+    "text_orig": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान्",
+    "chapter": 1,
+    "verse": 5,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0010.wav",
+    "duration": 3.32,
+    "text": "ಪುರುಜಿತ್ಕುನ್ತಿಭೋಜಶ್ಚ ಶೈಬ್ಯಶ್ಚ ನರಪುಙ್ಗವಃ",
+    "text_orig": "पुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः",
+    "chapter": 1,
+    "verse": 5,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0011.wav",
+    "duration": 6.32,
+    "text": "ಯುಧಾಮನ್ಯುಶ್ಚ ವಿಕ್ರಾನ್ತ ಉತ್ತಮೌಜಾಶ್ಚ ವೀರ್ಯವಾನ್",
+    "text_orig": "युधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान्",
+    "chapter": 1,
+    "verse": 6,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0012.wav",
+    "duration": 7.28,
+    "text": "ಸೌಭದ್ರೋ ದ್ರೌಪದೇಯಾಶ್ಚ ಸರ್ವ ಏವ ಮಹಾರಥಾಃ",
+    "text_orig": "सौभद्रो द्रौपदेयाश्च सर्व एव महारथाः",
+    "chapter": 1,
+    "verse": 6,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0013.wav",
+    "duration": 2.1,
+    "text": "ಅಸ್ಮಾಕಂ ತು ವಿಶಿಷ್ಟಾ ಯೇ ತಾನ್ನಿಬೋಧ ದ್ವಿಜೋತ್ತಮ",
+    "text_orig": "अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम",
+    "chapter": 1,
+    "verse": 7,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0014.wav",
+    "duration": 3.78,
+    "text": "ನಾಯಕಾ ಮಮ ಸೈನ್ಯಸ್ಯ ಸಂಜ್ಞಾರ್ಥಂ ತಾನ್ಬ್ರವೀಮಿ ತೇ",
+    "text_orig": "नायका मम सैन्यस्य संज्ञार्थं तान्ब्रवीमि ते",
+    "chapter": 1,
+    "verse": 7,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0015.wav",
+    "duration": 3.72,
+    "text": "ಭವಾನ್ಭೀಷ್ಮಶ್ಚ ಕರ್ಣಶ್ಚ ಕೃಪಶ್ಚ ಸಮಿತಿಞ್ಜಯಃ",
+    "text_orig": "भवान्भीष्मश्च कर्णश्च कृपश्च समितिञ्जयः",
+    "chapter": 1,
+    "verse": 8,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0016.wav",
+    "duration": 3.78,
+    "text": "ಅಶ್ವತ್ಥಾಮಾ ವಿಕರ್ಣಶ್ಚ ಸೌಮದತ್ತಿಸ್ತಥೈವ ಚ",
+    "text_orig": "अश्वत्थामा विकर्णश्च सौमदत्तिस्तथैव च",
+    "chapter": 1,
+    "verse": 8,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0017.wav",
+    "duration": 3.46,
+    "text": "ಅನ್ಯೇ ಚ ಬಹವಃ ಶೂರಾ ಮದರ್ಥೇ ತ್ಯಕ್ತಜೀವಿತಾಃ",
+    "text_orig": "अन्ये च बहवः शूरा मदर्थे त्यक्तजीविताः",
+    "chapter": 1,
+    "verse": 9,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0018.wav",
+    "duration": 6.84,
+    "text": "ನಾನಾಶಾಸ್ತ್ರಪ್ರಹರಣಾಃ ಸರ್ವೇ ಯುದ್ಧವಿಶಾರದಾಃ",
+    "text_orig": "नानाशास्त्रप्रहरणाः सर्वे युद्धविशारदाः",
+    "chapter": 1,
+    "verse": 9,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0019.wav",
+    "duration": 5.42,
+    "text": "ಅಪರ್ಯಾಪ್ತಂ ತದಸ್ಮಾಕಂ ಬಲಂ ಭೀಷ್ಮಾಭಿರಕ್ಷಿತಮ್",
+    "text_orig": "अपर्याप्तं तदस्माकं बलं भीष्माभिरक्षितम्",
+    "chapter": 1,
+    "verse": 10,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0020.wav",
+    "duration": 6.46,
+    "text": "ಪರ್ಯಾಪ್ತಂ ತ್ವಿದಮೇತೇಷಾಂ ಬಲಂ ಭೀಮಾಭಿರಕ್ಷಿತಮ್",
+    "text_orig": "पर्याप्तं त्विदमेतेषां बलं भीमाभिरक्षितम्",
+    "chapter": 1,
+    "verse": 10,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0021.wav",
+    "duration": 3.64,
+    "text": "ಅಯನೇಷು ಚ ಸರ್ವೇಷು ಯಥಾಭಾಗಮವಸ್ಥಿತಾಃ",
+    "text_orig": "अयनेषु च सर्वेषु यथाभागमवस्थिताः",
+    "chapter": 1,
+    "verse": 11,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0022.wav",
+    "duration": 3.42,
+    "text": "ಭೀಷ್ಮಮೇವಾಭಿರಕ್ಷನ್ತು ಭವನ್ತಃ ಸರ್ವ ಏವ ಹಿ",
+    "text_orig": "भीष्ममेवाभिरक्षन्तु भवन्तः सर्व एव हि",
+    "chapter": 1,
+    "verse": 11,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0023.wav",
+    "duration": 2.34,
+    "text": "ತಸ್ಯ ಸಞ್ಜನಯನ್ಹರ್ಷಂ ಕುರುವೃದ್ಧಃ ಪಿತಾಮಹಃ",
+    "text_orig": "तस्य सञ्जनयन्हर्षं कुरुवृद्धः पितामहः",
+    "chapter": 1,
+    "verse": 12,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0024.wav",
+    "duration": 7.24,
+    "text": "ಸಿಂಹನಾದಂ ವಿನದ್ಯೋಚ್ಚೈಃ ಶಙ್ಖಂ ದಧ್ಮೋ ಪ್ರತಾಪವಾನ್",
+    "text_orig": "सिंहनादं विनद्योच्चैः शङ्खं दध्मो प्रतापवान्",
+    "chapter": 1,
+    "verse": 12,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0025.wav",
+    "duration": 3.08,
+    "text": "ತತಃ ಶಙ್ಖಾಶ್ಚ ಭೇರ್ಯಶ್ಚ ಪಣವಾನಕಗೋಮುಖಾಃ",
+    "text_orig": "ततः शङ्खाश्च भेर्यश्च पणवानकगोमुखाः",
+    "chapter": 1,
+    "verse": 13,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0026.wav",
+    "duration": 3.88,
+    "text": "ಸಹಸೈವಾಭ್ಯಹನ್ಯನ್ತ ಸ ಶಬ್ದಸ್ತುಮುಲೋಽಭವತ್",
+    "text_orig": "सहसैवाभ्यहन्यन्त स शब्दस्तुमुलोऽभवत्",
+    "chapter": 1,
+    "verse": 13,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0027.wav",
+    "duration": 6.92,
+    "text": "ತತಃ ಶ್ವೇತೈರ್ಹಯೈರ್ಯುಕ್ತೇ ಮಹತಿ ಸ್ಯನ್ದನೇ ಸ್ಥಿತೌ",
+    "text_orig": "ततः श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ",
+    "chapter": 1,
+    "verse": 14,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0028.wav",
+    "duration": 6.58,
+    "text": "ಮಾಧವಃ ಪಾಣ್ಡವಶ್ಚೈವ ದಿವ್ಯೌ ಶಙ್ಖೌ ಪ್ರದಧ್ಮತುಃ",
+    "text_orig": "माधवः पाण्डवश्चैव दिव्यौ शङ्खौ प्रदध्मतुः",
+    "chapter": 1,
+    "verse": 14,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0029.wav",
+    "duration": 6.26,
+    "text": "ಪಾಞ್ಚಜನ್ಯಂ ಹೃಷೀಕೇಶೋ ದೇವದತ್ತಂ ಧನಞ್ಜಯಃ",
+    "text_orig": "पाञ्चजन्यं हृषीकेशो देवदत्तं धनञ्जयः",
+    "chapter": 1,
+    "verse": 15,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0030.wav",
+    "duration": 4.98,
+    "text": "ಪೌಣ್ಡ್ರಂ ದಧ್ಮೌ ಮಹಾಶಙ್ಖಂ ಭೀಮಕರ್ಮಾ ವೃಕೋದರಃ",
+    "text_orig": "पौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदरः",
+    "chapter": 1,
+    "verse": 15,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0032.wav",
+    "duration": 6.78,
+    "text": "ಅನನ್ತವಿಜಯಂ ರಾಜಾ ಕುನ್ತೀಪುತ್ರೋ ಯುಧಿಷ್ಠಿರಃ",
+    "text_orig": "अनन्तविजयं राजा कुन्तीपुत्रो युधिष्ठिरः",
+    "chapter": 1,
+    "verse": 16,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0033.wav",
+    "duration": 3.54,
+    "text": "ನಕುಲಃ ಸಹದೇವಶ್ಚ ಸುಘೋಷಮಣಿಪುಷ್ಪಕೌ",
+    "text_orig": "नकुलः सहदेवश्च सुघोषमणिपुष्पकौ",
+    "chapter": 1,
+    "verse": 16,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0034.wav",
+    "duration": 3.12,
+    "text": "ಕಾಶ್ಯಶ್ಚ ಪರಮೇಷ್ವಾಸಃ ಶಿಖಣ್ಡೀ ಚ ಮಹಾರಥಃ",
+    "text_orig": "काश्यश्च परमेष्वासः शिखण्डी च महारथः",
+    "chapter": 1,
+    "verse": 17,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0035.wav",
+    "duration": 4.86,
+    "text": "ಧೃಷ್ಟದ್ಯುಮ್ನೋ ವಿರಾಟಶ್ಚ ಸಾತ್ಯಕಿಶ್ಚಾಪರಾಜಿತಃ",
+    "text_orig": "धृष्टद्युम्नो विराटश्च सात्यकिश्चापराजितः",
+    "chapter": 1,
+    "verse": 17,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0036.wav",
+    "duration": 4.24,
+    "text": "ದ್ರುಪದೋ ದ್ರೌಪದೇಯಾಶ್ಚ ಸರ್ವಶಃ ಪೃಥಿವೀಪತೇ",
+    "text_orig": "द्रुपदो द्रौपदेयाश्च सर्वशः पृथिवीपते",
+    "chapter": 1,
+    "verse": 18,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0037.wav",
+    "duration": 3.58,
+    "text": "ಸೌಭದ್ರಶ್ಚ ಮಹಾಬಾಹುಃ ಶಙ್ಖಾನ್ದಧ್ಮುಃ ಪೃಥಕ್ಪೃಥಕ್",
+    "text_orig": "सौभद्रश्च महाबाहुः शङ्खान्दध्मुः पृथक्पृथक्",
+    "chapter": 1,
+    "verse": 18,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0038.wav",
+    "duration": 2.64,
+    "text": "ಸ ಘೋಷೋ ಧಾರ್ತರಾಷ್ಟ್ರಾಣಾಂ ಹೃದಯಾನಿ ವ್ಯದಾರಯತ್",
+    "text_orig": "स घोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्",
+    "chapter": 1,
+    "verse": 19,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0039.wav",
+    "duration": 3.94,
+    "text": "ನಭಶ್ಚ ಪೃಥಿವೀಂ ಚೈವ ತುಮುಲೋ ವ್ಯನುನಾದಯನ್",
+    "text_orig": "नभश्च पृथिवीं चैव तुमुलो व्यनुनादयन्",
+    "chapter": 1,
+    "verse": 19,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0040.wav",
+    "duration": 4.2,
+    "text": "ಅಥ ವ್ಯವಸ್ಥಿತಾನ್ದೃಷ್ಟ್ವಾ ಧಾರ್ತರಾಷ್ಟ್ರಾನ್ಕಪಿಧ್ವಜಃ",
+    "text_orig": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान्कपिध्वजः",
+    "chapter": 1,
+    "verse": 20,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0041.wav",
+    "duration": 3.52,
+    "text": "ಪ್ರವೃತ್ತೇ ಶಸ್ತ್ರಸಮ್ಪಾತೇ ಧನುರುದ್ಯಮ್ಯ ಪಾಣ್ಡವಃ",
+    "text_orig": "प्रवृत्ते शस्त्रसम्पाते धनुरुद्यम्य पाण्डवः",
+    "chapter": 1,
+    "verse": 20,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0042.wav",
+    "duration": 2.64,
+    "text": "ಹೃಷೀಕೇಶಂ ತದಾ ವಾಕ್ಯಮಿದಮಾಹ ಮಹೀಪತೇ",
+    "text_orig": "हृषीकेशं तदा वाक्यमिदमाह महीपते",
+    "chapter": 1,
+    "verse": 21,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0043.wav",
+    "duration": 3.62,
+    "text": "ಸೇನಯೋರುಭಯೋರ್ಮಧ್ಯೇ ರಥಂ ಸ್ಥಾಪಯ ಮೇಽಚ್ಯುತ",
+    "text_orig": "सेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत",
+    "chapter": 1,
+    "verse": 21,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0044.wav",
+    "duration": 4.0,
+    "text": "ಯಾವದೇತಾನ್ನಿರಿಕ್ಷೇಽಹಂ ಯೋದ್ಧುಕಾಮಾನವಸ್ಥಿತಾನ್",
+    "text_orig": "यावदेतान्निरिक्षेऽहं योद्धुकामानवस्थितान्",
+    "chapter": 1,
+    "verse": 22,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0045.wav",
+    "duration": 2.6,
+    "text": "ಕೈರ್ಮಯಾ ಸಹ ಯೋದ್ಧವ್ಯಮಸ್ಮಿನ್ ರಣಸಮುದ್ಯಮೇ",
+    "text_orig": "कैर्मया सह योद्धव्यमस्मिन् रणसमुद्यमे",
+    "chapter": 1,
+    "verse": 22,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0046.wav",
+    "duration": 4.82,
+    "text": "ಯೋತ್ಸ್ಯಮಾನಾನವೇಕ್ಷೇಽಹಂ ಯ ಏತೇಽತ್ರ ಸಮಾಗತಾಃ",
+    "text_orig": "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः",
+    "chapter": 1,
+    "verse": 23,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0047.wav",
+    "duration": 3.7,
+    "text": "ಧಾರ್ತರಾಷ್ಟ್ರಸ್ಯ ದುರ್ಬುದ್ಧೇರ್ಯುದ್ಧೇ ಪ್ರಿಯಚಿಕೀರ್ಷವಃ",
+    "text_orig": "धार्तराष्ट्रस्य दुर्बुद्धेर्युद्धे प्रियचिकीर्षवः",
+    "chapter": 1,
+    "verse": 23,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0048.wav",
+    "duration": 3.96,
+    "text": "ಸಞ್ಜಯ ಉವಾಚ ಏವಮುಕ್ತೋ ಹೃಷೀಕೇಶೋ ಗುಡಾಕೇಶೇನ ಭಾರತ",
+    "text_orig": "सञ्जय उवाच एवमुक्तो हृषीकेशो गुडाकेशेन भारत",
+    "chapter": 1,
+    "verse": 24,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0049.wav",
+    "duration": 2.66,
+    "text": "ಸೇನಯೋರುಭಯೋರ್ಮಧ್ಯೇ ಸ್ಥಾಪಯಿತ್ವಾ ರಥೋತ್ತಮಮ್",
+    "text_orig": "सेनयोरुभयोर्मध्ये स्थापयित्वा रथोत्तमम्",
+    "chapter": 1,
+    "verse": 24,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0050.wav",
+    "duration": 3.74,
+    "text": "ಭೀಷ್ಮದ್ರೋಣಪ್ರಮುಖತಃ ಸರ್ವೇಶಾಮ ಚ ಮಹೀಕ್ಷಿತಾಮ್",
+    "text_orig": "भीष्मद्रोणप्रमुखतः सर्वेशाम च महीक्षिताम्",
+    "chapter": 1,
+    "verse": 25,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0051.wav",
+    "duration": 3.64,
+    "text": "ಉವಾಚ ಪಾರ್ಥ ಪಶ್ಯೈತಾನ್ಸಮವೇತಾನ್ಕುರೂನಿತಿ",
+    "text_orig": "उवाच पार्थ पश्यैतान्समवेतान्कुरूनिति",
+    "chapter": 1,
+    "verse": 25,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0052.wav",
+    "duration": 3.52,
+    "text": "ತತ್ರಾಪಶ್ಯತ್ಸ್ಥಿತಾನ್ಪಾರ್ಥಃ ಪಿತ್ರೂನಥ ಪಿತಾಮಹಾನ್",
+    "text_orig": "तत्रापश्यत्स्थितान्पार्थः पितॄनथ पितामहान्",
+    "chapter": 1,
+    "verse": 26,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0053.wav",
+    "duration": 3.3,
+    "text": "ಆಚಾರ್ಯಾನ್ಮಾತುಲಾನ್ಭ್ರಾತ್ರೂನ್ಪುತ್ರಾನ್ಪೌತ್ರಾನ್ಸಖೀಂಸ್ತಥಾ",
+    "text_orig": "आचार्यान्मातुलान्भ्रातॄन्पुत्रान्पौत्रान्सखींस्तथा",
+    "chapter": 1,
+    "verse": 26,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0054.wav",
+    "duration": 3.56,
+    "text": "ಶ್ವಶುರಾನ್ಸುಹೃದಶ್ಚೈವ ಸೇನಯೋರುಭಯೋರಪಿ",
+    "text_orig": "श्वशुरान्सुहृदश्चैव सेनयोरुभयोरपि",
+    "chapter": 1,
+    "verse": 27,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0055.wav",
+    "duration": 3.74,
+    "text": "ತಾನ್ಸಮೀಕ್ಷ್ಯ ಸ ಕೌನ್ತೇಯಃ ಸರ್ವಾನ್ಬನ್ಧೂನವಸ್ಥಿತಾನ್",
+    "text_orig": "तान्समीक्ष्य स कौन्तेयः सर्वान्बन्धूनवस्थितान्",
+    "chapter": 1,
+    "verse": 27,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0056.wav",
+    "duration": 3.92,
+    "text": "ಕೃಪಯಾ ಪರಯಾವಿಷ್ಟೋ ವಿಷೀದನ್ನಿದಮಬ್ರವೀತ್",
+    "text_orig": "कृपया परयाविष्टो विषीदन्निदमब्रवीत्",
+    "chapter": 1,
+    "verse": 28,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0057.wav",
+    "duration": 3.24,
+    "text": "ಅರ್ಜುನ ಉವಾಚ ದೃಷ್ಟ್ವೇಮಂ ಸ್ವಜನಂ ಕೃಷ್ಣ ಯುಯುತ್ಸುಂ ಸಮುಪಸ್ಥಿತಮ್",
+    "text_orig": "अर्जुन उवाच दृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम्",
+    "chapter": 1,
+    "verse": 28,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0058.wav",
+    "duration": 3.16,
+    "text": "ಸೀದನ್ತಿ ಮಮ ಗಾತ್ರಾಣಿ ಮುಖಂ ಚ ಪರಿಶುಷ್ಯತಿ",
+    "text_orig": "सीदन्ति मम गात्राणि मुखं च परिशुष्यति",
+    "chapter": 1,
+    "verse": 29,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0059.wav",
+    "duration": 3.5,
+    "text": "ವೇಪಥುಶ್ಚ ಶರೀರೇ ಮೇ ರೋಮಹರ್ಷಶ್ಚ ಜಾಯತೇ",
+    "text_orig": "वेपथुश्च शरीरे मे रोमहर्षश्च जायते",
+    "chapter": 1,
+    "verse": 29,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0060.wav",
+    "duration": 3.58,
+    "text": "ಗಾಣ್ಡೀವಂ ಸ್ರಂಸತೇ ಹಸ್ತಾತ್ತ್ವಕ್ಚೈವ ಪರಿದಹ್ಯತೇ",
+    "text_orig": "गाण्डीवं स्रंसते हस्तात्त्वक्चैव परिदह्यते",
+    "chapter": 1,
+    "verse": 30,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0061.wav",
+    "duration": 3.34,
+    "text": "ನ ಚ ಶಕ್ನೋಮ್ಯವಸ್ಥಾತುಂ ಭ್ರಮತೀವ ಚ ಮೇ ಮನಃ",
+    "text_orig": "न च शक्नोम्यवस्थातुं भ्रमतीव च मे मनः",
+    "chapter": 1,
+    "verse": 30,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0062.wav",
+    "duration": 2.9,
+    "text": "ನಿಮಿತ್ತಾನಿ ಚ ಪಶ್ಯಾಮಿ ವಿಪರೀತಾನಿ ಕೇಶವ",
+    "text_orig": "निमित्तानि च पश्यामि विपरीतानि केशव",
+    "chapter": 1,
+    "verse": 31,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0063.wav",
+    "duration": 3.2,
+    "text": "ನ ಚ ಶ್ರೇಯೋಽನುಪಶ್ಯಾಮಿ ಹತ್ವಾ ಸ್ವಜನಮಾಹವೇ",
+    "text_orig": "न च श्रेयोऽनुपश्यामि हत्वा स्वजनमाहवे",
+    "chapter": 1,
+    "verse": 31,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0064.wav",
+    "duration": 4.24,
+    "text": "ನ ಕಾಙ್ಕ್ಷೇ ವಿಜಯಂ ಕೃಷ್ಣ ನ ಚ ರಾಜ್ಯಂ ಸುಖಾನಿ ಚ",
+    "text_orig": "न काङ्क्षे विजयं कृष्ण न च राज्यं सुखानि च",
+    "chapter": 1,
+    "verse": 32,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0065.wav",
+    "duration": 6.56,
+    "text": "ಕಿಂ ನೋ ರಾಜ್ಯೇನ ಗೋವಿನ್ದ ಕಿಂ ಭೋಗೈರ್ಜೀವಿತೇನ ವಾ",
+    "text_orig": "किं नो राज्येन गोविन्द किं भोगैर्जीवितेन वा",
+    "chapter": 1,
+    "verse": 32,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0066.wav",
+    "duration": 6.94,
+    "text": "ಯೇಷಾಮರ್ಥೇ ಕಾಙ್ಕ್ಷಿತಂ ನೋ ರಾಜ್ಯಂ ಭೋಗಾಃ ಸುಖಾನಿ ಚ",
+    "text_orig": "येषामर्थे काङ्क्षितं नो राज्यं भोगाः सुखानि च",
+    "chapter": 1,
+    "verse": 33,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0067.wav",
+    "duration": 6.86,
+    "text": "ತ ಇಮೇಽವಸ್ಥಿತಾ ಯುದ್ಧೇ ಪ್ರಾಣಾಂಸ್ತ್ಯಕ್ತ್ವಾ ಧನಾನಿ ಚ",
+    "text_orig": "त इमेऽवस्थिता युद्धे प्राणांस्त्यक्त्वा धनानि च",
+    "chapter": 1,
+    "verse": 33,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0068.wav",
+    "duration": 3.72,
+    "text": "ಆಚಾರ್ಯಾಃ ಪಿತರಃ ಪುತ್ರಾಸ್ತಥೈವ ಚ ಪಿತಾಮಹಾಃ",
+    "text_orig": "आचार्याः पितरः पुत्रास्तथैव च पितामहाः",
+    "chapter": 1,
+    "verse": 34,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0069.wav",
+    "duration": 4.08,
+    "text": "ಮಾತುಲಾಃ ಶ್ವಶುರಾಃ ಪೌತ್ರಾಃ ಶ್ಯಾಲಾಃ ಸಮ್ಬನ್ಧಿನಸ್ತಥಾ",
+    "text_orig": "मातुलाः श्वशुराः पौत्राः श्यालाः सम्बन्धिनस्तथा",
+    "chapter": 1,
+    "verse": 34,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0070.wav",
+    "duration": 4.86,
+    "text": "ಏತಾನ್ನ ಹನ್ತುಮಿಚ್ಛಾಮಿ ಘ್ನತೋಽಪಿ ಮಧುಸೂದನ",
+    "text_orig": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन",
+    "chapter": 1,
+    "verse": 35,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0071.wav",
+    "duration": 2.68,
+    "text": "ಅಪಿ ತ್ರೈಲೋಕ್ಯರಾಜ್ಯಸ್ಯ ಹೇತೋಃ ಕಿಂ ನು ಮಹೀಕೃತೇ",
+    "text_orig": "अपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते",
+    "chapter": 1,
+    "verse": 35,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0072.wav",
+    "duration": 4.26,
+    "text": "ನಿಹತ್ಯ ಧಾರ್ತರಾಷ್ಟ್ರಾನ್ನಃ ಕಾ ಪ್ರೀತಿಃ ಸ್ಯಾಜ್ಜನಾರ್ದನ",
+    "text_orig": "निहत्य धार्तराष्ट्रान्नः का प्रीतिः स्याज्जनार्दन",
+    "chapter": 1,
+    "verse": 36,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0073.wav",
+    "duration": 3.54,
+    "text": "ಪಾಪಮೇವಾಶ್ರಯೇದಸ್ಮಾನ್ಹತ್ವೈತಾನಾತತಾಯಿನಃ",
+    "text_orig": "पापमेवाश्रयेदस्मान्हत्वैतानाततायिनः",
+    "chapter": 1,
+    "verse": 36,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0074.wav",
+    "duration": 4.2,
+    "text": "ತಸ್ಮಾನ್ನಾರ್ಹಾ ವಯಂ ಹನ್ತುಂ ಧಾರ್ತರಾಷ್ಟ್ರಾನ್ಸಬಾನ್ಧವಾನ್",
+    "text_orig": "तस्मान्नार्हा वयं हन्तुं धार्तराष्ट्रान्सबान्धवान्",
+    "chapter": 1,
+    "verse": 37,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0075.wav",
+    "duration": 5.04,
+    "text": "ಸ್ವಜನಂ ಹಿ ಕಥಂ ಹತ್ವಾ ಸುಖಿನಃ ಸ್ಯಾಮ ಮಾಧವ",
+    "text_orig": "स्वजनं हि कथं हत्वा सुखिनः स्याम माधव",
+    "chapter": 1,
+    "verse": 37,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0076.wav",
+    "duration": 5.76,
+    "text": "ಯದ್ಯಪ್ಯೇತೇ ನ ಪಶ್ಯನ್ತಿ ಲೋಭೋಪಹತಚೇತಸಃ",
+    "text_orig": "यद्यप्येते न पश्यन्ति लोभोपहतचेतसः",
+    "chapter": 1,
+    "verse": 38,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0077.wav",
+    "duration": 3.72,
+    "text": "ಕುಲಕ್ಷಯಕೃತಂ ದೋಷಂ ಮಿತ್ರದ್ರೋಹೇ ಚ ಪಾತಕಮ್",
+    "text_orig": "कुलक्षयकृतं दोषं मित्रद्रोहे च पातकम्",
+    "chapter": 1,
+    "verse": 38,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0078.wav",
+    "duration": 3.26,
+    "text": "ಕಥಂ ನ ಜ್ಞೇಯಮಸ್ಮಾಭಿಃ ಪಾಪಾದಸ್ಮಾನ್ನಿವರ್ತಿತುಮ್",
+    "text_orig": "कथं न ज्ञेयमस्माभिः पापादस्मान्निवर्तितुम्",
+    "chapter": 1,
+    "verse": 39,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0079.wav",
+    "duration": 2.6,
+    "text": "ಕುಲಕ್ಷಯಕೃತಂ ದೋಷಂ ಪ್ರಪಶ್ಯದ್ಭಿರ್ಜನಾರ್ದನ",
+    "text_orig": "कुलक्षयकृतं दोषं प्रपश्यद्भिर्जनार्दन",
+    "chapter": 1,
+    "verse": 39,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0080.wav",
+    "duration": 3.08,
+    "text": "ಕುಲಕ್ಷಯೇ ಪ್ರಣಶ್ಯನ್ತಿ ಕುಲಧರ್ಮಾಃ ಸನಾತನಾಃ",
+    "text_orig": "कुलक्षये प्रणश्यन्ति कुलधर्माः सनातनाः",
+    "chapter": 1,
+    "verse": 40,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0081.wav",
+    "duration": 3.62,
+    "text": "ಧರ್ಮೇ ನಷ್ಟೇ ಕುಲಂ ಕೃತ್ಸ್ನಮಧರ್ಮೋಽಭಿಭವತ್ಯುತ",
+    "text_orig": "धर्मे नष्टे कुलं कृत्स्नमधर्मोऽभिभवत्युत",
+    "chapter": 1,
+    "verse": 40,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0082.wav",
+    "duration": 3.38,
+    "text": "ಅಧರ್ಮಾಭಿಭವಾತ್ಕೃಷ್ಣ ಪ್ರದುಷ್ಯನ್ತಿ ಕುಲಸ್ತ್ರಿಯಃ",
+    "text_orig": "अधर्माभिभवात्कृष्ण प्रदुष्यन्ति कुलस्त्रियः",
+    "chapter": 1,
+    "verse": 41,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0083.wav",
+    "duration": 2.82,
+    "text": "ಸ್ತ್ರೀಷು ದುಷ್ಟಾಸು ವಾರ್ಷ್ಣೇಯ ಜಾಯತೇ ವರ್ಣಸಙ್ಕರಃ",
+    "text_orig": "स्त्रीषु दुष्टासु वार्ष्णेय जायते वर्णसङ्करः",
+    "chapter": 1,
+    "verse": 41,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0084.wav",
+    "duration": 4.14,
+    "text": "ಸಙ್ಕರೋ ನರಕಾಯೈವ ಕುಲಘ್ನಾನಾಂ ಕುಲಸ್ಯ ಚ",
+    "text_orig": "सङ्करो नरकायैव कुलघ्नानां कुलस्य च",
+    "chapter": 1,
+    "verse": 42,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0085.wav",
+    "duration": 4.52,
+    "text": "ಪತನ್ತಿ ಪಿತರೋ ಹ್ಯೇಷಾಂ ಲುಪ್ತಪಿಣ್ಡೋದಕಕ್ರಿಯಾಃ",
+    "text_orig": "पतन्ति पितरो ह्येषां लुप्तपिण्डोदकक्रियाः",
+    "chapter": 1,
+    "verse": 42,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0086.wav",
+    "duration": 5.84,
+    "text": "ದೋಷೈರೇತೈಃ ಕುಲಘ್ನಾನಾಂ ವರ್ಣಸಙ್ಕರಕಾರಕೈಃ",
+    "text_orig": "दोषैरेतैः कुलघ्नानां वर्णसङ्करकारकैः",
+    "chapter": 1,
+    "verse": 43,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0087.wav",
+    "duration": 3.88,
+    "text": "ಉತ್ಸಾದ್ಯನ್ತೇ ಜಾತಿಧರ್ಮಾಃ ಕುಲಧರ್ಮಾಶ್ಚ ಶಾಶ್ವತಾಃ",
+    "text_orig": "उत्साद्यन्ते जातिधर्माः कुलधर्माश्च शाश्वताः",
+    "chapter": 1,
+    "verse": 43,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0088.wav",
+    "duration": 4.38,
+    "text": "ಉತ್ಸನ್ನಕುಲಧರ್ಮಾಣಾಂ ಮನುಷ್ಯಾಣಾಂ ಜನಾರ್ದನ",
+    "text_orig": "उत्सन्नकुलधर्माणां मनुष्याणां जनार्दन",
+    "chapter": 1,
+    "verse": 44,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0089.wav",
+    "duration": 3.28,
+    "text": "ನರಕೇಽನಿಯತಂ ವಾಸೋ ಭವತೀತ್ಯನುಶುಶ್ರುಮ",
+    "text_orig": "नरकेऽनियतं वासो भवतीत्यनुशुश्रुम",
+    "chapter": 1,
+    "verse": 44,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0090.wav",
+    "duration": 4.2,
+    "text": "ಅಹೋ ಬತ ಮಹತ್ಪಾಪಂ ಕರ್ತುಂ ವ್ಯವಸಿತಾ ವಯಮ್",
+    "text_orig": "अहो बत महत्पापं कर्तुं व्यवसिता वयम्",
+    "chapter": 1,
+    "verse": 45,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0091.wav",
+    "duration": 3.62,
+    "text": "ಯದ್ರಾಜ್ಯಸುಖಲೋಭೇನ ಹನ್ತುಂ ಸ್ವಜನಮುದ್ಯತಾಃ",
+    "text_orig": "यद्राज्यसुखलोभेन हन्तुं स्वजनमुद्यताः",
+    "chapter": 1,
+    "verse": 45,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0092.wav",
+    "duration": 2.92,
+    "text": "ಯದಿ ಮಾಮಪ್ರತೀಕಾರಮಶಸ್ತ್ರಂ ಶಸ್ತ್ರಪಾಣಯಃ",
+    "text_orig": "यदि मामप्रतीकारमशस्त्रं शस्त्रपाणयः",
+    "chapter": 1,
+    "verse": 46,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0093.wav",
+    "duration": 5.74,
+    "text": "ಧಾರ್ತರಾಷ್ಟ್ರಾ ರಣೇ ಹನ್ಯುಸ್ತನ್ಮೇ ಕ್ಷೇಮತರಂ ಭವೇತ್",
+    "text_orig": "धार्तराष्ट्रा रणे हन्युस्तन्मे क्षेमतरं भवेत्",
+    "chapter": 1,
+    "verse": 46,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0094.wav",
+    "duration": 3.14,
+    "text": "ಸಞ್ಜಯ ಉವಾಚ ಏವಮುಕ್ತ್ವಾರ್ಜುನಃ ಸಙ್ಖ್ಯೇ ರಥೋಪಸ್ಥ ಉಪಾವಿಶತ್",
+    "text_orig": "सञ्जय उवाच एवमुक्त्वार्जुनः सङ्ख्ये रथोपस्थ उपाविशत्",
+    "chapter": 1,
+    "verse": 47,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2118_Bg_01_Recitation_of_Bhagavad-gita_Chapter_One_seg_0095.wav",
+    "duration": 3.04,
+    "text": "ವಿಸೃಜ್ಯ ಸಶರಂ ಚಾಪಂ ಶೋಕಸಂವಿಗ್ನಮಾನಸಃ",
+    "text_orig": "विसृज्य सशरं चापं शोकसंविग्नमानसः",
+    "chapter": 1,
+    "verse": 47,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0014.wav",
+    "duration": 5.66,
+    "text": "ಸಞ್ಜಯ ಉವಾಚ",
+    "text_orig": "सञ्जय उवाच",
+    "chapter": 2,
+    "verse": 1,
+    "confidence": 0.4
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0019.wav",
+    "duration": 5.06,
+    "text": "ತಂ ತಥಾ ಕೃಪಯಾಽವಿಷ್ಟಮಶ್ರುಪೂರ್ಣಾಕುಲೇಕ್ಷಣಮ್",
+    "text_orig": "तं तथा कृपयाऽविष्टमश्रुपूर्णाकुलेक्षणम्।",
+    "chapter": 2,
+    "verse": 1,
+    "confidence": 0.39285714285714285
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0020.wav",
+    "duration": 5.08,
+    "text": "ವಿಷೀದನ್ತಮಿದಂ ವಾಕ್ಯಮುವಾಚ ಮಧುಸೂದನಃ",
+    "text_orig": "विषीदन्तमिदं वाक्यमुवाच मधुसूदनः।।2.1।।",
+    "chapter": 2,
+    "verse": 1,
+    "confidence": 0.3508771929824561
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0033.wav",
+    "duration": 4.16,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 2,
+    "verse": 2,
+    "confidence": 0.45
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0035.wav",
+    "duration": 2.76,
+    "text": "ಕುತಸ್ತ್ವಾ ಕಶ್ಮಲಮಿದಂ ವಿಷಮೇ ಸಮುಪಸ್ಥಿತಮ್",
+    "text_orig": "कुतस्त्वा कश्मलमिदं विषमे समुपस्थितम्।",
+    "chapter": 2,
+    "verse": 2,
+    "confidence": 0.4444444444444444
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0037.wav",
+    "duration": 2.84,
+    "text": "ಅನಾರ್ಯಜುಷ್ಟಮಸ್ವರ್ಗ್ಯಮಕೀರ್ತಿಕರಮರ್ಜುನ",
+    "text_orig": "अनार्यजुष्टमस्वर्ग्यमकीर्तिकरमर्जुन।।2.2।।",
+    "chapter": 2,
+    "verse": 2,
+    "confidence": 0.39285714285714285
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0042.wav",
+    "duration": 5.84,
+    "text": "ಕ್ಲೈಬ್ಯಂ ಮಾ ಸ್ಮ ಗಮಃ ಪಾರ್ಥ ನೈತತ್ತ್ವಯ್ಯುಪಪದ್ಯತೇ",
+    "text_orig": "क्लैब्यं मा स्म गमः पार्थ नैतत्त्वय्युपपद्यते।",
+    "chapter": 2,
+    "verse": 3,
+    "confidence": 0.4166666666666667
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0059.wav",
+    "duration": 3.4,
+    "text": "ಕ್ಷುದ್ರಂ ಹೃದಯದೌರ್ಬಲ್ಯಂ ತ್ಯಕ್ತ್ವೋತ್ತಿಷ್ಠ ಪರನ್ತಪ",
+    "text_orig": "क्षुद्रं हृदयदौर्बल्यं त्यक्त्वोत्तिष्ठ परन्तप।।2.3।।",
+    "chapter": 2,
+    "verse": 3,
+    "confidence": 0.4307692307692308
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0062.wav",
+    "duration": 3.14,
+    "text": "ಅರ್ಜುನ ಉವಾಚ",
+    "text_orig": "अर्जुन उवाच",
+    "chapter": 2,
+    "verse": 4,
+    "confidence": 0.4166666666666667
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0066.wav",
+    "duration": 4.64,
+    "text": "ಇಷುಭಿಃ ಪ್ರತಿಯೋತ್ಸ್ಯಾಮಿ ಪೂಜಾರ್ಹಾವರಿಸೂದನ",
+    "text_orig": "इषुभिः प्रतियोत्स्यामि पूजार्हावरिसूदन।।2.4।।",
+    "chapter": 2,
+    "verse": 4,
+    "confidence": 0.36363636363636365
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0071.wav",
+    "duration": 3.94,
+    "text": "ಗುರೂನಹತ್ವಾ ಹಿ ಮಹಾನುಭಾವಾನ್",
+    "text_orig": "गुरूनहत्वा हि महानुभावान्",
+    "chapter": 2,
+    "verse": 5,
+    "confidence": 0.425531914893617
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0082.wav",
+    "duration": 4.38,
+    "text": "ಶ್ರೇಯೋ ಭೋಕ್ತುಂ ಭೈಕ್ಷ್ಯಮಪೀಹ ಲೋಕೇ",
+    "text_orig": "श्रेयो भोक्तुं भैक्ष्यमपीह लोके।",
+    "chapter": 2,
+    "verse": 5,
+    "confidence": 0.4528301886792453
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0086.wav",
+    "duration": 3.62,
+    "text": "ಹತ್ವಾರ್ಥಕಾಮಾಂಸ್ತು ಗುರೂನಿಹೈವ",
+    "text_orig": "हत्वार्थकामांस्तु गुरूनिहैव",
+    "chapter": 2,
+    "verse": 5,
+    "confidence": 0.45614035087719296
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0090.wav",
+    "duration": 3.88,
+    "text": "ಭುಞ್ಜೀಯ ಭೋಗಾನ್ ರುಧಿರಪ್ರದಿಗ್ಧಾನ್",
+    "text_orig": "भुञ्जीय भोगान् रुधिरप्रदिग्धान्।।2.5।।",
+    "chapter": 2,
+    "verse": 5,
+    "confidence": 0.41509433962264153
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0095.wav",
+    "duration": 4.8,
+    "text": "ನ ಚೈತದ್ವಿದ್ಮಃ ಕತರನ್ನೋ ಗರೀಯೋ",
+    "text_orig": "न चैतद्विद्मः कतरन्नो गरीयो",
+    "chapter": 2,
+    "verse": 6,
+    "confidence": 0.4
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0101.wav",
+    "duration": 3.68,
+    "text": "ಯದ್ವಾ ಜಯೇಮ ಯದಿ ವಾ ನೋ ಜಯೇಯುಃ",
+    "text_orig": "यद्वा जयेम यदि वा नो जयेयुः।",
+    "chapter": 2,
+    "verse": 6,
+    "confidence": 0.6111111111111112
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0110.wav",
+    "duration": 3.2,
+    "text": "ಯಾನೇವ ಹತ್ವಾ ನ ಜಿಜೀವಿಷಾಮ",
+    "text_orig": "यानेव हत्वा न जिजीविषाम",
+    "chapter": 2,
+    "verse": 6,
+    "confidence": 0.48484848484848486
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2119_Bg_02_Recitation_of_Bhagavad-gita_Chapter_Two_seg_0119.wav",
+    "duration": 3.16,
+    "text": "ಸ್ತೇಽವಸ್ಥಿತಾಃ ಪ್ರಮುಖೇ ಧಾರ್ತರಾಷ್ಟ್ರಾಃ",
+    "text_orig": "स्तेऽवस्थिताः प्रमुखे धार्तराष्ट्राः।।2.6।।",
+    "chapter": 2,
+    "verse": 6,
+    "confidence": 0.46153846153846156
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0002.wav",
+    "duration": 4.16,
+    "text": "ಜ್ಯಾಯಸೀ ಚೇತ್ಕರ್ಮಣಸ್ತೇ ಮತಾ ಬುದ್ಧಿರ್ಜನಾರ್ದನ",
+    "text_orig": "ज्यायसी चेत्कर्मणस्ते मता बुद्धिर्जनार्दन।",
+    "chapter": 3,
+    "verse": 1,
+    "confidence": 0.4
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0004.wav",
+    "duration": 6.52,
+    "text": "ತತ್ಕಿಂ ಕರ್ಮಣಿ ಘೋರೇ ಮಾಂ ನಿಯೋಜಯಸಿ ಕೇಶವ",
+    "text_orig": "तत्किं कर्मणि घोरे मां नियोजयसि केशव।।3.1।।",
+    "chapter": 3,
+    "verse": 1,
+    "confidence": 0.9090909090909091
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0020.wav",
+    "duration": 3.62,
+    "text": "ವ್ಯಾಮಿಶ್ರೇಣೇವ ವಾಕ್ಯೇನ ಬುದ್ಧಿಂ ಮೋಹಯಸೀವ ಮೇ",
+    "text_orig": "व्यामिश्रेणेव वाक्येन बुद्धिं मोहयसीव मे।",
+    "chapter": 3,
+    "verse": 2,
+    "confidence": 0.3548387096774194
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0032.wav",
+    "duration": 7.36,
+    "text": "ತದೇಕಂ ವದ ನಿಶಿಚತ್ಯ ಯೇನ ಶ್ರೇಯೋಽಹಮಾಪ್ನುಯಾಮ್",
+    "text_orig": "तदेकं वद निश्िचत्य येन श्रेयोऽहमाप्नुयाम्।।3.2।।",
+    "chapter": 3,
+    "verse": 2,
+    "confidence": 0.36363636363636365
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0035.wav",
+    "duration": 3.6,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 3,
+    "verse": 3,
+    "confidence": 0.6086956521739131
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0059.wav",
+    "duration": 3.38,
+    "text": "ಲೋಕೇಽಸ್ಮಿನ್ದ್ವಿವಿಧಾ ನಿಷ್ಠಾ ಪುರಾ ಪ್ರೋಕ್ತಾ ಮಯಾನಘ",
+    "text_orig": "लोकेऽस्मिन्द्विविधा निष्ठा पुरा प्रोक्ता मयानघ।",
+    "chapter": 3,
+    "verse": 3,
+    "confidence": 0.4074074074074074
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0080.wav",
+    "duration": 3.22,
+    "text": "ಜ್ಞಾನಯೋಗೇನ ಸಾಂಖ್ಯಾನಾಂ ಕರ್ಮಯೋಗೇನ ಯೋಗಿನಾಮ್",
+    "text_orig": "ज्ञानयोगेन सांख्यानां कर्मयोगेन योगिनाम्।।3.3।।",
+    "chapter": 3,
+    "verse": 3,
+    "confidence": 0.4642857142857143
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0093.wav",
+    "duration": 4.32,
+    "text": "ನ ಕರ್ಮಣಾಮನಾರಮ್ಭಾನ್ನೈಷ್ಕರ್ಮ್ಯಂ ಪುರುಷೋಽಶ್ನುತೇ",
+    "text_orig": "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।",
+    "chapter": 3,
+    "verse": 4,
+    "confidence": 0.42424242424242425
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2120_Bg_03_Recitation_of_Bhagavad-gita_Chapter_Three_seg_0110.wav",
+    "duration": 3.26,
+    "text": "ನ ಚ ಸಂನ್ಯಸನಾದೇವ ಸಿದ್ಧಿಂ ಸಮಧಿಗಚ್ಛತಿ",
+    "text_orig": "न च संन्यसनादेव सिद्धिं समधिगच्छति।।3.4।।",
+    "chapter": 3,
+    "verse": 4,
+    "confidence": 0.5238095238095238
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0003.wav",
+    "duration": 2.7,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 4,
+    "verse": 1,
+    "confidence": 0.37209302325581395
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0004.wav",
+    "duration": 4.0,
+    "text": "ಇಮಂ ವಿವಸ್ವತೇ ಯೋಗಂ ಪ್ರೋಕ್ತವಾನಹಮವ್ಯಯಮ್",
+    "text_orig": "इमं विवस्वते योगं प्रोक्तवानहमव्ययम्।",
+    "chapter": 4,
+    "verse": 1,
+    "confidence": 0.38596491228070173
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0005.wav",
+    "duration": 2.14,
+    "text": "ವಿವಸ್ವಾನ್ ಮನವೇ ಪ್ರಾಹ ಮನುರಿಕ್ಷ್ವಾಕವೇಽಬ್ರವೀತ್",
+    "text_orig": "विवस्वान् मनवे प्राह मनुरिक्ष्वाकवेऽब्रवीत्।।4.1।।",
+    "chapter": 4,
+    "verse": 1,
+    "confidence": 0.3673469387755102
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0006.wav",
+    "duration": 6.64,
+    "text": "ಏವಂ ಪರಮ್ಪರಾಪ್ರಾಪ್ತಮಿಮಂ ರಾಜರ್ಷಯೋ ವಿದುಃ",
+    "text_orig": "एवं परम्पराप्राप्तमिमं राजर्षयो विदुः।",
+    "chapter": 4,
+    "verse": 2,
+    "confidence": 0.8307692307692308
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0007.wav",
+    "duration": 6.34,
+    "text": "ಸ ಕಾಲೇನೇಹ ಮಹತಾ ಯೋಗೋ ನಷ್ಟಃ ಪರನ್ತಪ",
+    "text_orig": "स कालेनेह महता योगो नष्टः परन्तप।।4.2।।",
+    "chapter": 4,
+    "verse": 2,
+    "confidence": 0.6923076923076923
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0009.wav",
+    "duration": 5.34,
+    "text": "ಸ ಏವಾಯಂ ಮಯಾ ತೇಽದ್ಯ ಯೋಗಃ ಪ್ರೋಕ್ತಃ ಪುರಾತನಃ",
+    "text_orig": "स एवायं मया तेऽद्य योगः प्रोक्तः पुरातनः।",
+    "chapter": 4,
+    "verse": 3,
+    "confidence": 0.4117647058823529
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0065.wav",
+    "duration": 3.36,
+    "text": "ಅರ್ಜುನ ಉವಾಚ",
+    "text_orig": "अर्जुन उवाच",
+    "chapter": 4,
+    "verse": 4,
+    "confidence": 0.36363636363636365
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0068.wav",
+    "duration": 2.82,
+    "text": "ಅಪರಂ ಭವತೋ ಜನ್ಮ ಪರಂ ಜನ್ಮ ವಿವಸ್ವತಃ",
+    "text_orig": "अपरं भवतो जन्म परं जन्म विवस्वतः।",
+    "chapter": 4,
+    "verse": 4,
+    "confidence": 0.5405405405405406
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0070.wav",
+    "duration": 4.9,
+    "text": "ಕಥಮೇತದ್ವಿಜಾನೀಯಾಂ ತ್ವಮಾದೌ ಪ್ರೋಕ್ತವಾನಿತಿ",
+    "text_orig": "कथमेतद्विजानीयां त्वमादौ प्रोक्तवानिति।।4.4।।",
+    "chapter": 4,
+    "verse": 4,
+    "confidence": 0.39285714285714285
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0076.wav",
+    "duration": 3.72,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 4,
+    "verse": 5,
+    "confidence": 0.4
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0080.wav",
+    "duration": 4.14,
+    "text": "ಬಹೂನಿ ಮೇ ವ್ಯತೀತಾನಿ ಜನ್ಮಾನಿ ತವ ಚಾರ್ಜುನ",
+    "text_orig": "बहूनि मे व्यतीतानि जन्मानि तव चार्जुन।",
+    "chapter": 4,
+    "verse": 5,
+    "confidence": 0.37037037037037035
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0082.wav",
+    "duration": 3.14,
+    "text": "ತಾನ್ಯಹಂ ವೇದ ಸರ್ವಾಣಿ ನ ತ್ವಂ ವೇತ್ಥ ಪರನ್ತಪ",
+    "text_orig": "तान्यहं वेद सर्वाणि न त्वं वेत्थ परन्तप।।4.5।।",
+    "chapter": 4,
+    "verse": 5,
+    "confidence": 0.5846153846153846
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0083.wav",
+    "duration": 3.16,
+    "text": "ಅಜೋಽಪಿ ಸನ್ನವ್ಯಯಾತ್ಮಾ ಭೂತಾನಾಮೀಶ್ವರೋಽಪಿ ಸನ್",
+    "text_orig": "अजोऽपि सन्नव्ययात्मा भूतानामीश्वरोऽपि सन्।",
+    "chapter": 4,
+    "verse": 6,
+    "confidence": 0.5172413793103449
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0087.wav",
+    "duration": 3.14,
+    "text": "ಯದಾ ಯದಾ ಹಿ ಧರ್ಮಸ್ಯ ಗ್ಲಾನಿರ್ಭವತಿ ಭಾರತ",
+    "text_orig": "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।",
+    "chapter": 4,
+    "verse": 7,
+    "confidence": 0.4
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0088.wav",
+    "duration": 4.0,
+    "text": "ಅಭ್ಯುತ್ಥಾನಮಧರ್ಮಸ್ಯ ತದಾಽಽತ್ಮಾನಂ ಸೃಜಾಮ್ಯಹಮ್",
+    "text_orig": "अभ्युत्थानमधर्मस्य तदाऽऽत्मानं सृजाम्यहम्।।4.7।।",
+    "chapter": 4,
+    "verse": 7,
+    "confidence": 0.4117647058823529
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0092.wav",
+    "duration": 4.3,
+    "text": "ಪರಿತ್ರಾಣಾಯ ಸಾಧೂನಾಂ ವಿನಾಶಾಯ ಚ ದುಷ್ಕೃತಾಮ್",
+    "text_orig": "परित्राणाय साधूनां विनाशाय च दुष्कृताम्।",
+    "chapter": 4,
+    "verse": 8,
+    "confidence": 0.72
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0128.wav",
+    "duration": 3.12,
+    "text": "ಧರ್ಮಸಂಸ್ಥಾಪನಾರ್ಥಾಯ ಸಂಭವಾಮಿ ಯುಗೇ ಯುಗೇ",
+    "text_orig": "धर्मसंस्थापनार्थाय संभवामि युगे युगे।।4.8।।",
+    "chapter": 4,
+    "verse": 8,
+    "confidence": 0.37209302325581395
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0129.wav",
+    "duration": 3.88,
+    "text": "ಜನ್ಮ ಕರ್ಮ ಚ ಮೇ ದಿವ್ಯಮೇವಂ ಯೋ ವೇತ್ತಿ ತತ್ತ್ವತಃ",
+    "text_orig": "जन्म कर्म च मे दिव्यमेवं यो वेत्ति तत्त्वतः।",
+    "chapter": 4,
+    "verse": 9,
+    "confidence": 0.35294117647058826
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0131.wav",
+    "duration": 7.46,
+    "text": "ವೀತರಾಗಭಯಕ್ರೋಧಾ ಮನ್ಮಯಾ ಮಾಮುಪಾಶ್ರಿತಾಃ",
+    "text_orig": "वीतरागभयक्रोधा मन्मया मामुपाश्रिताः।",
+    "chapter": 4,
+    "verse": 10,
+    "confidence": 0.3548387096774194
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2121_Bg_04_Recitation_of_Bhagavad-gita_Chapter_Four_seg_0132.wav",
+    "duration": 3.06,
+    "text": "ಬಹವೋ ಜ್ಞಾನತಪಸಾ ಪೂತಾ ಮದ್ಭಾವಮಾಗತಾಃ",
+    "text_orig": "बहवो ज्ञानतपसा पूता मद्भावमागताः।।4.10।।",
+    "chapter": 4,
+    "verse": 10,
+    "confidence": 0.5106382978723404
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0003.wav",
+    "duration": 4.58,
+    "text": "ಅರ್ಜುನ ಉವಾಚ",
+    "text_orig": "अर्जुन उवाच",
+    "chapter": 5,
+    "verse": 1,
+    "confidence": 0.38461538461538464
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0006.wav",
+    "duration": 5.26,
+    "text": "ಸಂನ್ಯಾಸಂ ಕರ್ಮಣಾಂ ಕೃಷ್ಣ ಪುನರ್ಯೋಗಂ ಚ ಶಂಸಸಿ",
+    "text_orig": "संन्यासं कर्मणां कृष्ण पुनर्योगं च शंससि।",
+    "chapter": 5,
+    "verse": 1,
+    "confidence": 0.38095238095238093
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0008.wav",
+    "duration": 2.68,
+    "text": "ಯಚ್ಛ್ರೇಯ ಏತಯೋರೇಕಂ ತನ್ಮೇ ಬ್ರೂಹಿ ಸುನಿಶಿಚತಮ್",
+    "text_orig": "यच्छ्रेय एतयोरेकं तन्मे ब्रूहि सुनिश्िचतम्।।5.1।।",
+    "chapter": 5,
+    "verse": 1,
+    "confidence": 0.46875
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0009.wav",
+    "duration": 2.84,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 5,
+    "verse": 2,
+    "confidence": 0.5365853658536586
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0020.wav",
+    "duration": 3.5,
+    "text": "ಸಂನ್ಯಾಸಃ ಕರ್ಮಯೋಗಶ್ಚ ನಿಃಶ್ರೇಯಸಕರಾವುಭೌ",
+    "text_orig": "संन्यासः कर्मयोगश्च निःश्रेयसकरावुभौ।",
+    "chapter": 5,
+    "verse": 2,
+    "confidence": 0.4897959183673469
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0021.wav",
+    "duration": 4.8,
+    "text": "ತಯೋಸ್ತು ಕರ್ಮಸಂನ್ಯಾಸಾತ್ಕರ್ಮಯೋಗೋ ವಿಶಿಷ್ಯತೇ",
+    "text_orig": "तयोस्तु कर्मसंन्यासात्कर्मयोगो विशिष्यते।।5.2।।",
+    "chapter": 5,
+    "verse": 2,
+    "confidence": 0.4117647058823529
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0032.wav",
+    "duration": 3.5,
+    "text": "ಜ್ಞೇಯಃ ಸ ನಿತ್ಯಸಂನ್ಯಾಸೀ ಯೋ ನ ದ್ವೇಷ್ಟಿ ನ ಕಾಙ್ಕ್ಷತಿ",
+    "text_orig": "ज्ञेयः स नित्यसंन्यासी यो न द्वेष्टि न काङ्क्षति।",
+    "chapter": 5,
+    "verse": 3,
+    "confidence": 0.35714285714285715
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0035.wav",
+    "duration": 4.46,
+    "text": "ನಿರ್ದ್ವನ್ದ್ವೋ ಹಿ ಮಹಾಬಾಹೋ ಸುಖಂ ಬನ್ಧಾತ್ಪ್ರಮುಚ್ಯತೇ",
+    "text_orig": "निर्द्वन्द्वो हि महाबाहो सुखं बन्धात्प्रमुच्यते।।5.3।।",
+    "chapter": 5,
+    "verse": 3,
+    "confidence": 0.43636363636363634
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0051.wav",
+    "duration": 7.06,
+    "text": "ಸಾಂಖ್ಯಯೋಗೌ ಪೃಥಗ್ಬಾಲಾಃ ಪ್ರವದನ್ತಿ ನ ಪಣ್ಡಿತಾಃ",
+    "text_orig": "सांख्ययोगौ पृथग्बालाः प्रवदन्ति न पण्डिताः।",
+    "chapter": 5,
+    "verse": 4,
+    "confidence": 0.45714285714285713
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0052.wav",
+    "duration": 3.62,
+    "text": "ಏಕಮಪ್ಯಾಸ್ಥಿತಃ ಸಮ್ಯಗುಭಯೋರ್ವಿನ್ದತೇ ಫಲಮ್",
+    "text_orig": "एकमप्यास्थितः सम्यगुभयोर्विन्दते फलम्।।5.4।।",
+    "chapter": 5,
+    "verse": 4,
+    "confidence": 0.509090909090909
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0055.wav",
+    "duration": 3.28,
+    "text": "ಯತ್ಸಾಂಖ್ಯೈಃ ಪ್ರಾಪ್ಯತೇ ಸ್ಥಾನಂ ತದ್ಯೋಗೈರಪಿ ಗಮ್ಯತೇ",
+    "text_orig": "यत्सांख्यैः प्राप्यते स्थानं तद्योगैरपि गम्यते।",
+    "chapter": 5,
+    "verse": 5,
+    "confidence": 0.5833333333333334
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0068.wav",
+    "duration": 2.8,
+    "text": "ಏಕಂ ಸಾಂಖ್ಯಂ ಚ ಯೋಗಂ ಚ ಯಃ ಪಶ್ಯತಿ ಸ ಪಶ್ಯತಿ",
+    "text_orig": "एकं सांख्यं च योगं च यः पश्यति स पश्यति।।5.5।।",
+    "chapter": 5,
+    "verse": 5,
+    "confidence": 0.36363636363636365
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0071.wav",
+    "duration": 5.46,
+    "text": "ಸಂನ್ಯಾಸಸ್ತು ಮಹಾಬಾಹೋ ದುಃಖಮಾಪ್ತುಮಯೋಗತಃ",
+    "text_orig": "संन्यासस्तु महाबाहो दुःखमाप्तुमयोगतः।",
+    "chapter": 5,
+    "verse": 6,
+    "confidence": 0.36065573770491804
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0083.wav",
+    "duration": 3.32,
+    "text": "ಯೋಗಯುಕ್ತೋ ಮುನಿರ್ಬ್ರಹ್ಮ ನಚಿರೇಣಾಧಿಗಚ್ಛತಿ",
+    "text_orig": "योगयुक्तो मुनिर्ब्रह्म नचिरेणाधिगच्छति।।5.6।।",
+    "chapter": 5,
+    "verse": 6,
+    "confidence": 0.6567164179104478
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0084.wav",
+    "duration": 4.18,
+    "text": "ಯೋಗಯುಕ್ತೋ ವಿಶುದ್ಧಾತ್ಮಾ ವಿಜಿತಾತ್ಮಾ ಜಿತೇನ್ದ್ರಿಯಃ",
+    "text_orig": "योगयुक्तो विशुद्धात्मा विजितात्मा जितेन्द्रियः।",
+    "chapter": 5,
+    "verse": 7,
+    "confidence": 0.3595505617977528
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2122_Bg_05_Recitation_of_Bhagavad-gita_Chapter_Five_seg_0087.wav",
+    "duration": 4.66,
+    "text": "ಸರ್ವಭೂತಾತ್ಮಭೂತಾತ್ಮಾ ಕುರ್ವನ್ನಪಿ ನ ಲಿಪ್ಯತೇ",
+    "text_orig": "सर्वभूतात्मभूतात्मा कुर्वन्नपि न लिप्यते।।5.7।।",
+    "chapter": 5,
+    "verse": 7,
+    "confidence": 0.46875
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0006.wav",
+    "duration": 2.72,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 6,
+    "verse": 1,
+    "confidence": 0.42424242424242425
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0007.wav",
+    "duration": 4.52,
+    "text": "ಅನಾಶ್ರಿತಃ ಕರ್ಮಫಲಂ ಕಾರ್ಯಂ ಕರ್ಮ ಕರೋತಿ ಯಃ",
+    "text_orig": "अनाश्रितः कर्मफलं कार्यं कर्म करोति यः।",
+    "chapter": 6,
+    "verse": 1,
+    "confidence": 0.45614035087719296
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0027.wav",
+    "duration": 4.72,
+    "text": "ಯಂ ಸಂನ್ಯಾಸಮಿತಿ ಪ್ರಾಹುರ್ಯೋಗಂ ತಂ ವಿದ್ಧಿ ಪಾಣ್ಡವ",
+    "text_orig": "यं संन्यासमिति प्राहुर्योगं तं विद्धि पाण्डव।",
+    "chapter": 6,
+    "verse": 2,
+    "confidence": 0.417910447761194
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0063.wav",
+    "duration": 4.16,
+    "text": "ನ ಹ್ಯಸಂನ್ಯಸ್ತಸಙ್ಕಲ್ಪೋ ಯೋಗೀ ಭವತಿ ಕಶ್ಚನ",
+    "text_orig": "न ह्यसंन्यस्तसङ्कल्पो योगी भवति कश्चन।।6.2।।",
+    "chapter": 6,
+    "verse": 2,
+    "confidence": 0.36
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0064.wav",
+    "duration": 3.48,
+    "text": "ಆರುರುಕ್ಷೋರ್ಮುನೇರ್ಯೋಗಂ ಕರ್ಮ ಕಾರಣಮುಚ್ಯತೇ",
+    "text_orig": "आरुरुक्षोर्मुनेर्योगं कर्म कारणमुच्यते।",
+    "chapter": 6,
+    "verse": 3,
+    "confidence": 0.4230769230769231
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0078.wav",
+    "duration": 7.58,
+    "text": "ಯದಾ ಹಿ ನೇನ್ದ್ರಿಯಾರ್ಥೇಷು ನ ಕರ್ಮಸ್ವನುಷಜ್ಜತೇ",
+    "text_orig": "यदा हि नेन्द्रियार्थेषु न कर्मस्वनुषज्जते।",
+    "chapter": 6,
+    "verse": 4,
+    "confidence": 0.358974358974359
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0091.wav",
+    "duration": 3.32,
+    "text": "ಸರ್ವಸಙ್ಕಲ್ಪಸಂನ್ಯಾಸೀ ಯೋಗಾರೂಢಸ್ತದೋಚ್ಯತೇ",
+    "text_orig": "सर्वसङ्कल्पसंन्यासी योगारूढस्तदोच्यते।।6.4।।",
+    "chapter": 6,
+    "verse": 4,
+    "confidence": 0.43478260869565216
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0098.wav",
+    "duration": 3.7,
+    "text": "ಉದ್ಧರೇದಾತ್ಮನಾಽಽತ್ಮಾನಂ ನಾತ್ಮಾನಮವಸಾದಯೇತ್",
+    "text_orig": "उद्धरेदात्मनाऽऽत्मानं नात्मानमवसादयेत्।",
+    "chapter": 6,
+    "verse": 5,
+    "confidence": 0.38461538461538464
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0099.wav",
+    "duration": 3.76,
+    "text": "ಆತ್ಮೈವ ಹ್ಯಾತ್ಮನೋ ಬನ್ಧುರಾತ್ಮೈವ ರಿಪುರಾತ್ಮನಃ",
+    "text_orig": "आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः।।6.5।।",
+    "chapter": 6,
+    "verse": 5,
+    "confidence": 0.4375
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0100.wav",
+    "duration": 9.66,
+    "text": "ಬನ್ಧುರಾತ್ಮಾಽಽತ್ಮನಸ್ತಸ್ಯ ಯೇನಾತ್ಮೈವಾತ್ಮನಾ ಜಿತಃ",
+    "text_orig": "बन्धुरात्माऽऽत्मनस्तस्य येनात्मैवात्मना जितः।",
+    "chapter": 6,
+    "verse": 6,
+    "confidence": 0.5333333333333333
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0106.wav",
+    "duration": 4.02,
+    "text": "ಅನಾತ್ಮನಸ್ತು ಶತ್ರುತ್ವೇ ವರ್ತೇತಾತ್ಮೈವ ಶತ್ರುವತ್",
+    "text_orig": "अनात्मनस्तु शत्रुत्वे वर्तेतात्मैव शत्रुवत्।।6.6।।",
+    "chapter": 6,
+    "verse": 6,
+    "confidence": 0.48484848484848486
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0107.wav",
+    "duration": 4.42,
+    "text": "ಜಿತಾತ್ಮನಃ ಪ್ರಶಾನ್ತಸ್ಯ ಪರಮಾತ್ಮಾ ಸಮಾಹಿತಃ",
+    "text_orig": "जितात्मनः प्रशान्तस्य परमात्मा समाहितः।",
+    "chapter": 6,
+    "verse": 7,
+    "confidence": 0.36363636363636365
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0115.wav",
+    "duration": 4.74,
+    "text": "ಶೀತೋಷ್ಣಸುಖದುಃಖೇಷು ತಥಾ ಮಾನಾಪಮಾನಯೋಃ",
+    "text_orig": "शीतोष्णसुखदुःखेषु तथा मानापमानयोः।।6.7।।",
+    "chapter": 6,
+    "verse": 7,
+    "confidence": 0.42424242424242425
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0116.wav",
+    "duration": 4.94,
+    "text": "ಜ್ಞಾನವಿಜ್ಞಾನತೃಪ್ತಾತ್ಮಾ ಕೂಟಸ್ಥೋ ವಿಜಿತೇನ್ದ್ರಿಯಃ",
+    "text_orig": "ज्ञानविज्ञानतृप्तात्मा कूटस्थो विजितेन्द्रियः।",
+    "chapter": 6,
+    "verse": 8,
+    "confidence": 0.3617021276595745
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0120.wav",
+    "duration": 3.92,
+    "text": "ಯುಕ್ತ ಇತ್ಯುಚ್ಯತೇ ಯೋಗೀ ಸಮಲೋಷ್ಟಾಶ್ಮಕಾಞ್ಚನಃ",
+    "text_orig": "युक्त इत्युच्यते योगी समलोष्टाश्मकाञ्चनः।।6.8।।",
+    "chapter": 6,
+    "verse": 8,
+    "confidence": 0.47619047619047616
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0122.wav",
+    "duration": 4.64,
+    "text": "ಸುಹೃನ್ಮಿತ್ರಾರ್ಯುದಾಸೀನಮಧ್ಯಸ್ಥದ್ವೇಷ್ಯಬನ್ಧುಷು",
+    "text_orig": "सुहृन्मित्रार्युदासीनमध्यस्थद्वेष्यबन्धुषु।",
+    "chapter": 6,
+    "verse": 9,
+    "confidence": 0.40963855421686746
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0125.wav",
+    "duration": 3.14,
+    "text": "ಸಾಧುಷ್ವಪಿ ಚ ಪಾಪೇಷು ಸಮಬುದ್ಧಿರ್ವಿಶಿಷ್ಯತೇ",
+    "text_orig": "साधुष्वपि च पापेषु समबुद्धिर्विशिष्यते।।6.9।।",
+    "chapter": 6,
+    "verse": 9,
+    "confidence": 0.3548387096774194
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2123_Bg_06_Recitation_of_Bhagavad-gita_Chapter_Six_seg_0139.wav",
+    "duration": 4.56,
+    "text": "ಯೋಗೀ ಯುಞ್ಜೀತ ಸತತಮಾತ್ಮಾನಂ ರಹಸಿ ಸ್ಥಿತಃ",
+    "text_orig": "योगी युञ्जीत सततमात्मानं रहसि स्थितः।",
+    "chapter": 6,
+    "verse": 10,
+    "confidence": 0.3793103448275862
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0000.wav",
+    "duration": 3.56,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 7,
+    "verse": 1,
+    "confidence": 0.4878048780487805
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0001.wav",
+    "duration": 3.42,
+    "text": "ಮಯ್ಯಾಸಕ್ತಮನಾಃ ಪಾರ್ಥ ಯೋಗಂ ಯುಞ್ಜನ್ಮದಾಶ್ರಯಃ",
+    "text_orig": "मय्यासक्तमनाः पार्थ योगं युञ्जन्मदाश्रयः।",
+    "chapter": 7,
+    "verse": 1,
+    "confidence": 0.7457627118644068
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0003.wav",
+    "duration": 3.52,
+    "text": "ಅಸಂಶಯಂ ಸಮಗ್ರಂ ಮಾಂ ಯಥಾ ಜ್ಞಾಸ್ಯಸಿ ತಚ್ಛೃಣು",
+    "text_orig": "असंशयं समग्रं मां यथा ज्ञास्यसि तच्छृणु।।7.1।।",
+    "chapter": 7,
+    "verse": 1,
+    "confidence": 0.7169811320754716
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0005.wav",
+    "duration": 3.94,
+    "text": "ಜ್ಞಾನಂ ತೇಽಹಂ ಸವಿಜ್ಞಾನಮಿದಂ ವಕ್ಷ್ಯಾಮ್ಯಶೇಷತಃ",
+    "text_orig": "ज्ञानं तेऽहं सविज्ञानमिदं वक्ष्याम्यशेषतः।",
+    "chapter": 7,
+    "verse": 2,
+    "confidence": 0.4727272727272727
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0007.wav",
+    "duration": 4.46,
+    "text": "ಯಜ್ಜ್ಞಾತ್ವಾ ನೇಹ ಭೂಯೋಽನ್ಯಜ್ಜ್ಞಾತವ್ಯಮವಶಿಷ್ಯತೇ",
+    "text_orig": "यज्ज्ञात्वा नेह भूयोऽन्यज्ज्ञातव्यमवशिष्यते।।7.2।।",
+    "chapter": 7,
+    "verse": 2,
+    "confidence": 0.7272727272727273
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0012.wav",
+    "duration": 3.68,
+    "text": "ಮನುಷ್ಯಾಣಾಂ ಸಹಸ್ರೇಷು ಕಶಿಚದ್ಯತತಿ ಸಿದ್ಧಯೇ",
+    "text_orig": "मनुष्याणां सहस्रेषु कश्िचद्यतति सिद्धये।",
+    "chapter": 7,
+    "verse": 3,
+    "confidence": 0.41935483870967744
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0013.wav",
+    "duration": 3.32,
+    "text": "ಯತತಾಮಪಿ ಸಿದ್ಧಾನಾಂ ಕಶಿಚನ್ಮಾಂ ವೇತ್ತಿ ತತ್ತ್ವತಃ",
+    "text_orig": "यततामपि सिद्धानां कश्िचन्मां वेत्ति तत्त्वतः।।7.3।।",
+    "chapter": 7,
+    "verse": 3,
+    "confidence": 0.4262295081967213
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0069.wav",
+    "duration": 3.68,
+    "text": "ಭೂಮಿರಾಪೋಽನಲೋ ವಾಯುಃ ಖಂ ಮನೋ ಬುದ್ಧಿರೇವ ಚ",
+    "text_orig": "भूमिरापोऽनलो वायुः खं मनो बुद्धिरेव च।",
+    "chapter": 7,
+    "verse": 4,
+    "confidence": 0.36363636363636365
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0089.wav",
+    "duration": 3.22,
+    "text": "ಅಹಙ್ಕಾರ ಇತೀಯಂ ಮೇ ಭಿನ್ನಾ ಪ್ರಕೃತಿರಷ್ಟಧಾ",
+    "text_orig": "अहङ्कार इतीयं मे भिन्ना प्रकृतिरष्टधा।।7.4।।",
+    "chapter": 7,
+    "verse": 4,
+    "confidence": 0.5652173913043478
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0093.wav",
+    "duration": 3.84,
+    "text": "ಅಪರೇಯಮಿತಸ್ತ್ವನ್ಯಾಂ ಪ್ರಕೃತಿಂ ವಿದ್ಧಿ ಮೇ ಪರಾಮ್",
+    "text_orig": "अपरेयमितस्त्वन्यां प्रकृतिं विद्धि मे पराम्।",
+    "chapter": 7,
+    "verse": 5,
+    "confidence": 0.4067796610169492
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0095.wav",
+    "duration": 8.12,
+    "text": "ಏತದ್ಯೋನೀನಿ ಭೂತಾನಿ ಸರ್ವಾಣೀತ್ಯುಪಧಾರಯ",
+    "text_orig": "एतद्योनीनि भूतानि सर्वाणीत्युपधारय।",
+    "chapter": 7,
+    "verse": 6,
+    "confidence": 0.3684210526315789
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2124_Bg_07_Recitation_of_Bhagavad-gita_Chapter_Seven_seg_0096.wav",
+    "duration": 3.8,
+    "text": "ಅಹಂ ಕೃತ್ಸ್ನಸ್ಯ ಜಗತಃ ಪ್ರಭವಃ ಪ್ರಲಯಸ್ತಥಾ",
+    "text_orig": "अहं कृत्स्नस्य जगतः प्रभवः प्रलयस्तथा।।7.6।।",
+    "chapter": 7,
+    "verse": 6,
+    "confidence": 0.3611111111111111
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0000.wav",
+    "duration": 3.94,
+    "text": "ಅರ್ಜುನ ಉವಾಚ",
+    "text_orig": "अर्जुन उवाच",
+    "chapter": 8,
+    "verse": 1,
+    "confidence": 0.6666666666666666
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0001.wav",
+    "duration": 5.68,
+    "text": "ಕಿಂ ತದ್ಬ್ರಹ್ಮ ಕಿಮಧ್ಯಾತ್ಮಂ ಕಿಂ ಕರ್ಮ ಪುರುಷೋತ್ತಮ",
+    "text_orig": "किं तद्ब्रह्म किमध्यात्मं किं कर्म पुरुषोत्तम।",
+    "chapter": 8,
+    "verse": 1,
+    "confidence": 0.9
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0002.wav",
+    "duration": 4.48,
+    "text": "ಅಧಿಭೂತಂ ಚ ಕಿಂ ಪ್ರೋಕ್ತಮಧಿದೈವಂ ಕಿಮುಚ್ಯತೇ",
+    "text_orig": "अधिभूतं च किं प्रोक्तमधिदैवं किमुच्यते।।8.1।।",
+    "chapter": 8,
+    "verse": 1,
+    "confidence": 0.8823529411764706
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0003.wav",
+    "duration": 5.14,
+    "text": "ಅಧಿಯಜ್ಞಃ ಕಥಂ ಕೋಽತ್ರ ದೇಹೇಽಸ್ಮಿನ್ಮಧುಸೂದನ",
+    "text_orig": "अधियज्ञः कथं कोऽत्र देहेऽस्मिन्मधुसूदन।",
+    "chapter": 8,
+    "verse": 2,
+    "confidence": 0.7428571428571429
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0004.wav",
+    "duration": 3.54,
+    "text": "ಪ್ರಯಾಣಕಾಲೇ ಚ ಕಥಂ ಜ್ಞೇಯೋಽಸಿ ನಿಯತಾತ್ಮಭಿಃ",
+    "text_orig": "प्रयाणकाले च कथं ज्ञेयोऽसि नियतात्मभिः।।8.2।।",
+    "chapter": 8,
+    "verse": 2,
+    "confidence": 0.84375
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0007.wav",
+    "duration": 2.86,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 8,
+    "verse": 3,
+    "confidence": 0.5185185185185185
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0008.wav",
+    "duration": 4.68,
+    "text": "ಭೂತಭಾವೋದ್ಭವಕರೋ ವಿಸರ್ಗಃ ಕರ್ಮಸಂಜ್ಞಿತಃ",
+    "text_orig": "भूतभावोद्भवकरो विसर्गः कर्मसंज्ञितः।।8.3।।",
+    "chapter": 8,
+    "verse": 3,
+    "confidence": 0.5483870967741935
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0009.wav",
+    "duration": 2.72,
+    "text": "ಅಧಿಭೂತಂ ಕ್ಷರೋ ಭಾವಃ ಪುರುಷಶ್ಚಾಧಿದೈವತಮ್",
+    "text_orig": "अधिभूतं क्षरो भावः पुरुषश्चाधिदैवतम्।",
+    "chapter": 8,
+    "verse": 4,
+    "confidence": 0.6122448979591837
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0012.wav",
+    "duration": 9.32,
+    "text": "ಅನ್ತಕಾಲೇ ಚ ಮಾಮೇವ ಸ್ಮರನ್ಮುಕ್ತ್ವಾ ಕಲೇವರಮ್",
+    "text_orig": "अन्तकाले च मामेव स्मरन्मुक्त्वा कलेवरम्।",
+    "chapter": 8,
+    "verse": 5,
+    "confidence": 0.6588235294117647
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0013.wav",
+    "duration": 7.14,
+    "text": "ಯಃ ಪ್ರಯಾತಿ ಸ ಮದ್ಭಾವಂ ಯಾತಿ ನಾಸ್ತ್ಯತ್ರ ಸಂಶಯಃ",
+    "text_orig": "यः प्रयाति स मद्भावं याति नास्त्यत्र संशयः।।8.5।।",
+    "chapter": 8,
+    "verse": 5,
+    "confidence": 0.8529411764705882
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0014.wav",
+    "duration": 3.92,
+    "text": "ಯಂ ಯಂ ವಾಪಿ ಸ್ಮರನ್ಭಾವಂ ತ್ಯಜತ್ಯನ್ತೇ ಕಲೇವರಮ್",
+    "text_orig": "यं यं वापि स्मरन्भावं त्यजत्यन्ते कलेवरम्।",
+    "chapter": 8,
+    "verse": 6,
+    "confidence": 0.6428571428571429
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0015.wav",
+    "duration": 4.36,
+    "text": "ತಸ್ಮಾತ್ಸರ್ವೇಷು ಕಾಲೇಷು ಮಾಮನುಸ್ಮರ ಯುಧ್ಯ ಚ",
+    "text_orig": "तस्मात्सर्वेषु कालेषु मामनुस्मर युध्य च।",
+    "chapter": 8,
+    "verse": 7,
+    "confidence": 0.35714285714285715
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0016.wav",
+    "duration": 8.38,
+    "text": "ಮಯ್ಯರ್ಪಿತಮನೋಬುದ್ಧಿರ್ಮಾಮೇವೈಷ್ಯಸ್ಯಸಂಶಯಮ್",
+    "text_orig": "मय्यर्पितमनोबुद्धिर्मामेवैष्यस्यसंशयम्।।8.7।।",
+    "chapter": 8,
+    "verse": 7,
+    "confidence": 0.4473684210526316
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0020.wav",
+    "duration": 3.24,
+    "text": "ಅಭ್ಯಾಸಯೋಗಯುಕ್ತೇನ ಚೇತಸಾ ನಾನ್ಯಗಾಮಿನಾ",
+    "text_orig": "अभ्यासयोगयुक्तेन चेतसा नान्यगामिना।",
+    "chapter": 8,
+    "verse": 8,
+    "confidence": 0.6938775510204082
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0022.wav",
+    "duration": 3.54,
+    "text": "ಪರಮಂ ಪುರುಷಂ ದಿವ್ಯಂ ಯಾತಿ ಪಾರ್ಥಾನುಚಿನ್ತಯನ್",
+    "text_orig": "परमं पुरुषं दिव्यं याति पार्थानुचिन्तयन्।।8.8।।",
+    "chapter": 8,
+    "verse": 8,
+    "confidence": 0.6153846153846154
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0024.wav",
+    "duration": 4.54,
+    "text": "ಕವಿಂ ಪುರಾಣಮನುಶಾಸಿತಾರ",
+    "text_orig": "कविं पुराणमनुशासितार",
+    "chapter": 8,
+    "verse": 9,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0025.wav",
+    "duration": 3.58,
+    "text": "ಮಣೋರಣೀಯಾಂಸಮನುಸ್ಮರೇದ್ಯಃ",
+    "text_orig": "मणोरणीयांसमनुस्मरेद्यः।",
+    "chapter": 8,
+    "verse": 9,
+    "confidence": 0.5161290322580645
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0026.wav",
+    "duration": 3.74,
+    "text": "ಸರ್ವಸ್ಯ ಧಾತಾರಮಚಿನ್ತ್ಯರೂಪ",
+    "text_orig": "सर्वस्य धातारमचिन्त्यरूप",
+    "chapter": 8,
+    "verse": 9,
+    "confidence": 0.42105263157894735
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0028.wav",
+    "duration": 5.28,
+    "text": "ಮಾದಿತ್ಯವರ್ಣಂ ತಮಸಃ ಪರಸ್ತಾತ್",
+    "text_orig": "मादित्यवर्णं तमसः परस्तात्।।8.9।।",
+    "chapter": 8,
+    "verse": 9,
+    "confidence": 0.875
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0029.wav",
+    "duration": 4.08,
+    "text": "ಪ್ರಯಾಣಕಾಲೇ ಮನಸಾಽಚಲೇನ",
+    "text_orig": "प्रयाणकाले मनसाऽचलेन",
+    "chapter": 8,
+    "verse": 10,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0030.wav",
+    "duration": 4.32,
+    "text": "ಭಕ್ತ್ಯಾ ಯುಕ್ತೋ ಯೋಗಬಲೇನ ಚೈವ",
+    "text_orig": "भक्त्या युक्तो योगबलेन चैव।",
+    "chapter": 8,
+    "verse": 10,
+    "confidence": 0.9387755102040817
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0031.wav",
+    "duration": 4.68,
+    "text": "ಭ್ರುವೋರ್ಮಧ್ಯೇ ಪ್ರಾಣಮಾವೇಶ್ಯ ಸಮ್ಯಕ್",
+    "text_orig": "भ्रुवोर्मध्ये प्राणमावेश्य सम्यक्",
+    "chapter": 8,
+    "verse": 10,
+    "confidence": 0.9310344827586207
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0032.wav",
+    "duration": 5.24,
+    "text": "ಸ ತಂ ಪರಂ ಪುರುಷಮುಪೈತಿ ದಿವ್ಯಮ್",
+    "text_orig": "स तं परं पुरुषमुपैति दिव्यम्।।8.10।।",
+    "chapter": 8,
+    "verse": 10,
+    "confidence": 0.92
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0033.wav",
+    "duration": 4.08,
+    "text": "ಯದಕ್ಷರಂ ವೇದವಿದೋ ವದನ್ತಿ",
+    "text_orig": "यदक्षरं वेदविदो वदन्ति",
+    "chapter": 8,
+    "verse": 11,
+    "confidence": 0.7317073170731707
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0034.wav",
+    "duration": 5.26,
+    "text": "ವಿಶನ್ತಿ ಯದ್ಯತಯೋ ವೀತರಾಗಾಃ",
+    "text_orig": "विशन्ति यद्यतयो वीतरागाः।",
+    "chapter": 8,
+    "verse": 11,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0035.wav",
+    "duration": 9.82,
+    "text": "ಯದಿಚ್ಛನ್ತೋ ಬ್ರಹ್ಮಚರ್ಯಂ ಚರನ್ತಿ",
+    "text_orig": "यदिच्छन्तो ब्रह्मचर्यं चरन्ति",
+    "chapter": 8,
+    "verse": 11,
+    "confidence": 0.6027397260273972
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0042.wav",
+    "duration": 5.78,
+    "text": "ತತ್ತೇ ಪದಂ ಸಂಗ್ರಹೇಣ ಪ್ರವಕ್ಷ್ಯೇ",
+    "text_orig": "तत्ते पदं संग्रहेण प्रवक्ष्ये।।8.11।।",
+    "chapter": 8,
+    "verse": 11,
+    "confidence": 0.5833333333333334
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0058.wav",
+    "duration": 3.78,
+    "text": "ಸರ್ವದ್ವಾರಾಣಿ ಸಂಯಮ್ಯ ಮನೋ ಹೃದಿ ನಿರುಧ್ಯ ಚ",
+    "text_orig": "सर्वद्वाराणि संयम्य मनो हृदि निरुध्य च।",
+    "chapter": 8,
+    "verse": 12,
+    "confidence": 0.36923076923076925
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0068.wav",
+    "duration": 2.02,
+    "text": "ಓಮಿತ್ಯೇಕಾಕ್ಷರಂ ಬ್ರಹ್ಮ ವ್ಯಾಹರನ್ಮಾಮನುಸ್ಮರನ್",
+    "text_orig": "ओमित्येकाक्षरं ब्रह्म व्याहरन्मामनुस्मरन्।",
+    "chapter": 8,
+    "verse": 13,
+    "confidence": 0.4
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0069.wav",
+    "duration": 4.96,
+    "text": "ಯಃ ಪ್ರಯಾತಿ ತ್ಯಜನ್ದೇಹಂ ಸ ಯಾತಿ ಪರಮಾಂ ಗತಿಮ್",
+    "text_orig": "यः प्रयाति त्यजन्देहं स याति परमां गतिम्।।8.13।।",
+    "chapter": 8,
+    "verse": 13,
+    "confidence": 0.43478260869565216
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2125_Bg_08_Recitation_of_Bhagavad-gita_Chapter_Eight_seg_0078.wav",
+    "duration": 5.56,
+    "text": "ಅನನ್ಯಚೇತಾಃ ಸತತಂ ಯೋ ಮಾಂ ಸ್ಮರತಿ ನಿತ್ಯಶಃ",
+    "text_orig": "अनन्यचेताः सततं यो मां स्मरति नित्यशः।",
+    "chapter": 8,
+    "verse": 14,
+    "confidence": 0.36923076923076925
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0002.wav",
+    "duration": 3.66,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 9,
+    "verse": 1,
+    "confidence": 0.4666666666666667
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0004.wav",
+    "duration": 4.08,
+    "text": "ಇದಂ ತು ತೇ ಗುಹ್ಯತಮಂ ಪ್ರವಕ್ಷ್ಯಾಮ್ಯನಸೂಯವೇ",
+    "text_orig": "इदं तु ते गुह्यतमं प्रवक्ष्याम्यनसूयवे।",
+    "chapter": 9,
+    "verse": 1,
+    "confidence": 0.6909090909090909
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0026.wav",
+    "duration": 3.42,
+    "text": "ಜ್ಞಾನಂ ವಿಜ್ಞಾನಸಹಿತಂ ಯಜ್ಜ್ಞಾತ್ವಾ ಮೋಕ್ಷ್ಯಸೇಽಶುಭಾತ್",
+    "text_orig": "ज्ञानं विज्ञानसहितं यज्ज्ञात्वा मोक्ष्यसेऽशुभात्।।9.1।।",
+    "chapter": 9,
+    "verse": 1,
+    "confidence": 0.375
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0027.wav",
+    "duration": 4.0,
+    "text": "ರಾಜವಿದ್ಯಾ ರಾಜಗುಹ್ಯಂ ಪವಿತ್ರಮಿದಮುತ್ತಮಮ್",
+    "text_orig": "राजविद्या राजगुह्यं पवित्रमिदमुत्तमम्।",
+    "chapter": 9,
+    "verse": 2,
+    "confidence": 0.38461538461538464
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0028.wav",
+    "duration": 4.14,
+    "text": "ಅಶ್ರದ್ದಧಾನಾಃ ಪುರುಷಾ ಧರ್ಮಸ್ಯಾಸ್ಯ ಪರನ್ತಪ",
+    "text_orig": "अश्रद्दधानाः पुरुषा धर्मस्यास्य परन्तप।",
+    "chapter": 9,
+    "verse": 3,
+    "confidence": 0.3829787234042553
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0031.wav",
+    "duration": 3.82,
+    "text": "ಅಪ್ರಾಪ್ಯ ಮಾಂ ನಿವರ್ತನ್ತೇ ಮೃತ್ಯುಸಂಸಾರವರ್ತ್ಮನಿ",
+    "text_orig": "अप्राप्य मां निवर्तन्ते मृत्युसंसारवर्त्मनि।।9.3।।",
+    "chapter": 9,
+    "verse": 3,
+    "confidence": 0.38461538461538464
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0033.wav",
+    "duration": 3.62,
+    "text": "ಮಯಾ ತತಮಿದಂ ಸರ್ವಂ ಜಗದವ್ಯಕ್ತಮೂರ್ತಿನಾ",
+    "text_orig": "मया ततमिदं सर्वं जगदव्यक्तमूर्तिना।",
+    "chapter": 9,
+    "verse": 4,
+    "confidence": 0.4166666666666667
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0035.wav",
+    "duration": 8.04,
+    "text": "ನ ಚ ಮತ್ಸ್ಥಾನಿ ಭೂತಾನಿ ಪಶ್ಯ ಮೇ ಯೋಗಮೈಶ್ವರಮ್",
+    "text_orig": "न च मत्स्थानि भूतानि पश्य मे योगमैश्वरम्।",
+    "chapter": 9,
+    "verse": 5,
+    "confidence": 0.38095238095238093
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0036.wav",
+    "duration": 3.12,
+    "text": "ಭೂತಭೃನ್ನ ಚ ಭೂತಸ್ಥೋ ಮಮಾತ್ಮಾ ಭೂತಭಾವನಃ",
+    "text_orig": "भूतभृन्न च भूतस्थो ममात्मा भूतभावनः।।9.5।।",
+    "chapter": 9,
+    "verse": 5,
+    "confidence": 0.4444444444444444
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0037.wav",
+    "duration": 3.8,
+    "text": "ಯಥಾಽಽಕಾಶಸ್ಥಿತೋ ನಿತ್ಯಂ ವಾಯುಃ ಸರ್ವತ್ರಗೋ ಮಹಾನ್",
+    "text_orig": "यथाऽऽकाशस्थितो नित्यं वायुः सर्वत्रगो महान्।",
+    "chapter": 9,
+    "verse": 6,
+    "confidence": 0.5396825396825397
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0039.wav",
+    "duration": 4.86,
+    "text": "ತಥಾ ಸರ್ವಾಣಿ ಭೂತಾನಿ ಮತ್ಸ್ಥಾನೀತ್ಯುಪಧಾರಯ",
+    "text_orig": "तथा सर्वाणि भूतानि मत्स्थानीत्युपधारय।।9.6।।",
+    "chapter": 9,
+    "verse": 6,
+    "confidence": 0.39285714285714285
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0045.wav",
+    "duration": 4.1,
+    "text": "ಸರ್ವಭೂತಾನಿ ಕೌನ್ತೇಯ ಪ್ರಕೃತಿಂ ಯಾನ್ತಿ ಮಾಮಿಕಾಮ್",
+    "text_orig": "सर्वभूतानि कौन्तेय प्रकृतिं यान्ति मामिकाम्।",
+    "chapter": 9,
+    "verse": 7,
+    "confidence": 0.39215686274509803
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0048.wav",
+    "duration": 6.18,
+    "text": "ಕಲ್ಪಕ್ಷಯೇ ಪುನಸ್ತಾನಿ ಕಲ್ಪಾದೌ ವಿಸೃಜಾಮ್ಯಹಮ್",
+    "text_orig": "कल्पक्षये पुनस्तानि कल्पादौ विसृजाम्यहम्।।9.7।।",
+    "chapter": 9,
+    "verse": 7,
+    "confidence": 0.5769230769230769
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0053.wav",
+    "duration": 3.8,
+    "text": "ಪ್ರಕೃತಿಂ ಸ್ವಾಮವಷ್ಟಭ್ಯ ವಿಸೃಜಾಮಿ ಪುನಃ ಪುನಃ",
+    "text_orig": "प्रकृतिं स्वामवष्टभ्य विसृजामि पुनः पुनः।",
+    "chapter": 9,
+    "verse": 8,
+    "confidence": 0.39215686274509803
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0057.wav",
+    "duration": 4.98,
+    "text": "ಭೂತಗ್ರಾಮಮಿಮಂ ಕೃತ್ಸ್ನಮವಶಂ ಪ್ರಕೃತೇರ್ವಶಾತ್",
+    "text_orig": "भूतग्राममिमं कृत्स्नमवशं प्रकृतेर्वशात्।।9.8।।",
+    "chapter": 9,
+    "verse": 8,
+    "confidence": 0.3548387096774194
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0066.wav",
+    "duration": 4.62,
+    "text": "ನ ಚ ಮಾಂ ತಾನಿ ಕರ್ಮಾಣಿ ನಿಬಧ್ನನ್ತಿ ಧನಞ್ಜಯ",
+    "text_orig": "न च मां तानि कर्माणि निबध्नन्ति धनञ्जय।",
+    "chapter": 9,
+    "verse": 9,
+    "confidence": 0.38235294117647056
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0072.wav",
+    "duration": 3.9,
+    "text": "ಉದಾಸೀನವದಾಸೀನಮಸಕ್ತಂ ತೇಷು ಕರ್ಮಸು",
+    "text_orig": "उदासीनवदासीनमसक्तं तेषु कर्मसु।।9.9।।",
+    "chapter": 9,
+    "verse": 9,
+    "confidence": 0.7017543859649122
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0077.wav",
+    "duration": 4.74,
+    "text": "ಮಯಾಽಧ್ಯಕ್ಷೇಣ ಪ್ರಕೃತಿಃ ಸೂಯತೇ ಸಚರಾಚರಮ್",
+    "text_orig": "मयाऽध्यक्षेण प्रकृतिः सूयते सचराचरम्।",
+    "chapter": 9,
+    "verse": 10,
+    "confidence": 0.7777777777777778
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0079.wav",
+    "duration": 2.8,
+    "text": "ಹೇತುನಾಽನೇನ ಕೌನ್ತೇಯ ಜಗದ್ವಿಪರಿವರ್ತತೇ",
+    "text_orig": "हेतुनाऽनेन कौन्तेय जगद्विपरिवर्तते।।9.10।।",
+    "chapter": 9,
+    "verse": 10,
+    "confidence": 0.43902439024390244
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0081.wav",
+    "duration": 5.18,
+    "text": "ಅವಜಾನನ್ತಿ ಮಾಂ ಮೂಢಾ ಮಾನುಷೀಂ ತನುಮಾಶ್ರಿತಮ್",
+    "text_orig": "अवजानन्ति मां मूढा मानुषीं तनुमाश्रितम्।",
+    "chapter": 9,
+    "verse": 11,
+    "confidence": 0.4857142857142857
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0082.wav",
+    "duration": 4.0,
+    "text": "ಪರಂ ಭಾವಮಜಾನನ್ತೋ ಮಮ ಭೂತಮಹೇಶ್ವರಮ್",
+    "text_orig": "परं भावमजानन्तो मम भूतमहेश्वरम्।।9.11।।",
+    "chapter": 9,
+    "verse": 11,
+    "confidence": 0.5084745762711864
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0087.wav",
+    "duration": 8.5,
+    "text": "ಮೋಘಾಶಾ ಮೋಘಕರ್ಮಾಣೋ ಮೋಘಜ್ಞಾನಾ ವಿಚೇತಸಃ",
+    "text_orig": "मोघाशा मोघकर्माणो मोघज्ञाना विचेतसः।",
+    "chapter": 9,
+    "verse": 12,
+    "confidence": 0.5074626865671642
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2126_Bg_09_Recitation_of_Bhagavad-gita_Chapter_Nine_seg_0088.wav",
+    "duration": 3.72,
+    "text": "ಮಹಾತ್ಮಾನಸ್ತು ಮಾಂ ಪಾರ್ಥ ದೈವೀಂ ಪ್ರಕೃತಿಮಾಶ್ರಿತಾಃ",
+    "text_orig": "महात्मानस्तु मां पार्थ दैवीं प्रकृतिमाश्रिताः।",
+    "chapter": 9,
+    "verse": 13,
+    "confidence": 0.38235294117647056
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0001.wav",
+    "duration": 2.04,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 10,
+    "verse": 1,
+    "confidence": 0.6666666666666666
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0002.wav",
+    "duration": 5.0,
+    "text": "ಭೂಯ ಏವ ಮಹಾಬಾಹೋ ಶ್ರೃಣು ಮೇ ಪರಮಂ ವಚಃ",
+    "text_orig": "भूय एव महाबाहो श्रृणु मे परमं वचः।",
+    "chapter": 10,
+    "verse": 1,
+    "confidence": 0.9259259259259259
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0003.wav",
+    "duration": 5.0,
+    "text": "ಯತ್ತೇಽಹಂ ಪ್ರೀಯಮಾಣಾಯ ವಕ್ಷ್ಯಾಮಿ ಹಿತಕಾಮ್ಯಯಾ",
+    "text_orig": "यत्तेऽहं प्रीयमाणाय वक्ष्यामि हितकाम्यया।।10.1।।",
+    "chapter": 10,
+    "verse": 1,
+    "confidence": 0.8918918918918919
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0004.wav",
+    "duration": 4.72,
+    "text": "ನ ಮೇ ವಿದುಃ ಸುರಗಣಾಃ ಪ್ರಭವಂ ನ ಮಹರ್ಷಯಃ",
+    "text_orig": "न मे विदुः सुरगणाः प्रभवं न महर्षयः।",
+    "chapter": 10,
+    "verse": 2,
+    "confidence": 0.9655172413793104
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0005.wav",
+    "duration": 6.0,
+    "text": "ಅಹಮಾದಿರ್ಹಿ ದೇವಾನಾಂ ಮಹರ್ಷೀಣಾಂ ಚ ಸರ್ವಶಃ",
+    "text_orig": "अहमादिर्हि देवानां महर्षीणां च सर्वशः।।10.2।।",
+    "chapter": 10,
+    "verse": 2,
+    "confidence": 1.0
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0006.wav",
+    "duration": 3.44,
+    "text": "ಯೋ ಮಾಮಜಮನಾದಿಂ ಚ ವೇತ್ತಿ ಲೋಕಮಹೇಶ್ವರಮ್",
+    "text_orig": "यो मामजमनादिं च वेत्ति लोकमहेश्वरम्।",
+    "chapter": 10,
+    "verse": 3,
+    "confidence": 0.9354838709677419
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0008.wav",
+    "duration": 7.16,
+    "text": "ಅಸಮ್ಮೂಢಃ ಸ ಮರ್ತ್ಯೇಷು ಸರ್ವಪಾಪೈಃ ಪ್ರಮುಚ್ಯತೇ",
+    "text_orig": "असम्मूढः स मर्त्येषु सर्वपापैः प्रमुच्यते।।10.3।।",
+    "chapter": 10,
+    "verse": 3,
+    "confidence": 0.5925925925925926
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0017.wav",
+    "duration": 3.46,
+    "text": "ಬುದ್ಧಿರ್ಜ್ಞಾನಮಸಂಮೋಹಃ ಕ್ಷಮಾ ಸತ್ಯಂ ದಮಃ ಶಮಃ",
+    "text_orig": "बुद्धिर्ज्ञानमसंमोहः क्षमा सत्यं दमः शमः।",
+    "chapter": 10,
+    "verse": 4,
+    "confidence": 0.4578313253012048
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0053.wav",
+    "duration": 2.7,
+    "text": "ಅಹಿಂಸಾ ಸಮತಾ ತುಷ್ಟಿಸ್ತಪೋ ದಾನಂ ಯಶೋಽಯಶಃ",
+    "text_orig": "अहिंसा समता तुष्टिस्तपो दानं यशोऽयशः।",
+    "chapter": 10,
+    "verse": 5,
+    "confidence": 0.3673469387755102
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0056.wav",
+    "duration": 4.3,
+    "text": "ಭವನ್ತಿ ಭಾವಾ ಭೂತಾನಾಂ ಮತ್ತ ಏವ ಪೃಥಗ್ವಿಧಾಃ",
+    "text_orig": "भवन्ति भावा भूतानां मत्त एव पृथग्विधाः।।10.5।।",
+    "chapter": 10,
+    "verse": 5,
+    "confidence": 0.36
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0058.wav",
+    "duration": 3.22,
+    "text": "ಮಹರ್ಷಯಃ ಸಪ್ತ ಪೂರ್ವೇ ಚತ್ವಾರೋ ಮನವಸ್ತಥಾ",
+    "text_orig": "महर्षयः सप्त पूर्वे चत्वारो मनवस्तथा।",
+    "chapter": 10,
+    "verse": 6,
+    "confidence": 0.3902439024390244
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0082.wav",
+    "duration": 4.0,
+    "text": "ಮದ್ಭಾವಾ ಮಾನಸಾ ಜಾತಾ ಯೇಷಾಂ ಲೋಕ ಇಮಾಃ ಪ್ರಜಾಃ",
+    "text_orig": "मद्भावा मानसा जाता येषां लोक इमाः प्रजाः।।10.6।।",
+    "chapter": 10,
+    "verse": 6,
+    "confidence": 0.35294117647058826
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0089.wav",
+    "duration": 5.72,
+    "text": "ಏತಾಂ ವಿಭೂತಿಂ ಯೋಗಂ ಚ ಮಮ ಯೋ ವೇತ್ತಿ ತತ್ತ್ವತಃ",
+    "text_orig": "एतां विभूतिं योगं च मम यो वेत्ति तत्त्वतः।",
+    "chapter": 10,
+    "verse": 7,
+    "confidence": 0.42105263157894735
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0093.wav",
+    "duration": 4.16,
+    "text": "ಸೋಽವಿಕಮ್ಪೇನ ಯೋಗೇನ ಯುಜ್ಯತೇ ನಾತ್ರ ಸಂಶಯಃ",
+    "text_orig": "सोऽविकम्पेन योगेन युज्यते नात्र संशयः।।10.7।।",
+    "chapter": 10,
+    "verse": 7,
+    "confidence": 0.6268656716417911
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0098.wav",
+    "duration": 7.58,
+    "text": "ಅಹಂ ಸರ್ವಸ್ಯ ಪ್ರಭವೋ ಮತ್ತಃ ಸರ್ವಂ ಪ್ರವರ್ತತೇ",
+    "text_orig": "अहं सर्वस्य प्रभवो मत्तः सर्वं प्रवर्तते।",
+    "chapter": 10,
+    "verse": 8,
+    "confidence": 0.36619718309859156
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0099.wav",
+    "duration": 6.22,
+    "text": "ಇತಿ ಮತ್ವಾ ಭಜನ್ತೇ ಮಾಂ ಬುಧಾ ಭಾವಸಮನ್ವಿತಾಃ",
+    "text_orig": "इति मत्वा भजन्ते मां बुधा भावसमन्विताः।।10.8।।",
+    "chapter": 10,
+    "verse": 8,
+    "confidence": 0.5135135135135135
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0100.wav",
+    "duration": 8.8,
+    "text": "ಮಚ್ಚಿತ್ತಾ ಮದ್ಗತಪ್ರಾಣಾ ಬೋಧಯನ್ತಃ ಪರಸ್ಪರಮ್",
+    "text_orig": "मच्चित्ता मद्गतप्राणा बोधयन्तः परस्परम्।",
+    "chapter": 10,
+    "verse": 9,
+    "confidence": 0.37681159420289856
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0101.wav",
+    "duration": 7.44,
+    "text": "ಕಥಯನ್ತಶ್ಚ ಮಾಂ ನಿತ್ಯಂ ತುಷ್ಯನ್ತಿ ಚ ರಮನ್ತಿ ಚ",
+    "text_orig": "कथयन्तश्च मां नित्यं तुष्यन्ति च रमन्ति च।।10.9।।",
+    "chapter": 10,
+    "verse": 9,
+    "confidence": 0.35135135135135137
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2127_Bg_10_Recitation_of_Bhagavad-gita_Chapter_Ten_seg_0118.wav",
+    "duration": 4.18,
+    "text": "ತೇಷಾಂ ಸತತಯುಕ್ತಾನಾಂ ಭಜತಾಂ ಪ್ರೀತಿಪೂರ್ವಕಮ್",
+    "text_orig": "तेषां सततयुक्तानां भजतां प्रीतिपूर्वकम्।",
+    "chapter": 10,
+    "verse": 10,
+    "confidence": 0.38235294117647056
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0002.wav",
+    "duration": 2.86,
+    "text": "ಮದನುಗ್ರಹಾಯ ಪರಮಂ ಗುಹ್ಯಮಧ್ಯಾತ್ಮಸಂಜ್ಞಿತಮ್",
+    "text_orig": "मदनुग्रहाय परमं गुह्यमध्यात्मसंज्ञितम्।",
+    "chapter": 11,
+    "verse": 1,
+    "confidence": 0.36
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0004.wav",
+    "duration": 3.1,
+    "text": "ಯತ್ತ್ವಯೋಕ್ತಂ ವಚಸ್ತೇನ ಮೋಹೋಽಯಂ ವಿಗತೋ ಮಮ",
+    "text_orig": "यत्त्वयोक्तं वचस्तेन मोहोऽयं विगतो मम।।11.1।।",
+    "chapter": 11,
+    "verse": 1,
+    "confidence": 0.5925925925925926
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0006.wav",
+    "duration": 2.9,
+    "text": "ಭವಾಪ್ಯಯೌ ಹಿ ಭೂತಾನಾಂ ಶ್ರುತೌ ವಿಸ್ತರಶೋ ಮಯಾ",
+    "text_orig": "भवाप्ययौ हि भूतानां श्रुतौ विस्तरशो मया।",
+    "chapter": 11,
+    "verse": 2,
+    "confidence": 0.46808510638297873
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0008.wav",
+    "duration": 3.16,
+    "text": "ತ್ವತ್ತಃ ಕಮಲಪತ್ರಾಕ್ಷ ಮಾಹಾತ್ಮ್ಯಮಪಿ ಚಾವ್ಯಯಮ್",
+    "text_orig": "त्वत्तः कमलपत्राक्ष माहात्म्यमपि चाव्ययम्।।11.2।।",
+    "chapter": 11,
+    "verse": 2,
+    "confidence": 0.5671641791044776
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0009.wav",
+    "duration": 2.92,
+    "text": "ಏವಮೇತದ್ಯಥಾತ್ಥ ತ್ವಮಾತ್ಮಾನಂ ಪರಮೇಶ್ವರ",
+    "text_orig": "एवमेतद्यथात्थ त्वमात्मानं परमेश्वर।",
+    "chapter": 11,
+    "verse": 3,
+    "confidence": 0.6774193548387096
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0033.wav",
+    "duration": 3.88,
+    "text": "ದ್ರಷ್ಟುಮಿಚ್ಛಾಮಿ ತೇ ರೂಪಮೈಶ್ವರಂ ಪುರುಷೋತ್ತಮ",
+    "text_orig": "द्रष्टुमिच्छामि ते रूपमैश्वरं पुरुषोत्तम।।11.3।।",
+    "chapter": 11,
+    "verse": 3,
+    "confidence": 0.3508771929824561
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0035.wav",
+    "duration": 5.7,
+    "text": "ಮನ್ಯಸೇ ಯದಿ ತಚ್ಛಕ್ಯಂ ಮಯಾ ದ್ರಷ್ಟುಮಿತಿ ಪ್ರಭೋ",
+    "text_orig": "मन्यसे यदि तच्छक्यं मया द्रष्टुमिति प्रभो।",
+    "chapter": 11,
+    "verse": 4,
+    "confidence": 0.5205479452054794
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0042.wav",
+    "duration": 3.5,
+    "text": "ಯೋಗೇಶ್ವರ ತತೋ ಮೇ ತ್ವಂ ದರ್ಶಯಾಽತ್ಮಾನಮವ್ಯಯಮ್",
+    "text_orig": "योगेश्वर ततो मे त्वं दर्शयाऽत्मानमव्ययम्।।11.4।।",
+    "chapter": 11,
+    "verse": 4,
+    "confidence": 0.3561643835616438
+  },
+  {
+    "audio_path": "/home/ubuntu/vagdhenu/prabhupada_training/processed_corpus/all_slices/2128_Bg_11_Recitation_of_Bhagavad-gita_Chapter_Eleven-27_seg_0046.wav",
+    "duration": 2.04,
+    "text": "ಶ್ರೀ ಭಗವಾನುವಾಚ",
+    "text_orig": "श्री भगवानुवाच",
+    "chapter": 11,
+    "verse": 5,
+    "confidence": 0.3888888888888889
+  }
+]

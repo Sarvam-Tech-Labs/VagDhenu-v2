@@ -11,6 +11,46 @@
     "ref_text": "सन्ततं चिन्तयेत् कण्ठं भास्वत्कौस्तुभभासकम्",
     "full_verse": "सन्ततं चिन्तयेत् कण्ठं भास्वत्कौस्तुभभासकम् । वैकुण्ठस्याखिला वेदा उद्गीर्यन्तेऽनिशं यतः ॥"
   },
+  "ram_anustubh": {
+    "wav": "ram_anustubh.wav",
+    "clip_id": "yt_short_EWaQ3gY4jZk",
+    "mode": "half",
+    "dur_s": 6.65,
+    "sr": 24000,
+    "sec_per_syll": 0.415,
+    "ref_text": "श्रीराम राम रघुनन्दन राम राम श्रीराम राम भरताग्रज राम राम",
+    "full_verse": "श्रीराम राम रघुनन्दन राम राम । श्रीराम राम भरताग्रज राम राम ॥"
+  },
+  "prabhupada_bg1_1": {
+    "wav": "prabhupada_bg1_1.wav",
+    "clip_id": "bg_01_recitation_prabhupada_1_1",
+    "mode": "half",
+    "dur_s": 7.48,
+    "sr": 24000,
+    "sec_per_syll": 0.467,
+    "ref_text": "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः",
+    "full_verse": "धृतराष्ट्र उवाच । धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः । मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥ १ ॥"
+  },
+  "prabhupada_anustubh": {
+    "wav": "prabhupada_anustubh.wav",
+    "clip_id": "bg_01_recitation_prabhupada_1_2",
+    "mode": "half",
+    "dur_s": 8.3,
+    "sr": 24000,
+    "sec_per_syll": 0.518,
+    "ref_text": "दृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा",
+    "full_verse": "सञ्जय उवाच । दृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा । आचार्यमुपसङ्गम्य राजा वचनमब्रवीत् ॥ २ ॥"
+  },
+  "prabhupada_v29": {
+    "wav": "prabhupada_anustubh_exact.wav",
+    "clip_id": "bg_01_recitation_prabhupada_1_29_h1",
+    "mode": "half",
+    "dur_s": 5.73,
+    "sr": 24000,
+    "sec_per_syll": 0.358,
+    "ref_text": "वेपथुश्च शरीरे मे रोमहर्षश्च जायते",
+    "full_verse": "वेपथुश्च शरीरे मे रोमहर्षश्च जायते । गाण्डीवं स्रंसते हस्तात्त्वक्चैव परिदह्यते ॥ २९ ॥"
+  },
   "pramāṇikā": {
     "wav": "pramanika.wav",
     "clip_id": "mbtn7__d5aa7417",

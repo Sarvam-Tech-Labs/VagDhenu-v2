@@ -14,3 +14,8 @@ models/
 BigVGAN/
 demo/BigVGAN/
 !src/reference_bank/*.wav
+*.mp3
+prabhupada_training/checkpoints_gold/
+prabhupada_training/prabhupada_gold_corpus.tar.gz
+demo/studio.log
+bbt_1972_canonical/
