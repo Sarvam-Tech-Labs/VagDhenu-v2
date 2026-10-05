@@ -275,18 +275,22 @@ class SaveBoundaryRequest(BaseModel):
     chapter: int
     abs_start_s: float
     abs_end_s: float
+    cascade_next: bool = True
 
 @app.post("/api/save_boundary")
 def save_boundary(req: SaveBoundaryRequest):
     """
     Saves updated absolute boundaries for a unit, re-slices the audio from the de-hissed master,
     and updates the manifests while storing absolute markers.
+    If cascade_next is True, seamlessly updates the next contiguous audio unit's start marker
+    to match this unit's end marker, re-slices both, and returns both updated boundary states.
     """
     ch = req.chapter
     fn = req.filename
     st_abs = round(float(req.abs_start_s), 3)
     et_abs = round(float(req.abs_end_s), 3)
     dur = round(et_abs - st_abs, 3)
+    cascade = req.cascade_next
     
     if dur <= 0:
         raise HTTPException(status_code=400, detail="Invalid duration: end must be greater than start")
@@ -297,21 +301,34 @@ def save_boundary(req: SaveBoundaryRequest):
         
     # Read slice from master
     data, sr = sf.read(master_path)
+    total_master_dur = len(data) / sr
+    
+    # 1. Slice and write current audio
     s_idx = int(round(st_abs * sr))
     e_idx = int(round(et_abs * sr))
     sliced_audio = data[s_idx:e_idx]
     
-    # Write to hemistich audio path
     ch_dir = os.path.join(HERE, "static", f"ch{ch}_all_padas")
     out_wav = os.path.join(ch_dir, "hemistichs", fn)
     sf.write(out_wav, sliced_audio, sr)
     
-    # Update hemistich manifest
+    # Also update padded audio for current unit (+/- 2.0s)
+    pad_s = 2.0
+    cur_pad_st = max(0.0, st_abs - pad_s)
+    cur_pad_et = min(total_master_dur, et_abs + pad_s)
+    cur_pad_wav = os.path.join(ch_dir, "hemistichs_padded", fn)
+    sf.write(cur_pad_wav, data[int(round(cur_pad_st * sr)):int(round(cur_pad_et * sr))], sr)
+    
+    # Update manifest & collect next item if cascading
     manifest_path = os.path.join(ch_dir, "hemistichs", "manifest.json")
+    next_info = None
+    items = []
     if os.path.exists(manifest_path):
         with open(manifest_path, "r", encoding="utf-8") as f:
             items = json.load(f)
-        for it in items:
+            
+        cur_idx = -1
+        for i, it in enumerate(items):
             if it.get("filename") == fn:
                 it["divider_start_s"] = st_abs
                 it["divider_end_s"] = et_abs
@@ -319,7 +336,58 @@ def save_boundary(req: SaveBoundaryRequest):
                 it["manual_normalized"] = True
                 it["norm_abs_start_s"] = st_abs
                 it["norm_abs_end_s"] = et_abs
+                it["padded_start_s"] = round(cur_pad_st, 3)
+                it["padded_end_s"] = round(cur_pad_et, 3)
+                it["padded_duration_s"] = round(cur_pad_et - cur_pad_st, 3)
+                cur_idx = i
                 break
+                
+        # If cascading to next unit
+        if cascade and cur_idx >= 0 and cur_idx + 1 < len(items):
+            next_it = items[cur_idx + 1]
+            next_fn = next_it.get("filename")
+            next_st_abs = et_abs # Next unit begins exactly where current unit ends
+            next_et_abs = round(float(next_it.get("divider_end_s", next_st_abs + 7.0)), 3)
+            
+            # Guard against invalid next duration
+            if next_et_abs <= next_st_abs:
+                next_et_abs = round(next_st_abs + 1.0, 3)
+            next_dur = round(next_et_abs - next_st_abs, 3)
+            
+            # Slice next audio
+            nxt_s_idx = int(round(next_st_abs * sr))
+            nxt_e_idx = int(round(next_et_abs * sr))
+            nxt_audio = data[nxt_s_idx:nxt_e_idx]
+            nxt_wav = os.path.join(ch_dir, "hemistichs", next_fn)
+            sf.write(nxt_wav, nxt_audio, sr)
+            
+            # Slice next padded audio (+/- 2.0s)
+            nxt_pad_st = max(0.0, next_st_abs - pad_s)
+            nxt_pad_et = min(total_master_dur, next_et_abs + pad_s)
+            nxt_pad_wav = os.path.join(ch_dir, "hemistichs_padded", next_fn)
+            sf.write(nxt_pad_wav, data[int(round(nxt_pad_st * sr)):int(round(nxt_pad_et * sr))], sr)
+            
+            # Update next item in manifest
+            next_it["divider_start_s"] = next_st_abs
+            next_it["divider_end_s"] = next_et_abs
+            next_it["duration"] = next_dur
+            next_it["manual_normalized"] = True
+            next_it["norm_abs_start_s"] = next_st_abs
+            next_it["norm_abs_end_s"] = next_et_abs
+            next_it["padded_start_s"] = round(nxt_pad_st, 3)
+            next_it["padded_end_s"] = round(nxt_pad_et, 3)
+            next_it["padded_duration_s"] = round(nxt_pad_et - nxt_pad_st, 3)
+            
+            next_info = {
+                "filename": next_fn,
+                "abs_start_s": next_st_abs,
+                "abs_end_s": next_et_abs,
+                "duration_s": next_dur,
+                "pad_st": round(nxt_pad_st, 3),
+                "pad_et": round(nxt_pad_et, 3),
+                "pad_dur": round(nxt_pad_et - nxt_pad_st, 3)
+            }
+            
         with open(manifest_path, "w", encoding="utf-8") as f:
             json.dump(items, f, indent=2, ensure_ascii=False)
             
@@ -332,6 +400,7 @@ def save_boundary(req: SaveBoundaryRequest):
                 norm_log = json.load(f)
         except Exception:
             norm_log = {}
+            
     norm_log[fn] = {
         "chapter": ch,
         "filename": fn,
@@ -340,6 +409,16 @@ def save_boundary(req: SaveBoundaryRequest):
         "duration_s": dur,
         "timestamp": time.time()
     }
+    if next_info:
+        norm_log[next_info["filename"]] = {
+            "chapter": ch,
+            "filename": next_info["filename"],
+            "abs_start_s": next_info["abs_start_s"],
+            "abs_end_s": next_info["abs_end_s"],
+            "duration_s": next_info["duration_s"],
+            "timestamp": time.time()
+        }
+        
     with open(norm_log_path, "w", encoding="utf-8") as f:
         json.dump(norm_log, f, indent=2, ensure_ascii=False)
         
@@ -348,7 +427,8 @@ def save_boundary(req: SaveBoundaryRequest):
         "filename": fn,
         "abs_start_s": st_abs,
         "abs_end_s": et_abs,
-        "duration_s": dur
+        "duration_s": dur,
+        "next": next_info
     })
 
 

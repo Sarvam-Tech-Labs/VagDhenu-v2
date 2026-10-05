@@ -142,7 +142,13 @@ def generate_norm_workspace_html(ch_num, fn, t_st, t_et, dur, is_normalized=Fals
         <!-- END MARKER (M2) -->
         <div style="display: flex; flex-direction: column; gap: 4px; border-left: 1px solid #1f2937; padding-left: 12px;">
           <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="color: #f87171; font-weight: bold;">📍 Marker 2 (End)</span>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="color: #f87171; font-weight: bold;">📍 Marker 2 (End)</span>
+              <label style="display: inline-flex; align-items: center; gap: 3px; font-size: 10px; color: #a7f3d0; cursor: pointer;" title="When enabled, moving Marker 2 automatically updates the Start Marker of the next audio card">
+                <input type="checkbox" class="norm-link-next" checked onchange="onLinkNextToggle('{fn}')" style="cursor: pointer; accent-color: #10b981; margin: 0;">
+                <span>🔗 Link Next Start</span>
+              </label>
+            </div>
             <button type="button" onclick="setMarkerLive('{fn}', 'end')" style="background: #111827; border: 1px solid #374151; color: #9ca3af; padding: 1px 6px; border-radius: 4px; cursor: pointer; font-size: 10px;">Set to Live Pos</button>
           </div>
           <div style="display: flex; align-items: center; gap: 6px;">
@@ -188,7 +194,35 @@ NORM_JAVASCRIPT = """
     return document.querySelector(`.norm-workspace[data-fn="${fn}"]`);
   }
 
-  function updateNormDisplay(ws) {
+  function getNextNormWorkspace(ws) {
+    if (!ws) return null;
+    const card = ws.closest('.pada-card');
+    if (!card) return null;
+    const nextCard = card.nextElementSibling;
+    if (!nextCard || !nextCard.classList.contains('pada-card')) return null;
+    return nextCard.querySelector('.norm-workspace');
+  }
+
+  function cascadeToNextWorkspace(ws, newAbsEnd) {
+    const linkCheckbox = ws.querySelector('.norm-link-next');
+    if (linkCheckbox && !linkCheckbox.checked) return;
+    const nextWs = getNextNormWorkspace(ws);
+    if (!nextWs) return;
+
+    const nextStInput = nextWs.querySelector('.norm-abs-st');
+    if (!nextStInput) return;
+    nextStInput.value = newAbsEnd.toFixed(3);
+    updateNormDisplay(nextWs, false); // do not recurse infinitely
+  }
+
+  function onLinkNextToggle(fn) {
+    const ws = getNormWorkspace(fn);
+    if (!ws) return;
+    const absEt = parseFloat(ws.querySelector('.norm-abs-et').value) || 0;
+    cascadeToNextWorkspace(ws, absEt);
+  }
+
+  function updateNormDisplay(ws, doCascade = true) {
     const padSt = parseFloat(ws.dataset.padSt);
     const padDur = parseFloat(ws.dataset.padDur);
     const absStInput = ws.querySelector('.norm-abs-st');
@@ -251,6 +285,10 @@ NORM_JAVASCRIPT = """
       badge.style.color = '#fdba74';
       badge.style.borderColor = '#9a3412';
     }
+
+    if (doCascade) {
+      cascadeToNextWorkspace(ws, absEt);
+    }
   }
 
   function onSliderMove(fn, marker, val) {
@@ -262,10 +300,11 @@ NORM_JAVASCRIPT = """
 
     if (marker === 'start') {
       ws.querySelector('.norm-abs-st').value = absVal.toFixed(3);
+      updateNormDisplay(ws, false);
     } else {
       ws.querySelector('.norm-abs-et').value = absVal.toFixed(3);
+      updateNormDisplay(ws, true);
     }
-    updateNormDisplay(ws);
   }
 
   function onMiddleScrubMove(fn, val) {
@@ -656,6 +695,8 @@ NORM_JAVASCRIPT = """
     const absSt = parseFloat(ws.querySelector('.norm-abs-st').value);
     const absEt = parseFloat(ws.querySelector('.norm-abs-et').value);
     const dur = absEt - absSt;
+    const linkCheckbox = ws.querySelector('.norm-link-next');
+    const doCascade = linkCheckbox ? linkCheckbox.checked : true;
 
     const btn = ws.querySelector('.norm-btn-save');
     btn.disabled = true;
@@ -669,16 +710,20 @@ NORM_JAVASCRIPT = """
           filename: fn,
           chapter: ch,
           abs_start_s: absSt,
-          abs_end_s: absEt
+          abs_end_s: absEt,
+          cascade_next: doCascade
         })
       });
       const data = await resp.json();
       if (data.status === 'ok') {
-        showToast(`✅ Saved ${fn}: [${absSt.toFixed(3)}s → ${absEt.toFixed(3)}s] (${dur.toFixed(3)}s)`, '#059669');
+        const msg = data.next
+          ? `✅ Saved ${fn} & Updated Next Audio (${data.next.filename})!`
+          : `✅ Saved ${fn}: [${absSt.toFixed(3)}s → ${absEt.toFixed(3)}s] (${dur.toFixed(3)}s)`;
+        showToast(msg, '#059669');
         btn.innerText = '✅ Saved';
         setTimeout(() => { btn.innerText = '💾 Save Cut'; btn.disabled = false; }, 2000);
 
-        // --- INSTANT LIVE UI UPDATE ---
+        // --- INSTANT LIVE UI UPDATE FOR CURRENT CARD ---
         const badgeEl = ws.querySelector('.norm-saved-badge');
         if (badgeEl) badgeEl.style.display = 'inline-block';
         ws.style.borderColor = '#059669';
@@ -705,6 +750,41 @@ NORM_JAVASCRIPT = """
           const tapePosEl = card.querySelector('.tape-pos');
           if (tapePosEl) {
             tapePosEl.innerText = absSt.toFixed(3) + 's';
+          }
+        }
+
+        // --- INSTANT LIVE UI UPDATE FOR NEXT CARD (IF CASCADED) ---
+        if (data.next) {
+          const nextWs = getNextNormWorkspace(ws);
+          if (nextWs) {
+            const nxtBadgeEl = nextWs.querySelector('.norm-saved-badge');
+            if (nxtBadgeEl) nxtBadgeEl.style.display = 'inline-block';
+            nextWs.style.borderColor = '#059669';
+
+            nextWs.querySelector('.norm-abs-st').value = data.next.abs_start_s.toFixed(3);
+            nextWs.querySelector('.norm-abs-et').value = data.next.abs_end_s.toFixed(3);
+            updateNormDisplay(nextWs, false);
+
+            const nextCard = nextWs.closest('.pada-card');
+            if (nextCard) {
+              const nxtMainAudio = nextCard.querySelector('audio:not(.norm-audio)');
+              if (nxtMainAudio) {
+                const baseSrc = nxtMainAudio.src.split('?')[0];
+                nxtMainAudio.src = `${baseSrc}?v=${data.next.duration_s.toFixed(3)}&t=${Date.now()}`;
+              }
+              const nxtSpanLabel = nextCard.querySelector('span[style*="font-family:monospace"][style*="font-weight:600"]');
+              if (nxtSpanLabel) {
+                nxtSpanLabel.innerHTML = `[${data.next.abs_start_s.toFixed(3)}s → ${data.next.abs_end_s.toFixed(3)}s] <span style="color:#f1c40f;">(${data.next.duration_s.toFixed(3)}s)</span>`;
+              }
+              const nxtTotalDurEl = nextCard.querySelector('.audio-total-dur');
+              if (nxtTotalDurEl) {
+                nxtTotalDurEl.innerText = data.next.duration_s.toFixed(3) + 's';
+              }
+              const nxtTapePosEl = nextCard.querySelector('.tape-pos');
+              if (nxtTapePosEl) {
+                nxtTapePosEl.innerText = data.next.abs_start_s.toFixed(3) + 's';
+              }
+            }
           }
         }
       } else {
